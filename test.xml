@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE castList PUBLIC "-//TEI Consortium//DTD TEI P4//EN"
+"/home/lou/TEI/web/Software/tei-emacs/sgml/dtds/tei/tei2.dtd" [ 
+<!ENTITY % TEI.drama 'INCLUDE'>
+<!ENTITY % TEI.XML 'INCLUDE'>
+]>
+<castList>
+<castItem>
+<role>King Paramount, the First</role> 
+<roleDesc>(King of Utopia)</roleDesc>
+</castItem>
+<castItem><role>Scaphio</role>
+and <role>Phantis</role> 
+<roleDesc>(Judges of the Utopian Supreme Court)</roleDesc></castItem>
+<castItem><role>Tarara</role><roleDesc> (The Public Exploder)</roleDesc></castItem>
+<castItem><role>Calynx</role><roleDesc>(The Utopian Vice-Chamberlain)</roleDesc></castItem>
+<castGroup>
+<head>Imported Flowers of Progress:</head>
+<castItem>
+<role>Lord Dramaleigh</role><roleDesc>(a British Lord Chamberlain)</roleDesc>
+</castItem>
+<castItem>
+<role>Captain Fitzbattleaxe</role><roleDesc>  (First Life Guards)</roleDesc>
+</castItem>
+<castItem>
+<role>Captain Sir Edward Corcoran, K.C.B.</role><roleDesc>  (of the Royal Navy)</roleDesc>
+</castItem>
+<castItem>
+<role>Mr. Goldbury</role><roleDesc>  (a company promoter; afterwards Comptroller of the Utopian
+     Household)</roleDesc>
+</castItem>
+<castItem><role>Sir Bailey Barre, Q.C., M.P.</role></castItem>
+<castItem><role>Mr. Blushington </role><roleDesc> (of the County Council)</roleDesc>
+</castItem>
+  </castGroup></castList>

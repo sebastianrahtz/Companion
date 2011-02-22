@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!--<?xml-stylesheet type="text/xsl" href="hotframes2.xsl"?>-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title>Testing nesting and menu construction</title>
+<author>Robin McCleery</author>
+</titleStmt>
+<editionStmt>
+<edition>
+<date></date>
+</edition>
+</editionStmt>
+<publicationStmt>
+<p></p>
+</publicationStmt>
+<sourceDesc>
+<p>This is the master version of an original document,
+created by converting an HTML file to TEI XML on TODAYSDATE.</p>
+</sourceDesc>
+</fileDesc>
+<revisionDesc>
+<change>
+<date></date>
+<respStmt><name>$Author$</name></respStmt>
+<item>$Revision$</item>
+</change>
+</revisionDesc>
+</teiHeader>
+<text>
+
+<body>
+
+<div xml:id="outer_section"><head>Heading 1</head>
+<p></p>
+<p>Top level text followed by</p>
+<div xml:id="Second_Level"><head>Second Level</head>
+<p>Which has several sub sections to whit:</p>
+<div xml:id="A_third_level"><head>A third level</head>
+<p>stuff</p>
+<p>Third level text</p>
+</div><div xml:id="Third_level_2"><head>Third level 2</head>
+<p>nonsense</p>
+<p>Third level text second one</p>
+</div></div><div xml:id="Back_to_level_2"><head>Back to level 2</head>
+<p>This is level 2 text again</p>
+</div></div>
+<div xml:id="Level_1_Again"><head>Level 1 Again</head>
+<p>And with luck this is the end of the
+document</p>
+<!----></div></body>
+</text>
+</TEI>

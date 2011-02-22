@@ -1,0 +1,28 @@
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="chap-orinoco"><!-- revised $Date$ -->
+<head>A multi-media catalogue</head>
+
+<div type="opener">
+<p>We imagine the
+archival markup of the records of an archaeological expedition, and
+show how multimedia objects, texts, and database records can be linked
+together in a single TEI document.
+<!-- are we talking  archival only? or active website? or other publication? -->
+<!-- either way this one could get *very* complicated : or be really easy -->
+<list type="gloss">
+<label>TEI coverage</label>
+<item>group,text,link,pb,figure,ab,align,linking attributes, extensions</item>
+<label>XML coverage</label>
+<item>xLink, entity management</item>
+<label>Discussion topics</label>
+<item>different approaches to database interfaces; images and sounds; synchronization;
+use of the header.
+</item>
+</list>
+</p>
+</div>
+
+<closer>
+<!-- what we learnt in this chapter-->
+</closer>
+</div>
+

@@ -1,0 +1,19 @@
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="chap-biblio"><head>Managing bibliographies</head>
+<p>We treat bibliographical tools as a special case of the highly structured
+textual datasets which XML was designed for: moreover, everyone needs
+bibliographical tools. We discuss how to create bibliographic records which are
+re-usable by different word processing and publishing systems, both starting from
+scratch and  by conversion from other proprietary systems. We also discuss briefly
+how to store and such records in TEI format, and how to format such records in
+differing styles.  </p>
+<list type="gloss">
+<label>TEI coverage</label>
+<item>bibl, biblStruct, all members of the m.bibl class,cit,listBibl </item>
+<label>XML coverage</label>
+<item>tree-based editors; use of ID/IDREF mechanism; stylesheets</item>
+<label>Discussion topics</label>
+<item>differing styles from a single dataset; doc management issues
+</item>
+</list>
+  </div>
+

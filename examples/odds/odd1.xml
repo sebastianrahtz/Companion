@@ -1,0 +1,6 @@
+<schemaSpec ident="oddex1" start="TEI">
+  <moduleRef key="header"/>
+  <moduleRef key="core"/>
+  <moduleRef key="tei"/>
+  <moduleRef key="textstructure"/>
+</schemaSpec>

@@ -1,0 +1,3424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tei:glossList xmlns:tei="http://www.tei-c.org/ns/1.0">
+  <tei:label><tei:gi>TEI</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a single TEI-conformant document,
+comprising a TEI header and a text, either in isolation or as part of a
+teiCorpus element.
+      [<tei:emph>Attributes</tei:emph>: version, <tei:hi>xmlns</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>ab</tei:gi>
+    (<tei:emph>linking</tei:emph>)</tei:label>
+  <tei:item>contains any arbitrary component-level unit of text, acting as
+an anonymous container for phrase or inter level elements analogous to, but
+without the semantic baggage of, a paragraph.
+      [<tei:emph>Attributes</tei:emph>: part]
+      [<tei:emph>Classes</tei:emph>: tei.chunk, tei.segment, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>abbr</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains an abbreviation of any sort.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.chooseable, tei.data]
+    </tei:item>
+  <tei:label><tei:gi>accMat</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains details of any significant additional
+material which may be closely associated with the manuscript being
+described, such as non-contemporaneous documents or fragments bound in
+with the manuscript at some earlier historical period.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>acquisition</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains any descriptive or other information
+concerning the process by which a manuscript or manuscript part entered the holding
+institution. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.datable]
+    </tei:item>
+  <tei:label><tei:gi>activity</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>contains a brief informal description of what a participant in a
+language interaction is doing other than speaking, if anything.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>actor</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>Name of an actor appearing within a cast list.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>add</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains letters, words, or phrases inserted in the text by an
+author, scribe, annotator, or corrector.
+      [<tei:emph>Attributes</tei:emph>: cert, hand, place, resp]
+      [<tei:emph>Classes</tei:emph>: tei.edit]
+    </tei:item>
+  <tei:label><tei:gi>addName</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains an additional name component, such as a nickname, 
+epithet, or alias, or any other descriptive phrase used within a
+personal name.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.personPart]
+    </tei:item>
+  <tei:label><tei:gi>addSpan</tei:gi>
+    (<tei:emph>transcr</tei:emph>)</tei:label>
+  <tei:item>marks the beginning of a longer sequence of text added by an
+author, scribe, annotator or corrector (see also
+add).
+      [<tei:emph>Attributes</tei:emph>: cert, hand, place, resp, <tei:hi>to</tei:hi>, type]
+      [<tei:emph>Classes</tei:emph>: tei.editIncl]
+    </tei:item>
+  <tei:label><tei:gi>additional</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>groups additional information relating to the
+modern bibliography for a manuscript, its current curatorial status, and
+and other associated materials. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>additions</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a description of any significant additions found
+within a manuscript, such as marginalia or other annotations. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>addrLine</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains one line of a postal or other address.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>address</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a postal or other address, for example of a
+publisher, an organization, or an individual.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.data]
+    </tei:item>
+  <tei:label><tei:gi>adminInfo</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains information about the present
+custody and availability of the manuscript, and also about the record
+description itself. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>affiliation</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>contains an informal description of a person's present
+or past affiliation with some
+organization, for example an employer or sponsor.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.demographic]
+    </tei:item>
+  <tei:label><tei:gi>alt</tei:gi>
+    (<tei:emph>linking</tei:emph>)</tei:label>
+  <tei:item>identifies an alternation or a set of choices among elements or passages.
+      [<tei:emph>Attributes</tei:emph>: mode, <tei:hi>targets</tei:hi>, wScale, weights]
+      [<tei:emph>Classes</tei:emph>: tei.metadata, tei.pointer]
+    </tei:item>
+  <tei:label><tei:gi>altGrp</tei:gi>
+    (<tei:emph>linking</tei:emph>)</tei:label>
+  <tei:item>groups a collection of alt elements and possibly
+pointers.
+      [<tei:emph>Attributes</tei:emph>: mode, wScale]
+      [<tei:emph>Classes</tei:emph>: tei.metadata, tei.pointerGroup]
+    </tei:item>
+  <tei:label><tei:gi>altIdent</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>supplies the recommended XML name for an element, class,
+  attribute, etc. in some language.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>altIdentifier</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains an alternative or former structured identifier used for
+a manuscript, such as a former catalogue number.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>altName</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains any form of unstructured alternative
+name used for
+a manuscript, such as an  ocellus
+nominum, or nickname. 
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>anchor</tei:gi>
+    (<tei:emph>linking</tei:emph>)</tei:label>
+  <tei:item>attaches an identifier to a
+point within a text, whether or not it corresponds with a textual
+element.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.Incl, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>app</tei:gi>
+    (<tei:emph>textcrit</tei:emph>)</tei:label>
+  <tei:item>contains one entry in a critical apparatus, with an optional
+lemma and at least one reading.
+      [<tei:emph>Attributes</tei:emph>: from, loc, to, type]
+      [<tei:emph>Classes</tei:emph>: tei.edit]
+    </tei:item>
+  <tei:label><tei:gi>arc</tei:gi>
+    (<tei:emph>nets</tei:emph>)</tei:label>
+  <tei:item>encodes an arc, the connection from one node to another in a graph.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>from</tei:hi>, label, label2, <tei:hi>to</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>argument</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>A formal list or prose description of the topics addressed by
+	a subdivision of a text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.divtop, tei.fmchunk]
+    </tei:item>
+  <tei:label><tei:gi>att</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains the name of an attribute appearing within running text.
+      [<tei:emph>Attributes</tei:emph>: scheme]
+      [<tei:emph>Classes</tei:emph>: tei.oddPhr]
+    </tei:item>
+  <tei:label><tei:gi>attDef</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains the definition of a single attribute.
+      [<tei:emph>Attributes</tei:emph>: usage]
+      [<tei:emph>Classes</tei:emph>: tei.identifiable]
+    </tei:item>
+  <tei:label><tei:gi>attList</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains documentation for all the attributes associated with this
+element, as a series of attDef elements.
+      [<tei:emph>Attributes</tei:emph>: org]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>attRef</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>points to the definition of a single attribute.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>class</tei:hi>, <tei:hi>key</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>author</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>in a bibliographic reference, contains the name of the author(s),
+personal or corporate,
+of a work; the primary statement of responsibility for any
+bibliographic item. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.biblPart, tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>authority</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>supplies the name of a person or other agency responsible for
+making an electronic file available, other than a publisher or
+distributor.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>availability</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>supplies information about the availability of a text, for
+example any restrictions on its use or distribution, its copyright
+status, etc.
+      [<tei:emph>Attributes</tei:emph>: status]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>back</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains any appendixes, etc. following the main part of a
+text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring]
+    </tei:item>
+  <tei:label><tei:gi>bibl</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a loosely-structured bibliographic citation of which
+the sub-components may or may not be explicitly tagged. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.bibl, tei.declarable, tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>biblFull</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a fully-structured bibliographic citation, in which all
+components of the TEI file description
+are present.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.bibl, tei.declarable]
+    </tei:item>
+  <tei:label><tei:gi>biblItem</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a bibliographic citation in which only bibliographic
+  subelements appear.
+      [<tei:emph>Attributes</tei:emph>: form, role, status]
+      [<tei:emph>Classes</tei:emph>: tei.bibl, tei.declarable, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>biblScope</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>defines the scope of a bibliographic reference, for example as a
+list of pagenumbers, or a named subdivision of a larger work.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.biblPart]
+    </tei:item>
+  <tei:label><tei:gi>bicond</tei:gi>
+    (<tei:emph>declarefs</tei:emph>)</tei:label>
+  <tei:item>defines a biconditional feature-structure constraint; both
+consequent and antecedent are specified as feature structures or groups
+of feature structures; the constraint is satisfied if both
+subsume a given feature structure, or if both do not.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>binary</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>represents the value part of a feature-value specification which can contain either
+  of exactly two possible values.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>value</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.singleVal]
+    </tei:item>
+  <tei:label><tei:gi>binding</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a description of one binding, i.e. type of covering, boards, etc. applied to a manuscript
+      [<tei:emph>Attributes</tei:emph>: contemporary]
+      [<tei:emph>Classes</tei:emph>: tei.datable]
+    </tei:item>
+  <tei:label><tei:gi>bindingDesc</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>describes the present and former bindings of a manuscript, either
+as a series of paragraphs or as a series of distinct binding elements,
+one for each binding of the manuscript. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>birth</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>contains information about a person's birth, such as its date
+and place.
+      [<tei:emph>Attributes</tei:emph>: date]
+      [<tei:emph>Classes</tei:emph>: tei.demographic]
+    </tei:item>
+  <tei:label><tei:gi>bloc</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>a geo-political unit containing one or more nation states.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.names, tei.placePart, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>body</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains the whole body of a single unitary text, excluding any front or back matter.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring]
+    </tei:item>
+  <tei:label><tei:gi>broadcast</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>describes a broadcast used as the source of a spoken text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable]
+    </tei:item>
+  <tei:label><tei:gi>byline</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains the primary statement of responsibility given for a work
+on its title page or at the head or end of the work.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.divbot, tei.divtop, tei.fmchunk, tei.tpParts]
+    </tei:item>
+  <tei:label><tei:gi>c</tei:gi>
+    (<tei:emph>analysis</tei:emph>)</tei:label>
+  <tei:item>represents a character.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.seg]
+    </tei:item>
+  <tei:label><tei:gi>caesura</tei:gi>
+    (<tei:emph>verse</tei:emph>)</tei:label>
+  <tei:item>marks the point at which a metrical line may be divided.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.phrase.verse]
+    </tei:item>
+  <tei:label><tei:gi>camera</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>describes a particular camera angle or viewpoint in a screen play.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.stageDirection]
+    </tei:item>
+  <tei:label><tei:gi>caption</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>contains the text of a caption or other text displayed as part of
+a film script or screenplay.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.stageDirection]
+    </tei:item>
+  <tei:label><tei:gi>case</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains grammatical case information given by a dictionary for a given form.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.morphInfo]
+    </tei:item>
+  <tei:label><tei:gi>castGroup</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>groups one or more individual castItem
+elements within a cast list.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>castItem</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>contains a single entry within a cast list, describing
+either a single role or a list of non-speaking roles.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>castList</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>contains a single cast list or dramatis personae.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.comp.drama, tei.dramafront, tei.inter]
+    </tei:item>
+  <tei:label><tei:gi>catDesc</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>describes some category within a taxonomy
+or text typology, either in the form of a brief prose description
+or in terms of the situational parameters used by the TEI
+formal textDesc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>catRef</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>specifies one or more defined categories
+within some taxonomy or text typology.
+      [<tei:emph>Attributes</tei:emph>: scheme, <tei:hi>target</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>category</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>contains an individual descriptive category, possibly nested
+within a superordinate category, within a user-defined taxonomy.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>cb</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>marks the boundary between one column of a text and the next
+in a standard reference system.
+      [<tei:emph>Attributes</tei:emph>: ed]
+      [<tei:emph>Classes</tei:emph>: tei.refsys]
+    </tei:item>
+  <tei:label><tei:gi>cell</tei:gi>
+    (<tei:emph>figures</tei:emph>)</tei:label>
+  <tei:item>contains one cell of a table. 
+      [<tei:emph>Attributes</tei:emph>: cols, role, rows]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>certainty</tei:gi>
+    (<tei:emph>certainty</tei:emph>)</tei:label>
+  <tei:item>indicates the degree of certainty or uncertainty associated with
+some aspect of the text markup.
+ 
+      [<tei:emph>Attributes</tei:emph>: assertedValue, degree, desc, given, <tei:hi>locus</tei:hi>, <tei:hi>target</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.metadata]
+    </tei:item>
+  <tei:label><tei:gi>change</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>summarizes a particular change or correction made
+to a particular version of an electronic text which is
+shared between several researchers.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>channel</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes the medium or channel by which a text is delivered or
+experienced. For a written text, this might be print, manuscript, e-mail, etc.;
+for a spoken one, radio, telephone, face-to-face, etc.
+      [<tei:emph>Attributes</tei:emph>: mode]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>char</tei:gi>
+    (<tei:emph>gaiji</tei:emph>)</tei:label>
+  <tei:item>provides descriptive information about a character. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>charDesc</tei:gi>
+    (<tei:emph>gaiji</tei:emph>)</tei:label>
+  <tei:item>provides descriptive information about characters or
+glyphs. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.encoding]
+    </tei:item>
+  <tei:label><tei:gi>charName</tei:gi>
+    (<tei:emph>gaiji</tei:emph>)</tei:label>
+  <tei:item>contains the name of a character, expressed following Unicode conventions. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>charProp</tei:gi>
+    (<tei:emph>gaiji</tei:emph>)</tei:label>
+  <tei:item>provides a name and value for some property of the parent
+character or glyph. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>choice</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>groups a number of alternative encodings for the same point in
+  a text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.chooseable, tei.edit]
+    </tei:item>
+  <tei:label><tei:gi>cit</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>A quotation from some other document, together with a bibliographic
+reference to its source.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.hqinter]
+    </tei:item>
+  <tei:label><tei:gi>cl</tei:gi>
+    (<tei:emph>analysis</tei:emph>)</tei:label>
+  <tei:item>represents a grammatical clause.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.seg]
+    </tei:item>
+  <tei:label><tei:gi>classCode</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>contains the classification code used for this text in some
+standard classification system.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>scheme</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>classDecl</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>contains one or more taxonomies defining any classificatory
+codes used elsewhere in the text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.encoding]
+    </tei:item>
+  <tei:label><tei:gi>classSpec</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains reference information for a TEI element class; 
+that is a group of 
+  elements which appear together in  content models, or 
+  which share some common attribute, or both.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>type</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.identifiable, tei.oddDecl]
+    </tei:item>
+  <tei:label><tei:gi>classes</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>specifies all the classes of which the documented element or
+class is a member or subclass.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>closer</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>groups together dateline, byline, salutation, and similar
+phrases appearing as a final group at the end of a
+division, especially of a letter.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.divbot]
+    </tei:item>
+  <tei:label><tei:gi>code</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains literal code
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.oddPhr]
+    </tei:item>
+  <tei:label><tei:gi>col</tei:gi>
+    (<tei:emph>concurrent-decl</tei:emph>)</tei:label>
+  <tei:item>contains one column of a multi-column reference edition.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>coll</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>represents the value part of a feature-value specification
+  which contains multiple values organized as a set, bag, or list.
+      [<tei:emph>Attributes</tei:emph>: org]
+      [<tei:emph>Classes</tei:emph>: tei.complexVal]
+    </tei:item>
+  <tei:label><tei:gi>collation</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a description of how the leaves or bifolia are physically
+arranged.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>collection</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains the name of a collection of
+manuscripts, not necessarily located within a single repository. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.names]
+    </tei:item>
+  <tei:label><tei:gi>colloc</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains a collocate of the headword.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.gramInfo]
+    </tei:item>
+  <tei:label><tei:gi>colophon</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains the text of any colophon
+attached to a particular manuscript item: that is, an inscription,
+usually found at a break point such as the end of a text or codex,
+usually containing information about the production of the manuscript,
+such as the name of the scribe, the date and place of the copying, the
+person who commissioned the copying, etc. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>cond</tei:gi>
+    (<tei:emph>declarefs</tei:emph>)</tei:label>
+  <tei:item>defines a conditional feature-structure constraint; the consequent
+and the antecedent are specified as feature structures or
+feature-structure groups; the constraint is satisfied if both the
+antecedent and the consequent subsume a given feature
+structure, or if the antecedent does not.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>condition</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a description of the physical
+condition of the manuscript.  
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>constitution</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes the internal composition of a text or text sample,
+for example
+as fragmentary, complete, etc.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>content</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains the text of a declaration for the schema
+documented.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>corr</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains the correct form of a passage apparently erroneous in the copy text.
+      [<tei:emph>Attributes</tei:emph>: cert, resp]
+      [<tei:emph>Classes</tei:emph>: tei.chooseable, tei.edit]
+    </tei:item>
+  <tei:label><tei:gi>correction</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>states how and under what circumstances corrections have been
+made in the text.
+      [<tei:emph>Attributes</tei:emph>: method, status]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.policy]
+    </tei:item>
+  <tei:label><tei:gi>country</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>in an address, gives the name of the nation, country, colony, or
+commonwealth; in a place name given as a hierarchy of geo-political
+units, the country is larger or administratively superior
+to the region and smaller than the bloc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.names, tei.placePart, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>creation</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>contains information about the creation of a text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>custEvent</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>describes a single event during the custodial history of a manuscript.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.datable]
+    </tei:item>
+  <tei:label><tei:gi>custodialHist</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a description of a manuscript's custodial history, either
+as running prose or as a series of dated custodial events. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>damage</tei:gi>
+    (<tei:emph>transcr</tei:emph>)</tei:label>
+  <tei:item>contains an area of damage to the text witness.
+      [<tei:emph>Attributes</tei:emph>: agent, degree, extent, hand, resp, type]
+      [<tei:emph>Classes</tei:emph>: tei.edit]
+    </tei:item>
+  <tei:label><tei:gi>datatype</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>specifies the declared value for an attribute, by referring to
+  any datatype defined by the chosen schema language.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>date</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a date in any format.
+      [<tei:emph>Attributes</tei:emph>: calendar, certainty, value]
+      [<tei:emph>Classes</tei:emph>: tei.data, tei.date]
+    </tei:item>
+  <tei:label><tei:gi>dateRange</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains two dates or another phrase delimiting a time period.
+      [<tei:emph>Attributes</tei:emph>: calendar, exact, from, to]
+      [<tei:emph>Classes</tei:emph>: tei.data, tei.date]
+    </tei:item>
+  <tei:label><tei:gi>dateStruct</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains an internally structured representation of a date.
+      [<tei:emph>Attributes</tei:emph>: calendar, exact]
+      [<tei:emph>Classes</tei:emph>: tei.data, tei.date, tei.temporalExpr]
+    </tei:item>
+  <tei:label><tei:gi>dateline</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a brief description of the place, date, time, etc. of
+	production of a letter, newspaper story, or other work, prefixed or
+	suffixed to it as a kind of heading or trailer. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.divbot, tei.divtop]
+    </tei:item>
+  <tei:label><tei:gi>day</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>the day component of a structured date.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.temporalExpr]
+    </tei:item>
+  <tei:label><tei:gi>decoDesc</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a description of the decoration of a manuscript, either as a sequence of paragraphs, or as a sequence of topically organised decoNote elements.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>decoNote</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a note describing either a
+decorative component of a manuscript, or a fairly homogenous class of
+such components.
+      [<tei:emph>Attributes</tei:emph>: subtype, type]
+      [<tei:emph>Classes</tei:emph>: tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>def</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains definition text in a dictionary entry.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.dictionaryTopLevel]
+    </tei:item>
+  <tei:label><tei:gi>default</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>represents the value part of a feature-value specification
+  which contains a defaulted value.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.singleVal]
+    </tei:item>
+  <tei:label><tei:gi>defaultVal</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>specifies the default declared value for an attribute.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>del</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a letter, word or passage deleted, marked as deleted,
+or otherwise indicated as superfluous or spurious in the copy text by an
+author, scribe, annotator, or corrector.
+      [<tei:emph>Attributes</tei:emph>: cert, hand, resp, status, type]
+      [<tei:emph>Classes</tei:emph>: tei.edit]
+    </tei:item>
+  <tei:label><tei:gi>delSpan</tei:gi>
+    (<tei:emph>transcr</tei:emph>)</tei:label>
+  <tei:item>marks the beginning of a longer sequence of text deleted,
+marked as deleted, or otherwise signaled as superfluous or spurious by an
+author, scribe, annotator, or corrector.
+      [<tei:emph>Attributes</tei:emph>: cert, hand, resp, status, <tei:hi>to</tei:hi>, type]
+      [<tei:emph>Classes</tei:emph>: tei.editIncl]
+    </tei:item>
+  <tei:label><tei:gi>depth</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a measurement measured across the spine. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.measured]
+    </tei:item>
+  <tei:label><tei:gi>derivation</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes the nature and extent of originality of this text.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>desc</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a brief description of the purpose and application for
+an element, attribute, or attribute value.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>dictScrap</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>encloses a part of a dictionary entry in which other phrase-level dictionary elements are
+        freely combined.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaryTopLevel]
+    </tei:item>
+  <tei:label><tei:gi>dicteg</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>(in a dictionary) contains an example text containing at least one occurrence of the word
+        form, used in the sense being described; examples may be quoted from (named) authors or contrived.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.dictionaryTopLevel, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>dimensions</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains any kind of dimensional specification. 
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.data, tei.measured]
+    </tei:item>
+  <tei:label><tei:gi>distance</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>that part of a relative temporal or spatial expression which indicates
+the distance between the place or time denoted by it and the place or
+time referred to within it.
+      [<tei:emph>Attributes</tei:emph>: exact]
+      [<tei:emph>Classes</tei:emph>: tei.placePart, tei.temporalExpr]
+    </tei:item>
+  <tei:label><tei:gi>distinct</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>identifies any word or phrase which is regarded as linguistically
+distinct, for example as archaic, technical, dialectal, non-preferred,
+etc., or as forming part of a sublanguage. 
+      [<tei:emph>Attributes</tei:emph>: social, space, time, type]
+      [<tei:emph>Classes</tei:emph>: tei.hqphrase]
+    </tei:item>
+  <tei:label><tei:gi>distributor</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>supplies the name of a person or other agency responsible for the
+distribution of a text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.biblPart]
+    </tei:item>
+  <tei:label><tei:gi>div</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a subdivision of the front, body, or back of a
+text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>div0</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains the largest possible subdivision of the body
+of a text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>div1</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a first-level subdivision of the front, body, or back
+of a text (the largest, if
+div0 is not used, the second largest if it is).
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>div2</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a second-level subdivision of the front, body, or back of a
+ text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>div3</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a third-level subdivision of the front, body, or back of a
+ text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>div4</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a fourth-level subdivision of the front, body, or back of a
+ text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>div5</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a fifth-level subdivision of the front, body, or back of a
+ text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>div6</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a sixth-level subdivision of the front, body, or back of a
+ text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>div7</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains the smallest possible subdivision of the front, body or
+back of a text, larger than a paragraph.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>divGen</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>indicates the location at which a textual division generated
+automatically by a text-processing application is to appear.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.front]
+    </tei:item>
+  <tei:label><tei:gi>docAuthor</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains the name of the author of the document, as given on the
+title page (often but not always contained in a byline).
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.divtop, tei.fmchunk, tei.tpParts]
+    </tei:item>
+  <tei:label><tei:gi>docDate</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains the date of a document, as given
+(usually) on a title page.
+      [<tei:emph>Attributes</tei:emph>: value]
+      [<tei:emph>Classes</tei:emph>: tei.divtop, tei.fmchunk, tei.tpParts]
+    </tei:item>
+  <tei:label><tei:gi>docEdition</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains an edition statement as presented on a title page of a
+document.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.fmchunk, tei.tpParts]
+    </tei:item>
+  <tei:label><tei:gi>docImprint</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains the imprint statement (place and date of publication,
+publisher name), as given
+(usually) at the foot of a title page.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.fmchunk, tei.tpParts]
+    </tei:item>
+  <tei:label><tei:gi>docTitle</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains the title of a document, including all its
+constituents, as given on a title page.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.fmchunk, tei.tpParts]
+    </tei:item>
+  <tei:label><tei:gi>domain</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes the most important social context in which the text was
+realized or for which it is intended, for example private vs. public,
+education, religion, etc.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>eLeaf</tei:gi>
+    (<tei:emph>nets</tei:emph>)</tei:label>
+  <tei:item>provides explicitly for a leaf of an embedding tree, which may also
+be encoded with the eTree element.
+      [<tei:emph>Attributes</tei:emph>: label, value]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>eTree</tei:gi>
+    (<tei:emph>nets</tei:emph>)</tei:label>
+  <tei:item>provides an alternative to tree element for representing
+ordered rooted tree structures.
+      [<tei:emph>Attributes</tei:emph>: label, value]
+      [<tei:emph>Classes</tei:emph>: tei.chunk]
+    </tei:item>
+  <tei:label><tei:gi>edition</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>describes the particularities of one edition of a text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.biblPart]
+    </tei:item>
+  <tei:label><tei:gi>editionStmt</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>groups information relating to one edition of a text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>editor</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>secondary statement of responsibility for a
+bibliographic item, for example the name of an individual, institution
+or organization, (or of several such) acting as editor, compiler,
+translator, etc. 
+      [<tei:emph>Attributes</tei:emph>: role]
+      [<tei:emph>Classes</tei:emph>: tei.biblPart]
+    </tei:item>
+  <tei:label><tei:gi>editorialDecl</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>provides details of editorial principles and practices applied
+during the encoding of a text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.encoding]
+    </tei:item>
+  <tei:label><tei:gi>education</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>contains a brief prose description of the
+educational background of a participant.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.demographic]
+    </tei:item>
+  <tei:label><tei:gi>eg</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains any kind of illustrative example. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.common, tei.data]
+    </tei:item>
+  <tei:label><tei:gi>egXML</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains a single well-formed XML example demonstrating the use of some XML element or
+  attribute. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.common, tei.data]
+    </tei:item>
+  <tei:label><tei:gi>elementSpec</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>documents the structure, content, and purpose of a single
+element type.
+      [<tei:emph>Attributes</tei:emph>: ns, usage]
+      [<tei:emph>Classes</tei:emph>: tei.identifiable, tei.oddDecl]
+    </tei:item>
+  <tei:label><tei:gi>emph</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>marks words or phrases which are stressed or emphasized for
+linguistic or rhetorical effect.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.hqphrase]
+    </tei:item>
+  <tei:label><tei:gi>encodingDesc</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>documents the relationship between an electronic text and the
+source or sources from which it was derived.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.header]
+    </tei:item>
+  <tei:label><tei:gi>entry</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains a reasonably well-structured dictionary entry.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.comp.dictionaries, tei.entries]
+    </tei:item>
+  <tei:label><tei:gi>entryFree</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains a dictionary entry which does not necessarily conform to the constraints imposed
+        by the entry element.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.comp.dictionaries, tei.dictionaries, tei.entries]
+    </tei:item>
+  <tei:label><tei:gi>epigraph</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a quotation, anonymous or attributed, appearing at
+the start of a section or chapter, or on a title page. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.divbot, tei.divtop, tei.fmchunk, tei.tpParts]
+    </tei:item>
+  <tei:label><tei:gi>epilogue</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>contains the epilogue to a drama,  typically spoken by an actor
+out of character, possibly in association with a particular performance
+or venue.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dramafront]
+    </tei:item>
+  <tei:label><tei:gi>equipment</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>provides technical details of the equipment and media used for
+an audio or video recording used as the source for a spoken text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable]
+    </tei:item>
+  <tei:label><tei:gi>equiv</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>specifies a component which is considered equivalent to the
+  parent element, either by co-reference, or by external link.
+      [<tei:emph>Attributes</tei:emph>: name, uri]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>etym</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>encloses the etymological information in a dictionary entry.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.dictionaryTopLevel]
+    </tei:item>
+  <tei:label><tei:gi>event</tei:gi>
+    (<tei:emph>spoken</tei:emph>)</tei:label>
+  <tei:item>any phenomenon or occurrence, not necessarily vocalized or
+communicative, for example incidental noises or other events affecting
+communication.
+      [<tei:emph>Attributes</tei:emph>: desc, iterated, who]
+      [<tei:emph>Classes</tei:emph>: tei.comp.spoken, tei.timed]
+    </tei:item>
+  <tei:label><tei:gi>exemplum</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains a single example demonstrating the use of an element,
+  together with optional paragraphs of commentary.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>expan</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains the expansion of an abbreviation.
+      [<tei:emph>Attributes</tei:emph>: cert, resp]
+      [<tei:emph>Classes</tei:emph>: tei.chooseable, tei.data]
+    </tei:item>
+  <tei:label><tei:gi>explicit</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains the text of any explicit attached 
+to a particular manuscript item, that is, the closing words of a text or a section of
+a text, sometimes used as a kind of title,  possibly followed by one or more rubrics or colophons.
+  
+      [<tei:emph>Attributes</tei:emph>: defective, type]
+      [<tei:emph>Classes</tei:emph>: tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>extent</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>describes the approximate size of the electronic text as stored on
+some carrier medium, specified in any convenient units.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.biblPart]
+    </tei:item>
+  <tei:label><tei:gi>f</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>represents a feature value specification, that
+  is, the association of a name with a value of any of several different types.
+      [<tei:emph>Attributes</tei:emph>: fVal, <tei:hi>name</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>fDecl</tei:gi>
+    (<tei:emph>declarefs</tei:emph>)</tei:label>
+  <tei:item>declares a single feature, specifying its name, organization,
+range of allowed values, and optionally its default value.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>name</tei:hi>, org]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>fDescr</tei:gi>
+    (<tei:emph>declarefs</tei:emph>)</tei:label>
+  <tei:item>describes in prose what is represented by the feature being
+declared and its values.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>fLib</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>assembles library of feature elements.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.metadata]
+    </tei:item>
+  <tei:label><tei:gi>factuality</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes the extent to which the text may be regarded as
+imaginative or non-imaginative, that is, as describing a fictional
+or a non-fictional world. 
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>figDesc</tei:gi>
+    (<tei:emph>figures</tei:emph>)</tei:label>
+  <tei:item>contains a brief prose description of the appearance or content
+of a graphic figure, for use when documenting an image without
+displaying it.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>figure</tei:gi>
+    (<tei:emph>figures</tei:emph>)</tei:label>
+  <tei:item>contains a block containing graphics, illustrations, or figures.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.common, tei.inter, tei.tpParts]
+    </tei:item>
+  <tei:label><tei:gi>fileDesc</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>contains a full bibliographic description of an electronic
+file.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>filiation</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains information concerning the manuscript's filiation, i.e. its relationship to other surviving manuscripts of the same text, its protographs, antigraphs and apographs.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.msItemPart, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>finalRubric</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains the text of any rubric or heading attached to a particular manuscript item, that is, a  string of words whereby a
+manuscript signals a text division (e.g. beginning, book, chapter, end)
+which is in some way set off from the text itself, usually in red ink,or by use of different size or type of script, lining, or other such visual device.  
+. 
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>firstLang</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>specifies the first language of a participant.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.demographic]
+    </tei:item>
+  <tei:label><tei:gi>foliation</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>describes the numbering system or systems used to 
+count the leaves or pages in a codex.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>foreName</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains a forename, given or baptismal name.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.personPart]
+    </tei:item>
+  <tei:label><tei:gi>foreign</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>identifies a word or phrase as belonging to some language other
+than that of the surrounding text. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.hqphrase]
+    </tei:item>
+  <tei:label><tei:gi>forest</tei:gi>
+    (<tei:emph>nets</tei:emph>)</tei:label>
+  <tei:item>provides for groups of rooted trees.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>forestGrp</tei:gi>
+    (<tei:emph>nets</tei:emph>)</tei:label>
+  <tei:item>provides for groups of forests.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>form</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>groups all the information on the written and spoken forms of one headword.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.dictionaryTopLevel, tei.formInfo]
+    </tei:item>
+  <tei:label><tei:gi>formula</tei:gi>
+    (<tei:emph>figures</tei:emph>)</tei:label>
+  <tei:item>contains a mathematical or other formula.
+      [<tei:emph>Attributes</tei:emph>: notation]
+      [<tei:emph>Classes</tei:emph>: tei.phrase]
+    </tei:item>
+  <tei:label><tei:gi>fragmentPattern</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>specifies an expression and replacement pattern for
+  tranforming a canonical reference into a URI
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>pat</tei:hi>, <tei:hi>re</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>front</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains any prefatory matter (headers,
+title page, prefaces, dedications, etc.)
+found  at the start of a document, before the main body.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring]
+    </tei:item>
+  <tei:label><tei:gi>fs</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>represents a feature structure, that is, a
+  collection of feature-value pairs organized as a
+structural unit.
+      [<tei:emph>Attributes</tei:emph>: feats, type]
+      [<tei:emph>Classes</tei:emph>: tei.complexVal, tei.metadata]
+    </tei:item>
+  <tei:label><tei:gi>fsConstraints</tei:gi>
+    (<tei:emph>declarefs</tei:emph>)</tei:label>
+  <tei:item>specifies constraints on the content of well formed feature
+structures.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>fsDecl</tei:gi>
+    (<tei:emph>declarefs</tei:emph>)</tei:label>
+  <tei:item>declares one type of feature structure.
+      [<tei:emph>Attributes</tei:emph>: baseType, <tei:hi>type</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>fsDescr</tei:gi>
+    (<tei:emph>declarefs</tei:emph>)</tei:label>
+  <tei:item>describes in prose what is represented by the type of feature
+structure declared in the enclosing fsDecl.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>fsdDecl</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>identifies the feature system declaration which contains
+definitions for a particular type of feature structure.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>type</tei:hi>, <tei:hi>url</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.encoding]
+    </tei:item>
+  <tei:label><tei:gi>funder</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>specifies the name of an individual, institution, or organization
+responsible for the funding of a project or text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>fvLib</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>assembles a library of reusable feature value elements
+  (including complete feature structures).
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.metadata]
+    </tei:item>
+  <tei:label><tei:gi>fw</tei:gi>
+    (<tei:emph>transcr</tei:emph>)</tei:label>
+  <tei:item>contains a running head (e.g. a header,
+footer), catchword, or similar material
+appearing on the current page.
+      [<tei:emph>Attributes</tei:emph>: place, type]
+      [<tei:emph>Classes</tei:emph>: tei.refsys]
+    </tei:item>
+  <tei:label><tei:gi>g</tei:gi>
+    (<tei:emph>gaiji</tei:emph>)</tei:label>
+  <tei:item>represents a non-standard character or glyph.
+      [<tei:emph>Attributes</tei:emph>: ref]
+      [<tei:emph>Classes</tei:emph>: tei.Incl, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>gap</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>indicates a point where material has been omitted in a
+transcription, whether for editorial reasons described in the TEI
+header, as part of sampling practice, or because the material is
+illegible or inaudible.
+      [<tei:emph>Attributes</tei:emph>: agent, desc, extent, hand, reason, resp]
+      [<tei:emph>Classes</tei:emph>: tei.editIncl]
+    </tei:item>
+  <tei:label><tei:gi>gen</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>identifies the morphological gender of a lexical item, as given in the dictionary.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.morphInfo]
+    </tei:item>
+  <tei:label><tei:gi>genName</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains a name component used to indicating generational
+information, such as Junior, or a number used in a monarch's
+name.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.personPart]
+    </tei:item>
+  <tei:label><tei:gi>geog</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains a common noun identifying some geographical feature 
+contained within a geographic name, such as valley,
+mount etc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.names, tei.placePart, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>geogName</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>a name associated with  some geographical feature such as
+ Windrush Valley or Mount Sinai.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.data, tei.names]
+    </tei:item>
+  <tei:label><tei:gi>gi</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains the name (generic identifier) of an element.
+      [<tei:emph>Attributes</tei:emph>: scheme]
+      [<tei:emph>Classes</tei:emph>: tei.oddPhr]
+    </tei:item>
+  <tei:label><tei:gi>gloss</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>identifies a phrase or word used to provide a gloss or
+  definition for some other word or phrase.
+      [<tei:emph>Attributes</tei:emph>: cref, target]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.hqphrase]
+    </tei:item>
+  <tei:label><tei:gi>glyph</tei:gi>
+    (<tei:emph>gaiji</tei:emph>)</tei:label>
+  <tei:item>provides descriptive information about a character glyph. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>glyphName</tei:gi>
+    (<tei:emph>gaiji</tei:emph>)</tei:label>
+  <tei:item>contains the name of a glyph, expressed following Unicode
+conventions for character names. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>gram</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>within an entry in a dictionary or a terminological data file, contains grammatical
+        information relating to a term, word, or form.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.morphInfo]
+    </tei:item>
+  <tei:label><tei:gi>gramGrp</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>groups morpho-syntactic information about a lexical item, e.g. pos, gen, number, case, or
+        itype (inflectional class).
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.dictionaryTopLevel, tei.gramInfo]
+    </tei:item>
+  <tei:label><tei:gi>graph</tei:gi>
+    (<tei:emph>nets</tei:emph>)</tei:label>
+  <tei:item>encodes a graph, which is a collection of nodes, and arcs which
+connect the nodes.
+      [<tei:emph>Attributes</tei:emph>: label, order, size, type]
+      [<tei:emph>Classes</tei:emph>: tei.chunk]
+    </tei:item>
+  <tei:label><tei:gi>graphic</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>indicates the location of an inline graphic, illustration, or figure.
+      [<tei:emph>Attributes</tei:emph>: height, scale, url, width]
+      [<tei:emph>Classes</tei:emph>: tei.phrase, tei.tpParts]
+    </tei:item>
+  <tei:label><tei:gi>group</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains the body of a composite text, grouping together a
+sequence of distinct texts (or groups of such texts) which are regarded
+as a unit for some purpose, for example the collected works of an
+author, a sequence of prose essays, etc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring]
+    </tei:item>
+  <tei:label><tei:gi>hand</tei:gi>
+    (<tei:emph>transcr</tei:emph>)</tei:label>
+  <tei:item>used in the header to define each distinct scribe or
+handwriting style.
+      [<tei:emph>Attributes</tei:emph>: character, first, hand, ink, mainLang, resp, scribe, style]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>handDesc</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a description of all the different kinds of writing  used in a manuscript.
+      [<tei:emph>Attributes</tei:emph>: hands]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>handList</tei:gi>
+    (<tei:emph>transcr</tei:emph>)</tei:label>
+  <tei:item>contains a series of hand elements listing the
+different hands of the source.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.profile]
+    </tei:item>
+  <tei:label><tei:gi>handNote</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>describes a particular style
+or hand distinguished within a manuscript.
+      [<tei:emph>Attributes</tei:emph>: medium, scope, scribe, script]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>handShift</tei:gi>
+    (<tei:emph>transcr</tei:emph>)</tei:label>
+  <tei:item>marks the beginning of a sequence of text written in a new
+hand, or of a change in the scribe, writing style, ink or character
+of the document hand.
+      [<tei:emph>Attributes</tei:emph>: character, ink, <tei:hi>new</tei:hi>, <tei:hi>old</tei:hi>, resp, style]
+      [<tei:emph>Classes</tei:emph>: tei.phrase, tei.profile]
+    </tei:item>
+  <tei:label><tei:gi>head</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains any heading, for example, the title of a section,
+or the heading of a list or glossary.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.divtop, tei.fmchunk]
+    </tei:item>
+  <tei:label><tei:gi>headItem</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains the heading for the item or gloss column in a
+glossary list or similar structured list.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>headLabel</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains the heading for the label or term column in a
+glossary list or similar structured list.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>height</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a measurement measured along the axis parallel to the spine. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.measured]
+    </tei:item>
+  <tei:label><tei:gi>heraldry</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a heraldic formula
+or phrase, typically found as part of a blazon, coat of arms, etc. 
+within a manuscript .
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.phrase]
+    </tei:item>
+  <tei:label><tei:gi>hi</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>marks a word or phrase as graphically distinct from the
+surrounding text, for reasons concerning which no claim is
+made. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.hqphrase]
+    </tei:item>
+  <tei:label><tei:gi>history</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item> groups elements
+describing the full history of a manuscript or manuscript part.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>hom</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>groups information relating to one homograph within an entry.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts]
+    </tei:item>
+  <tei:label><tei:gi>hour</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>the hour component of a temporal expression
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.temporalExpr]
+    </tei:item>
+  <tei:label><tei:gi>hyph</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains a hyphenated form of a dictionary headword, or hyphenation information in some
+        other form.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.formInfo]
+    </tei:item>
+  <tei:label><tei:gi>hyphenation</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>summarizes the way in which hyphenation in a source text has been
+treated in an encoded version of it.
+      [<tei:emph>Attributes</tei:emph>: eol]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.policy]
+    </tei:item>
+  <tei:label><tei:gi>iNode</tei:gi>
+    (<tei:emph>nets</tei:emph>)</tei:label>
+  <tei:item>represents an intermediate (or internal) node of a tree.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>children</tei:hi>, follow, label, ord, outDegree, parent, value]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>ident</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>identifies or names any kind of object
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.oddPhr, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>idno</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>supplies any standard or non-standard number used to identify a
+bibliographic item.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.biblPart]
+    </tei:item>
+  <tei:label><tei:gi>if</tei:gi>
+    (<tei:emph>declarefs</tei:emph>)</tei:label>
+  <tei:item>defines a conditional default value for a feature; the condition
+is specified as a feature structure, and is met if it
+subsumes the feature structure in the text for which a
+default value is sought.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>iff</tei:gi>
+    (<tei:emph>declarefs</tei:emph>)</tei:label>
+  <tei:item>separates the condition from the consequence in a bicond
+element.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>imprimatur</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a formal statement authorizing the publication of
+a work, sometimes required to appear on a title page or its verso.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.tpParts]
+    </tei:item>
+  <tei:label><tei:gi>imprint</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>groups information relating to the publication or distribution
+of a bibliographic item.  
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.biblPart]
+    </tei:item>
+  <tei:label><tei:gi>incipit</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains the text of any incipit
+attached to a particular manuscript item, that is the opening words of
+a text, frequently used as a form of identifier for it; it may be
+preceded by one or more rubrics, and may be defective.
+
+      [<tei:emph>Attributes</tei:emph>: defective, type]
+      [<tei:emph>Classes</tei:emph>: tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>index</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>marks a location to be indexed for whatever purpose.
+      [<tei:emph>Attributes</tei:emph>: index, <tei:hi>level1</tei:hi>, level2, level3, level4]
+      [<tei:emph>Classes</tei:emph>: tei.metadata]
+    </tei:item>
+  <tei:label><tei:gi>institution</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains the name of an
+organization, such as a University or Library, within which a
+manuscript repository is located. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.names]
+    </tei:item>
+  <tei:label><tei:gi>interaction</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes the extent, cardinality and nature of any interaction
+among those producing and experiencing the text, for example in the
+form of response or interjection, commentary etc.
+      [<tei:emph>Attributes</tei:emph>: active, passive, type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>interp</tei:gi>
+    (<tei:emph>analysis</tei:emph>)</tei:label>
+  <tei:item>provides for an interpretative annotation which can be
+linked to a span of text.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>value</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.interpret, tei.metadata]
+    </tei:item>
+  <tei:label><tei:gi>interpGrp</tei:gi>
+    (<tei:emph>analysis</tei:emph>)</tei:label>
+  <tei:item>collects together interp tags.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.interpret, tei.metadata]
+    </tei:item>
+  <tei:label><tei:gi>interpretation</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>describes the scope of any analytic or interpretive information
+added to the text in addition to the transcription. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.policy]
+    </tei:item>
+  <tei:label><tei:gi>item</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains one
+component of a list.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>itype</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>indicates the inflectional class associated with a lexical item.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.morphInfo]
+    </tei:item>
+  <tei:label><tei:gi>join</tei:gi>
+    (<tei:emph>linking</tei:emph>)</tei:label>
+  <tei:item>identifies a possibly fragmented segment of text, by pointing
+at the possibly discontiguous elements which compose it.
+      [<tei:emph>Attributes</tei:emph>: desc, result, scope, <tei:hi>targets</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.metadata, tei.pointer]
+    </tei:item>
+  <tei:label><tei:gi>joinGrp</tei:gi>
+    (<tei:emph>linking</tei:emph>)</tei:label>
+  <tei:item>groups a collection of join elements and possibly
+  pointers.
+      [<tei:emph>Attributes</tei:emph>: desc, result]
+      [<tei:emph>Classes</tei:emph>: tei.metadata, tei.pointerGroup]
+    </tei:item>
+  <tei:label><tei:gi>keywords</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>contains a list of keywords or phrases identifying the topic or
+nature of a text.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>scheme</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>kinesic</tei:gi>
+    (<tei:emph>spoken</tei:emph>)</tei:label>
+  <tei:item>any communicative phenomenon, not necessarily vocalized, for
+example a gesture, frown, etc.
+      [<tei:emph>Attributes</tei:emph>: desc, iterated, who]
+      [<tei:emph>Classes</tei:emph>: tei.comp.spoken, tei.timed]
+    </tei:item>
+  <tei:label><tei:gi>l</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a single, possibly incomplete, line of verse.
+      [<tei:emph>Attributes</tei:emph>: part]
+      [<tei:emph>Classes</tei:emph>: tei.chunk, tei.enjamb, tei.metrical]
+    </tei:item>
+  <tei:label><tei:gi>label</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains the label associated with an item in a list; in
+glossaries, marks the term being defined.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.lists]
+    </tei:item>
+  <tei:label><tei:gi>lacunaEnd</tei:gi>
+    (<tei:emph>textcrit</tei:emph>)</tei:label>
+  <tei:item>indicates the end of a lacuna in a mostly complete textual
+witness.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.fragmentary]
+    </tei:item>
+  <tei:label><tei:gi>lacunaStart</tei:gi>
+    (<tei:emph>textcrit</tei:emph>)</tei:label>
+  <tei:item>indicates the beginning of a lacuna in the text of a mostly
+complete textual witness.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.fragmentary]
+    </tei:item>
+  <tei:label><tei:gi>lang</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>name of a language mentioned in etymological or other linguistic discussion.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.data, tei.dictionaries]
+    </tei:item>
+  <tei:label><tei:gi>langKnown</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>contains an informal description of a person's competence in
+different languages, dialects, etc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.demographic]
+    </tei:item>
+  <tei:label><tei:gi>langUsage</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>describes the languages, sublanguages, registers, dialects etc.
+represented within a text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.profile]
+    </tei:item>
+  <tei:label><tei:gi>language</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>characterizes a single language or sublanguage used within a
+  text.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>ident</tei:hi>, usage]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>layout</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>describes how text is laid out on the page,
+including information about any ruling, pricking, or other evidence of
+page-preparation techniques.
+      [<tei:emph>Attributes</tei:emph>: columns, ruledLines, writtenLines]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>layoutDesc</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>collects the set of layout descriptions applicable to a manuscript.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>lb</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>marks the start of a new (typographic) line in some
+edition or version of a text.
+      [<tei:emph>Attributes</tei:emph>: ed]
+      [<tei:emph>Classes</tei:emph>: tei.refsys]
+    </tei:item>
+  <tei:label><tei:gi>lbl</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>in dictionaries, contains a label for a form, example, translation, or other piece of
+        information, e.g. abbreviation for, contraction of, literally, approximately, synonyms:, etc.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.formInfo, tei.gramInfo]
+    </tei:item>
+  <tei:label><tei:gi>leaf</tei:gi>
+    (<tei:emph>nets</tei:emph>)</tei:label>
+  <tei:item>encodes the leaves (terminal nodes) of a tree.
+      [<tei:emph>Attributes</tei:emph>: follow, label, parent, value]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>lem</tei:gi>
+    (<tei:emph>textcrit</tei:emph>)</tei:label>
+  <tei:item>contains the lemma, or base text, of a textual variation.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.readings]
+    </tei:item>
+  <tei:label><tei:gi>lg</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a group of verse lines functioning as a formal unit,
+e.g. a stanza, refrain, verse paragraph, etc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.chunk, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>lg1</tei:gi>
+    (<tei:emph>verse</tei:emph>)</tei:label>
+  <tei:item>contains a first-level (i.e. largest) group of verse lines
+functioning as a formal unit e.g. a stanza, refrain, verse paragraph,
+etc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.comp.verse, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>lg2</tei:gi>
+    (<tei:emph>verse</tei:emph>)</tei:label>
+  <tei:item>contains a second-level (i.e. second largest) group of verse lines
+functioning as a formal unit e.g. a stanza, refrain, verse paragraph,
+etc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.comp.verse, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>lg3</tei:gi>
+    (<tei:emph>verse</tei:emph>)</tei:label>
+  <tei:item>contains a third-level (i.e. third largest) group of verse lines
+functioning as a formal unit e.g. a stanza, refrain, verse paragraph,
+etc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.comp.verse, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>lg4</tei:gi>
+    (<tei:emph>verse</tei:emph>)</tei:label>
+  <tei:item>contains a fourth-level (i.e. fourth largest) group of verse lines
+functioning as a formal unit e.g. a stanza, refrain, verse paragraph,
+etc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.comp.verse, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>lg5</tei:gi>
+    (<tei:emph>verse</tei:emph>)</tei:label>
+  <tei:item>contains a fifth-level (i.e. smallest) group of verse lines
+functioning as a formal unit e.g. a stanza, refrain, verse paragraph,
+etc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.comp.verse, tei.divn]
+    </tei:item>
+  <tei:label><tei:gi>line</tei:gi>
+    (<tei:emph>concurrent-decl</tei:emph>)</tei:label>
+  <tei:item>contains one line of a reference edition.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>link</tei:gi>
+    (<tei:emph>linking</tei:emph>)</tei:label>
+  <tei:item>defines an association or hypertextual link
+among elements or passages, of some type
+not more precisely specifiable by other elements.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>targets</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.metadata, tei.pointer]
+    </tei:item>
+  <tei:label><tei:gi>linkGrp</tei:gi>
+    (<tei:emph>linking</tei:emph>)</tei:label>
+  <tei:item>defines a collection of associations or hypertextual links.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.metadata, tei.pointerGroup]
+    </tei:item>
+  <tei:label><tei:gi>list</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains any sequence of items organized as a list.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.lists]
+    </tei:item>
+  <tei:label><tei:gi>listBibl</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a list of bibliographic citations of any kind. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.lists, tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>listRef</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>supplies a list of significant references to places where this
+  element is discussed, in the current document or elsewhere.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.oddDecl]
+    </tei:item>
+  <tei:label><tei:gi>localName</tei:gi>
+    (<tei:emph>gaiji</tei:emph>)</tei:label>
+  <tei:item>contains a locally defined name for some property. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>locale</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>contains a brief informal description of the nature of a
+place for example a room, a restaurant, a park bench etc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>locus</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>defines a location  within a manuscript or manuscript part, usually as a (possibly discontinuous) sequence of folio references. 
+      [<tei:emph>Attributes</tei:emph>: from, scheme, targets, to]
+      [<tei:emph>Classes</tei:emph>: tei.phrase]
+    </tei:item>
+  <tei:label><tei:gi>m</tei:gi>
+    (<tei:emph>analysis</tei:emph>)</tei:label>
+  <tei:item>represents a grammatical morpheme.
+      [<tei:emph>Attributes</tei:emph>: baseForm]
+      [<tei:emph>Classes</tei:emph>: tei.seg]
+    </tei:item>
+  <tei:label><tei:gi>macroSpec</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>documents the function and implementation of a pattern. 
+      [<tei:emph>Attributes</tei:emph>: combine, type]
+      [<tei:emph>Classes</tei:emph>: tei.identifiable, tei.oddDecl]
+    </tei:item>
+  <tei:label><tei:gi>mapping</tei:gi>
+    (<tei:emph>gaiji</tei:emph>)</tei:label>
+  <tei:item>contains one or more
+	 characters which are related to the parent character or glyph
+	 in some respect, as specified by the type
+	 attribute.
+
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>material</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a phrase describing the material of which any part of a manuscript or binding is composed. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.phrase]
+    </tei:item>
+  <tei:label><tei:gi>measure</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a word or phrase referring to some quantity of
+an object or commodity, usually comprising a number, a unit, and a
+commodity name.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.data, tei.names]
+    </tei:item>
+  <tei:label><tei:gi>meeting</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>in bibliographic references,
+contains a description of the meeting or conference from which
+the bibliographic item derives.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>memberOf</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>specifies  class membership of the parent element or class.
+      [<tei:emph>Attributes</tei:emph>: key]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>mentioned</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>marks words or phrases mentioned, not used.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.hqphrase]
+    </tei:item>
+  <tei:label><tei:gi>metDecl</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>documents the notation employed to represent a metrical
+  pattern when this is specified as the value of a met,
+  real, or rhyme attribute on any structural
+  element of a metrical text (e.g. lg, l, or
+  seg).
+      [<tei:emph>Attributes</tei:emph>: pattern, type]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.encoding]
+    </tei:item>
+  <tei:label><tei:gi>metSym</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>documents the intended significance of a particular character or
+character sequence within a metrical notation, either explicitly or in
+terms of other symbol elements in the same metDecl.
+      [<tei:emph>Attributes</tei:emph>: terminal, <tei:hi>value</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>milestone</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>marks the boundary between sections of a text, as indicated by
+changes in a standard reference system.
+      [<tei:emph>Attributes</tei:emph>: ed, <tei:hi>unit</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.refsys]
+    </tei:item>
+  <tei:label><tei:gi>minute</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>the minute component of a structured time-expression.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.temporalExpr]
+    </tei:item>
+  <tei:label><tei:gi>moduleRef</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>references a module which is to be incorporated into a schema.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.oddRef]
+    </tei:item>
+  <tei:label><tei:gi>moduleSpec</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>documents the structure, content, and purpose of a single
+module, i.e. a named and externally visible group of declarations.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.identifiable, tei.oddDecl]
+    </tei:item>
+  <tei:label><tei:gi>month</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>the month component of a structured date.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.temporalExpr]
+    </tei:item>
+  <tei:label><tei:gi>mood</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains information about the grammatical mood of verbs (e.g. indicative, subjunctive, imperative)
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.morphInfo]
+    </tei:item>
+  <tei:label><tei:gi>move</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>marks the actual entrance or exit of one or more characters on stage.
+      [<tei:emph>Attributes</tei:emph>: perf, type, where, <tei:hi>who</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.stageDirection]
+    </tei:item>
+  <tei:label><tei:gi>msContents</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>describes the intellectual content of a
+manuscript or manuscript part either as a series of paragraphs or as a
+series of structured manuscript items. 
+      [<tei:emph>Attributes</tei:emph>: class, defective]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>msDescription</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a description of a single identifiable
+manuscript or manuscript part
+      [<tei:emph>Attributes</tei:emph>: status, type]
+      [<tei:emph>Classes</tei:emph>: tei.sourcedesc]
+    </tei:item>
+  <tei:label><tei:gi>msIdentifier</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains the information required to identify
+a given manuscript or manuscript part uniquely within its holding institution. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.biblPart]
+    </tei:item>
+  <tei:label><tei:gi>msItem</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>describes an individual work or item within the intellectual 
+content of a manuscript or manuscript part. 
+      [<tei:emph>Attributes</tei:emph>: class, defective]
+      [<tei:emph>Classes</tei:emph>: tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>msItemStruct</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a structured description for an individual work or item within the intellectual 
+content of a manuscript or manuscript part. 
+      [<tei:emph>Attributes</tei:emph>: class, defective]
+      [<tei:emph>Classes</tei:emph>: tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>msPart</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains information about an originally distinct manuscript or manuscript fragment now forming part of a composite manuscript.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>musicNotation</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains description of type of musical notation.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>name</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a proper noun or noun phrase.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.addrPart, tei.agent, tei.data, tei.names]
+    </tei:item>
+  <tei:label><tei:gi>nameLink</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains a connecting phrase or link used within a name but not
+regarded as part of it, such as  van der or of.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.personPart]
+    </tei:item>
+  <tei:label><tei:gi>node</tei:gi>
+    (<tei:emph>nets</tei:emph>)</tei:label>
+  <tei:item>encodes a node, a possibly labeled point in a graph.
+      [<tei:emph>Attributes</tei:emph>: adj, adjFrom, adjTo, degree, inDegree, label, label2, outDegree, type, value]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>normalization</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>indicates the extent of normalization or regularization of the
+original source carried out in converting it to electronic form.
+      [<tei:emph>Attributes</tei:emph>: method, source, uri]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.policy]
+    </tei:item>
+  <tei:label><tei:gi>note</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a note or
+annotation.
+      [<tei:emph>Attributes</tei:emph>: anchored, place, resp, target, targetEnd, type]
+      [<tei:emph>Classes</tei:emph>: tei.biblPart, tei.dictionaryTopLevel, tei.msItemPart, tei.notes]
+    </tei:item>
+  <tei:label><tei:gi>notesStmt</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>collects together any notes providing information about a text
+additional to that recorded in other parts of the bibliographic
+description.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>num</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a number, written in any form.
+      [<tei:emph>Attributes</tei:emph>: type, value]
+      [<tei:emph>Classes</tei:emph>: tei.data]
+    </tei:item>
+  <tei:label><tei:gi>number</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>indicates grammatical number associated with a form, as given in a dictionary.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.morphInfo]
+    </tei:item>
+  <tei:label><tei:gi>numeric</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>represents the value part of a feature-value specification
+  which contains a numeric value or range.
+      [<tei:emph>Attributes</tei:emph>: max, trunc, <tei:hi>value</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.singleVal]
+    </tei:item>
+  <tei:label><tei:gi>oRef</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>in a dictionary example, indicates a reference to the orthographic form(s) of the headword.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.formPointers]
+    </tei:item>
+  <tei:label><tei:gi>oVar</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>in a dictionary example, indicates a reference to variant orthographic form(s) of the headword.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.formPointers]
+    </tei:item>
+  <tei:label><tei:gi>objectDesc</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a description of the physical
+  components making up the object which is being described.
+      [<tei:emph>Attributes</tei:emph>: form]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>occasion</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>a temporal expression (either a date or a time)
+given in terms of a named occasion such as a holiday,
+a named time of day, or some notable event.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.temporalExpr]
+    </tei:item>
+  <tei:label><tei:gi>occupation</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>contains an informal description of a person's trade,
+profession or occupation.
+      [<tei:emph>Attributes</tei:emph>: code, scheme]
+      [<tei:emph>Classes</tei:emph>: tei.demographic]
+    </tei:item>
+  <tei:label><tei:gi>offset</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>that  part of a relative temporal or spatial expression
+which indicates the direction of the offset between the two place
+names, dates, or times involved in the expression. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.placePart, tei.temporalExpr]
+    </tei:item>
+  <tei:label><tei:gi>opener</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>groups together dateline, byline, salutation, and similar
+phrases appearing as a preliminary group at the start of a
+division, especially of a letter.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.divtop]
+    </tei:item>
+  <tei:label><tei:gi>orgDivn</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>indicates a division, branch or department specified
+in an organizational name.
+      [<tei:emph>Attributes</tei:emph>: reg, type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>orgName</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains an organizational name. 
+      [<tei:emph>Attributes</tei:emph>: key, reg, type]
+      [<tei:emph>Classes</tei:emph>: tei.data]
+    </tei:item>
+  <tei:label><tei:gi>orgTitle</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains the proper name component of an organizational
+name. 
+      [<tei:emph>Attributes</tei:emph>: reg, type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>orgType</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>indicates a part of the organization name which contains
+information about the organization's structure or function.
+      [<tei:emph>Attributes</tei:emph>: reg, type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>orig</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains  a reading which is marked as following  the original,
+rather than being normalized or corrected.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.chooseable, tei.edit]
+    </tei:item>
+  <tei:label><tei:gi>origDate</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains any form of date, used to identify the
+date of origin for a manuscript or manuscript part. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.datable, tei.phrase]
+    </tei:item>
+  <tei:label><tei:gi>origPlace</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains any form of place name, used to identify the
+place of origin for a manuscript or manuscript part. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.phrase]
+    </tei:item>
+  <tei:label><tei:gi>origin</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains any descriptive or other information
+concerning the origin of  a manuscript or manuscript part. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.datable]
+    </tei:item>
+  <tei:label><tei:gi>orth</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>gives the orthographic form of a dictionary headword.
+      [<tei:emph>Attributes</tei:emph>: extent, type]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.formInfo]
+    </tei:item>
+  <tei:label><tei:gi>p</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>marks paragraphs in prose.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.chunk, tei.paragraph]
+    </tei:item>
+  <tei:label><tei:gi>pRef</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>in a dictionary example, indicates a reference to the pronunciation(s) of the headword.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.formPointers]
+    </tei:item>
+  <tei:label><tei:gi>pVar</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>in a dictionary example, indicates a reference to variant pronunciation(s) of the headword.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.formPointers]
+    </tei:item>
+  <tei:label><tei:gi>page</tei:gi>
+    (<tei:emph>concurrent-decl</tei:emph>)</tei:label>
+  <tei:item>marks pages in a reference edition.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>particDesc</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes the identifiable speakers, voices, or other participants
+in a linguistic interaction. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.profile]
+    </tei:item>
+  <tei:label><tei:gi>particLinks</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes the relationships or social links existing between
+participants in a linguistic interaction. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>pause</tei:gi>
+    (<tei:emph>spoken</tei:emph>)</tei:label>
+  <tei:item>a pause either between or within utterances.
+      [<tei:emph>Attributes</tei:emph>: who]
+      [<tei:emph>Classes</tei:emph>: tei.comp.spoken, tei.timed, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>pb</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>marks the boundary between one page of a text and the next
+in a standard reference system.
+      [<tei:emph>Attributes</tei:emph>: ed]
+      [<tei:emph>Classes</tei:emph>: tei.refsys]
+    </tei:item>
+  <tei:label><tei:gi>per</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains an indication of the grammatical person (1st, 2nd, 3rd, etc.) associated with a
+        given inflected form in a dictionary.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.morphInfo]
+    </tei:item>
+  <tei:label><tei:gi>performance</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>contains a section of front or back matter describing how a
+dramatic piece is to be performed in general or how it was performed
+on some specific occasion. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dramafront]
+    </tei:item>
+  <tei:label><tei:gi>persName</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains a proper noun or proper-noun phrase referring to
+a person, possibly including any or all of the person's forenames,
+surnames, honorifics, added names, etc.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.data, tei.demographic, tei.names]
+    </tei:item>
+  <tei:label><tei:gi>person</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes a single participant in a language interaction. 
+      [<tei:emph>Attributes</tei:emph>: age, role, sex]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>personGrp</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes a group of individuals treated as a single person for
+analytic purposes.
+      [<tei:emph>Attributes</tei:emph>: age, role, sex, size]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>phr</tei:gi>
+    (<tei:emph>analysis</tei:emph>)</tei:label>
+  <tei:item>represents a grammatical phrase.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.seg]
+    </tei:item>
+  <tei:label><tei:gi>physDesc</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a full physical description of a
+manuscript, either as a sequence of paragraphs, or as a series of more
+specialised elements.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>placeName</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains an absolute or relative place name. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.data, tei.names]
+    </tei:item>
+  <tei:label><tei:gi>pos</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>indicates the part of speech assigned to a dictionary headword (noun, verb, adjective, etc.)
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.gramInfo]
+    </tei:item>
+  <tei:label><tei:gi>postBox</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a number or other identifier for some postal delivery
+point other than a street address. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.addrPart]
+    </tei:item>
+  <tei:label><tei:gi>postCode</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a numerical or alphanumeric code used as part of a
+postal address to simplify sorting or delivery of mail. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.addrPart]
+    </tei:item>
+  <tei:label><tei:gi>preparedness</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes the extent to which a text may be regarded as
+prepared or spontaneous. 
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>principal</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>supplies the name of the principal researcher responsible for the
+creation of an electronic text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>profileDesc</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>provides a detailed description of non-bibliographic aspects of a
+text, specifically the languages and sublanguages used, the situation in
+which it was produced, the participants and their setting.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.header]
+    </tei:item>
+  <tei:label><tei:gi>projectDesc</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>describes in detail the aim or purpose for which an electronic
+file was encoded, together with any other relevant information
+concerning the process by which it was assembled or collected.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.encoding]
+    </tei:item>
+  <tei:label><tei:gi>prologue</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>contains the prologue to a drama,  typically spoken by an actor out of
+character, possibly in association with a particular performance or venue.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dramafront]
+    </tei:item>
+  <tei:label><tei:gi>pron</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains the pronunciation(s) of the word.
+      [<tei:emph>Attributes</tei:emph>: extent, notation]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.formInfo]
+    </tei:item>
+  <tei:label><tei:gi>provenance</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains any descriptive or other information
+concerning a single identifiable episode during the history of a manuscript
+or manuscript part, after its creation but before its acquisition. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.datable]
+    </tei:item>
+  <tei:label><tei:gi>ptr</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>defines a pointer to another location in the current document in
+  terms of one or more identifiable elements.
+      [<tei:emph>Attributes</tei:emph>: cref, <tei:hi>target</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.loc, tei.pointer]
+    </tei:item>
+  <tei:label><tei:gi>pubPlace</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains the name of the place where a bibliographic item was
+published.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.biblPart, tei.names]
+    </tei:item>
+  <tei:label><tei:gi>publicationStmt</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>groups information concerning the publication or distribution
+of an electronic or other text. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>publisher</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>provides the name of the organization responsible for
+the publication or distribution of a bibliographic item.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.biblPart]
+    </tei:item>
+  <tei:label><tei:gi>purpose</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>characterizes a single purpose or communicative function of the
+text.
+      [<tei:emph>Attributes</tei:emph>: degree, type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>q</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a quotation or apparent quotation — a representation of
+speech or thought marked as being quoted from someone else (whether in
+fact quoted or not); in narrative, the words are usually those of of a
+character or speaker; in dictionaries, q may be used to mark
+real or contrived examples of usage.
+      [<tei:emph>Attributes</tei:emph>: direct, type, who]
+      [<tei:emph>Classes</tei:emph>: tei.hqinter, tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>quotation</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>specifies editorial practice adopted with respect to quotation
+marks in the original. 
+      [<tei:emph>Attributes</tei:emph>: form, marks]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.policy]
+    </tei:item>
+  <tei:label><tei:gi>quote</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a phrase or passage attributed by the narrator or
+author to some agency external to the text. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.hqinter]
+    </tei:item>
+  <tei:label><tei:gi>rdg</tei:gi>
+    (<tei:emph>textcrit</tei:emph>)</tei:label>
+  <tei:item>contains a single reading within a textual variation.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.readings]
+    </tei:item>
+  <tei:label><tei:gi>rdgGrp</tei:gi>
+    (<tei:emph>textcrit</tei:emph>)</tei:label>
+  <tei:item>within a textual variation,
+groups two or more readings perceived to have a genetic
+relationship or other affinity.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.readings]
+    </tei:item>
+  <tei:label><tei:gi>re</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains a dictionary entry for a lexical item related to the headword, such as a compound
+        phrase or derived form, embedded inside a larger entry.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.dictionaryTopLevel]
+    </tei:item>
+  <tei:label><tei:gi>recordHist</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>provides information about the source and
+revision status of the parent manuscript description itself. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>recording</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>details of an audio or video recording event
+used as the source of a spoken text, either directly or from
+a public broadcast. 
+      [<tei:emph>Attributes</tei:emph>: dur, type]
+      [<tei:emph>Classes</tei:emph>: tei.declarable]
+    </tei:item>
+  <tei:label><tei:gi>recordingStmt</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>describes a set of recordings used in transcription of a
+spoken text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.sourcedesc]
+    </tei:item>
+  <tei:label><tei:gi>ref</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>defines a reference to another location in the current
+  document, in terms of one or more identifiable elements, possibly
+  modified by additional text or comment.
+      [<tei:emph>Attributes</tei:emph>: cref, target]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.loc, tei.pointer]
+    </tei:item>
+  <tei:label><tei:gi>refsDecl</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>specifies how canonical references are constructed for this
+  text.
+      [<tei:emph>Attributes</tei:emph>: doctype]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.encoding]
+    </tei:item>
+  <tei:label><tei:gi>reg</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a reading which has been regularized or normalized
+in some sense.
+      [<tei:emph>Attributes</tei:emph>: resp]
+      [<tei:emph>Classes</tei:emph>: tei.chooseable, tei.edit]
+    </tei:item>
+  <tei:label><tei:gi>region</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>in an address, contains the state, province, county or region
+name; in a place name given as a hierarchy of geo-political
+units, the region is larger or administratively
+superior to the settlement and
+smaller or administratively less important than the
+country.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.names, tei.placePart, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>relation</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes any kind of relationship or linkage amongst a specified
+group of participants.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>active</tei:hi>, <tei:hi>desc</tei:hi>, mutual, <tei:hi>passive</tei:hi>, type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>remarks</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains any commentary or discussion about the usage of an
+element, attribute, class, or entity not otherwise documented within the
+containing element.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>rendition</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>supplies information about the intended rendition of one or more
+elements.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>repository</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains the name of a repository (usually
+a distinct physical building) within which manuscripts are stored, forming part
+of an institution. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.names]
+    </tei:item>
+  <tei:label><tei:gi>residence</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes a person's present or past places of residence.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.demographic]
+    </tei:item>
+  <tei:label><tei:gi>resp</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a phrase describing the nature of a person's
+  intellectual responsibility.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>respStmt</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>supplies a statement of responsibility for someone responsible for
+the intellectual content of a text, edition, recording, or series, where
+the specialized elements for authors, editors, etc. do
+not suffice or do not apply.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.biblPart, tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>respons</tei:gi>
+    (<tei:emph>certainty</tei:emph>)</tei:label>
+  <tei:item>identifies the individual(s) responsible for some aspect of the
+markup of particular element(s).
+      [<tei:emph>Attributes</tei:emph>: desc, <tei:hi>locus</tei:hi>, <tei:hi>resp</tei:hi>, <tei:hi>target</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.metadata]
+    </tei:item>
+  <tei:label><tei:gi>restore</tei:gi>
+    (<tei:emph>transcr</tei:emph>)</tei:label>
+  <tei:item>indicates restoration of text to an earlier state by
+cancellation of an editorial or authorial marking or instruction.
+      [<tei:emph>Attributes</tei:emph>: cert, desc, hand, resp, type]
+      [<tei:emph>Classes</tei:emph>: tei.edit]
+    </tei:item>
+  <tei:label><tei:gi>revisionDesc</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>summarizes the revision history for a file.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>role</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>the name of a dramatic role, as given in a cast list.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>roleDesc</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>describes a character's role in a drama.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>roleName</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains a name component which indicates that the referent has a
+particular role or position in society, such as an official title or
+rank.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.personPart]
+    </tei:item>
+  <tei:label><tei:gi>root</tei:gi>
+    (<tei:emph>nets</tei:emph>)</tei:label>
+  <tei:item>represents the root node of a tree.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>children</tei:hi>, label, ord, outDegree, value]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>row</tei:gi>
+    (<tei:emph>figures</tei:emph>)</tei:label>
+  <tei:item>contains one row of a table. 
+      [<tei:emph>Attributes</tei:emph>: role]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>rs</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a general purpose name or referring string.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.data, tei.names]
+    </tei:item>
+  <tei:label><tei:gi>rubric</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains the text of any rubric or heading attached to a particular manuscript item, that is, a  string of words whereby a
+manuscript signals a text division (e.g. beginning, book, chapter, end)
+which is in some way set off from the text itself, usually in red ink,or by use of different size or type of script, lining, or other such visual device.  
+. 
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>s</tei:gi>
+    (<tei:emph>analysis</tei:emph>)</tei:label>
+  <tei:item>contains a sentence-like division of a text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.seg]
+    </tei:item>
+  <tei:label><tei:gi>salute</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a salutation or greeting prefixed to a foreword,
+dedicatory epistle, or other division of a text, or the
+salutation in the closing of a letter, preface, etc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.divbot, tei.divtop]
+    </tei:item>
+  <tei:label><tei:gi>samplingDecl</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>contains a prose description of the rationale and methods used
+in sampling texts in the creation of a corpus or collection.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.encoding]
+    </tei:item>
+  <tei:label><tei:gi>schemaSpec</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>generates a TEI-conformant schema and documentation for it.
+      [<tei:emph>Attributes</tei:emph>: namespace, start, type]
+      [<tei:emph>Classes</tei:emph>: tei.identifiable, tei.oddPhr]
+    </tei:item>
+  <tei:label><tei:gi>scriptStmt</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>contains a citation giving details of the script used for
+a spoken text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.sourcedesc]
+    </tei:item>
+  <tei:label><tei:gi>seal</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a description of one seal or similar
+  attachment applied to a manuscript
+      [<tei:emph>Attributes</tei:emph>: contemporary]
+      [<tei:emph>Classes</tei:emph>: tei.datable, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>sealDesc</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>describes the seals or other external items attached to a manuscript, either
+as a series of paragraphs or as a series of distinct seal elements,
+possibly with additional decoNotes. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>secFol</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>The word or words that a cataloguer, typically medieval but possibly modern as well, might take from a fixed point in all the codices he is describing (the beginning of the second leaf, the beginning of the second column, the beginning of the penultimate leaf, the end of the penultimate leaf, and so on) in order to provide a unique identifier to the particular codex.
+
+
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.phrase]
+    </tei:item>
+  <tei:label><tei:gi>second</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>the second component of a structured time-expression.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.temporalExpr]
+    </tei:item>
+  <tei:label><tei:gi>seg</tei:gi>
+    (<tei:emph>linking</tei:emph>)</tei:label>
+  <tei:item>contains any arbitrary phrase-level unit of text (including
+other seg elements).
+      [<tei:emph>Attributes</tei:emph>: subtype]
+      [<tei:emph>Classes</tei:emph>: tei.chooseable, tei.seg, tei.segment]
+    </tei:item>
+  <tei:label><tei:gi>segmentation</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>describes the principles according to which the text has been
+segmented, for example into sentences, tone-units, graphemic strata,
+etc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.policy]
+    </tei:item>
+  <tei:label><tei:gi>sense</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>groups together all information relating to one word sense in a dictionary entry
+        (definitions, examples, translation equivalents, etc.)
+      [<tei:emph>Attributes</tei:emph>: level]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts]
+    </tei:item>
+  <tei:label><tei:gi>seriesStmt</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>groups information about the series, if any, to which
+a publication belongs.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>set</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>contains a description of the setting, time, locale, appearance,
+etc., of the action of a play, typically found in the front matter of
+a printed performance text (not a stage direction).
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dramafront]
+    </tei:item>
+  <tei:label><tei:gi>setting</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes one particular setting in which a language interaction
+takes place.
+      [<tei:emph>Attributes</tei:emph>: who]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>settingDesc</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>describes the setting or settings within which a language
+interaction takes place, either as a prose description or as a
+series of setting elements.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.profile]
+    </tei:item>
+  <tei:label><tei:gi>settlement</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains the name of the smallest component of a
+place name expressed as a hierarchy of geo-political or
+administrative units as in Rochester, New York;
+Glasgow, Scotland.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.names, tei.placePart, tei.typed]
+    </tei:item>
+  <tei:label><tei:gi>shift</tei:gi>
+    (<tei:emph>spoken</tei:emph>)</tei:label>
+  <tei:item>marks the point at which some paralinguistic feature of a series of
+utterances by any one speaker changes.
+      [<tei:emph>Attributes</tei:emph>: feature, new, who]
+      [<tei:emph>Classes</tei:emph>: tei.comp.spoken]
+    </tei:item>
+  <tei:label><tei:gi>sic</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains text reproduced although apparently incorrect or inaccurate.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.chooseable, tei.edit]
+    </tei:item>
+  <tei:label><tei:gi>signatures</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains discussion of the leaf or quire signatures found within a codex.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.phrase]
+    </tei:item>
+  <tei:label><tei:gi>signed</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains the closing salutation, etc., appended to a foreword,
+dedicatory epistle, or other division of a text. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.divbot, tei.divtop]
+    </tei:item>
+  <tei:label><tei:gi>soCalled</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a word or phrase for which the author or narrator
+indicates a disclaiming of responsibility, for example by the use
+of scare quotes or italics.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.hqphrase]
+    </tei:item>
+  <tei:label><tei:gi>socecStatus</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>contains an informal description of a person's perceived social or
+economic status.
+      [<tei:emph>Attributes</tei:emph>: code, scheme]
+      [<tei:emph>Classes</tei:emph>: tei.demographic]
+    </tei:item>
+  <tei:label><tei:gi>sound</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>describes a sound effect or musical sequence specified within a
+screen play or radio script.
+      [<tei:emph>Attributes</tei:emph>: discrete, type]
+      [<tei:emph>Classes</tei:emph>: tei.stageDirection]
+    </tei:item>
+  <tei:label><tei:gi>source</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>describes the original source for the information contained with a manuscript description. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>sourceDesc</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>supplies a description of the source text(s) from
+which an electronic text was derived or generated.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable]
+    </tei:item>
+  <tei:label><tei:gi>sp</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>An individual speech in a performance text, or a passage
+	  presented as such in a prose or verse text.
+      [<tei:emph>Attributes</tei:emph>: who]
+      [<tei:emph>Classes</tei:emph>: tei.chunk]
+    </tei:item>
+  <tei:label><tei:gi>space</tei:gi>
+    (<tei:emph>transcr</tei:emph>)</tei:label>
+  <tei:item>indicates the location of a significant space in the copy text.
+      [<tei:emph>Attributes</tei:emph>: dim, extent, resp]
+      [<tei:emph>Classes</tei:emph>: tei.edit]
+    </tei:item>
+  <tei:label><tei:gi>span</tei:gi>
+    (<tei:emph>analysis</tei:emph>)</tei:label>
+  <tei:item>associates an interpretative annotation directly with a span of
+text.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>from</tei:hi>, to, <tei:hi>value</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.interpret, tei.metadata]
+    </tei:item>
+  <tei:label><tei:gi>spanGrp</tei:gi>
+    (<tei:emph>analysis</tei:emph>)</tei:label>
+  <tei:item>collects together span tags.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.interpret, tei.metadata]
+    </tei:item>
+  <tei:label><tei:gi>speaker</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>A specialized form of heading or label, giving the name of
+one or more speakers in a dramatic text or fragment.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>specDesc</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>indicates that a description of the specified element should
+          be included at this point within a tagList.
+      [<tei:emph>Attributes</tei:emph>: atts, key]
+      [<tei:emph>Classes</tei:emph>: tei.oddPhr]
+    </tei:item>
+  <tei:label><tei:gi>specGrp</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains any convenient grouping of specifications for use within
+  the current module.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.oddDecl]
+    </tei:item>
+  <tei:label><tei:gi>specGrpRef</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>indicates that the  declarations contained by the
+  specGrp referenced should be inserted at this point.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>target</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.oddRef]
+    </tei:item>
+  <tei:label><tei:gi>specList</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>marks where a list of descriptions is to be inserted into the prose documentation.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.oddPhr]
+    </tei:item>
+  <tei:label><tei:gi>sponsor</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>specifies the name of a sponsoring organization or
+institution.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>stage</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains any kind of stage direction within a dramatic text or
+fragment.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.common, tei.inter]
+    </tei:item>
+  <tei:label><tei:gi>state</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>specifies one component of a canonical reference defined by
+the milestone method.
+      [<tei:emph>Attributes</tei:emph>: delim, ed, length, <tei:hi>unit</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>stdVals</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>specifies the format used when standardized date or number
+values are supplied.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.policy]
+    </tei:item>
+  <tei:label><tei:gi>street</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>a full street address including any name or number identifying a
+building as well as the name of the street or route on which it is
+located.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.addrPart]
+    </tei:item>
+  <tei:label><tei:gi>stress</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains the stress pattern for a dictionary headword, if given separately.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaryParts]
+    </tei:item>
+  <tei:label><tei:gi>string</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>represents the value part of a feature-value specification
+  which contains a string.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.singleVal]
+    </tei:item>
+  <tei:label><tei:gi>stringVal</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains the intended expansion for the entity documented
+by an patternSpec element, enclosed by quotation marks.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>subc</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains subcategorization information (transitive/intransitive, countable/non-countable, etc.)
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.gramInfo]
+    </tei:item>
+  <tei:label><tei:gi>summary</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a brief summary of the
+intellectual content of an item, provided by the cataloguer 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>superEntry</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>groups successive entries for a set of homographs.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.comp.dictionaries, tei.dictionaryParts, tei.entries]
+    </tei:item>
+  <tei:label><tei:gi>supplied</tei:gi>
+    (<tei:emph>transcr</tei:emph>)</tei:label>
+  <tei:item>signifies text supplied by the transcriber or editor in place
+of text which cannot be read, either because of physical damage or
+loss in the original or because it is illegible for any
+reason.
+      [<tei:emph>Attributes</tei:emph>: agent, hand, reason, resp, source]
+      [<tei:emph>Classes</tei:emph>: tei.edit]
+    </tei:item>
+  <tei:label><tei:gi>support</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a description of the materials
+etc. which make up the physical support for the written part of a manuscript.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>supportDesc</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>groups elements describing the physical support for the written part of a manuscript.
+      [<tei:emph>Attributes</tei:emph>: material]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>surname</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains a family (inherited) name, as opposed to a given,
+baptismal, or nick name.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.personPart]
+    </tei:item>
+  <tei:label><tei:gi>surrogates</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains information about any digital or
+photographic representations of the manuscript being described which
+may exist in the holding institution or elsewhere. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>syll</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains the syllabification of the headword.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.formInfo]
+    </tei:item>
+  <tei:label><tei:gi>symbol</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>represents the value part of a feature-value specification
+  which contains one of a finite list of symbols.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>value</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.singleVal]
+    </tei:item>
+  <tei:label><tei:gi>table</tei:gi>
+    (<tei:emph>figures</tei:emph>)</tei:label>
+  <tei:item>contains text displayed in tabular form, in
+rows and columns.
+      [<tei:emph>Attributes</tei:emph>: cols, rows]
+      [<tei:emph>Classes</tei:emph>: tei.common, tei.inter]
+    </tei:item>
+  <tei:label><tei:gi>tag</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains text of a complete start- or end-tag, possibly
+including attribute specifications, but excluding the opening and
+closing markup delimiter characters.
+      [<tei:emph>Attributes</tei:emph>: scheme]
+      [<tei:emph>Classes</tei:emph>: tei.oddPhr]
+    </tei:item>
+  <tei:label><tei:gi>tagUsage</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>supplies information about the usage of a specific element
+within a text. 
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>gi</tei:hi>, occurs, render, withId]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>tagsDecl</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>provides detailed information about the tagging applied to an SGML or XML document.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.encoding]
+    </tei:item>
+  <tei:label><tei:gi>taxonomy</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>defines a typology used to classify texts either implicitly, by
+means of a bibliographic citation, or explicitly by a structured
+taxonomy.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>tech</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>describes a special-purpose stage direction that is not
+meant for the actors.
+      [<tei:emph>Attributes</tei:emph>: perf, type]
+      [<tei:emph>Classes</tei:emph>: tei.stageDirection]
+    </tei:item>
+  <tei:label><tei:gi>teiCorpus</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains the whole of a TEI encoded corpus, comprising a
+single corpus header and one or more TEI elements, each containing
+a single text header and a text.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>xmlns</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>teiHeader</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>supplies the descriptive and declarative information making
+	up an electronic title page prefixed to every TEI-conformant
+	text.
+      [<tei:emph>Attributes</tei:emph>: creator, dateCreated, dateUpdated, status, type]
+      [<tei:emph>Classes</tei:emph>: tei.teiHeader]
+    </tei:item>
+  <tei:label><tei:gi>teifsd</tei:gi>
+    (<tei:emph>declarefs</tei:emph>)</tei:label>
+  <tei:item>contains a feature system declaration.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>term</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a single-word, multi-word, or symbolic designation
+  which is regarded as a technical term.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.hqphrase]
+    </tei:item>
+  <tei:label><tei:gi>text</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a single text of any kind, whether unitary or
+composite, for example a poem or drama, a collection of essays, a novel,
+a dictionary, or a corpus sample.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declaring, tei.inter, tei.teiText]
+    </tei:item>
+  <tei:label><tei:gi>textClass</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>groups information which describes the nature or topic of a text
+in terms of a standard classification scheme, thesaurus, etc.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.declarable, tei.profile]
+    </tei:item>
+  <tei:label><tei:gi>textDesc</tei:gi>
+    (<tei:emph>corpus</tei:emph>)</tei:label>
+  <tei:item>provides a description of a text in terms of its
+situational parameters.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.categorize, tei.declarable, tei.profile]
+    </tei:item>
+  <tei:label><tei:gi>textLang</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>describes the languages and writing systems used by a
+manuscript (as opposed to its description, which is described in the langUsage element)
+      [<tei:emph>Attributes</tei:emph>: langKey, otherLangs]
+      [<tei:emph>Classes</tei:emph>: tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>then</tei:gi>
+    (<tei:emph>declarefs</tei:emph>)</tei:label>
+  <tei:item>separates the condition from the default in an if, or
+the antecedent and the consequent in a cond element.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>time</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a phrase defining a time of day in any format.
+      [<tei:emph>Attributes</tei:emph>: type, value, zone]
+      [<tei:emph>Classes</tei:emph>: tei.data]
+    </tei:item>
+  <tei:label><tei:gi>timeRange</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains two times or another phrase indicating a time period.
+      [<tei:emph>Attributes</tei:emph>: exact, from, to]
+      [<tei:emph>Classes</tei:emph>: tei.data]
+    </tei:item>
+  <tei:label><tei:gi>timeStruct</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>contains an internally structured representation for a time of day.
+      [<tei:emph>Attributes</tei:emph>: zone]
+      [<tei:emph>Classes</tei:emph>: tei.data, tei.temporalExpr]
+    </tei:item>
+  <tei:label><tei:gi>timeline</tei:gi>
+    (<tei:emph>linking</tei:emph>)</tei:label>
+  <tei:item>provides a set of ordered points in time which can be linked to
+elements of a spoken text to create a temporal alignment of that text.
+      [<tei:emph>Attributes</tei:emph>: interval, <tei:hi>origin</tei:hi>, unit]
+      [<tei:emph>Classes</tei:emph>: tei.metadata]
+    </tei:item>
+  <tei:label><tei:gi>title</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains the full title of a work of any kind.
+      [<tei:emph>Attributes</tei:emph>: level, type]
+      [<tei:emph>Classes</tei:emph>: tei.hqphrase, tei.msItemPart]
+    </tei:item>
+  <tei:label><tei:gi>titlePage</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains the title page of a text, appearing within the front
+or back matter. 
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.front]
+    </tei:item>
+  <tei:label><tei:gi>titlePart</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a subsection or division of the title of a work, as
+indicated on a title page.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.fmchunk, tei.tpParts]
+    </tei:item>
+  <tei:label><tei:gi>titleStmt</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>groups information about the title of a work and those
+responsible for its intellectual content.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>tns</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>indicates the grammatical tense associated with a given inflected form in a dictionary.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.morphInfo]
+    </tei:item>
+  <tei:label><tei:gi>tr</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains a translation of the headword or an example.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts]
+    </tei:item>
+  <tei:label><tei:gi>trailer</tei:gi>
+    (<tei:emph>textstructure</tei:emph>)</tei:label>
+  <tei:item>contains a closing title or footer appearing at the end of
+a division of a text. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.divbot]
+    </tei:item>
+  <tei:label><tei:gi>trans</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains translation text and related information (within an entry in a multilingual dictionary).
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.dictionaryTopLevel]
+    </tei:item>
+  <tei:label><tei:gi>tree</tei:gi>
+    (<tei:emph>nets</tei:emph>)</tei:label>
+  <tei:item>encodes a tree, which is made up of a root, internal nodes,
+leaves, and arcs from root to leaves.
+      [<tei:emph>Attributes</tei:emph>: arity, label, <tei:hi>ord</tei:hi>, order]
+      [<tei:emph>Classes</tei:emph>: tei.chunk]
+    </tei:item>
+  <tei:label><tei:gi>triangle</tei:gi>
+    (<tei:emph>nets</tei:emph>)</tei:label>
+  <tei:item>provides for an underspecified eTree, that is,
+an eTree with information left out.
+      [<tei:emph>Attributes</tei:emph>: label, value]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>u</tei:gi>
+    (<tei:emph>spoken</tei:emph>)</tei:label>
+  <tei:item>a stretch of speech usually preceded and followed by
+silence or by a change of speaker.
+      [<tei:emph>Attributes</tei:emph>: trans, who]
+      [<tei:emph>Classes</tei:emph>: tei.comp.spoken, tei.declaring, tei.timed]
+    </tei:item>
+  <tei:label><tei:gi>unclear</tei:gi>
+    (<tei:emph>core</tei:emph>)</tei:label>
+  <tei:item>contains a word, phrase, or passage which cannot be transcribed
+with certainty because it is illegible or inaudible in the source.
+      [<tei:emph>Attributes</tei:emph>: agent, cert, hand, reason, resp]
+      [<tei:emph>Classes</tei:emph>: tei.chooseable, tei.edit]
+    </tei:item>
+  <tei:label><tei:gi>unicodeName</tei:gi>
+    (<tei:emph>gaiji</tei:emph>)</tei:label>
+  <tei:item>contains the name of a registered Unicode normative or
+informative property. 
+      [<tei:emph>Attributes</tei:emph>: version]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>usg</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains usage information in a dictionary entry.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.dictionaryTopLevel, tei.formInfo, tei.gramInfo]
+    </tei:item>
+  <tei:label><tei:gi>vAlt</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>represents the value part of a feature-value specification
+  which contains a set of values, only one of which can be valid.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.singleVal]
+    </tei:item>
+  <tei:label><tei:gi>vDefault</tei:gi>
+    (<tei:emph>declarefs</tei:emph>)</tei:label>
+  <tei:item>declares the default value to be supplied when a feature structure
+does not contain an instance of f for this name; if
+unconditional, it is specified as one (or, depending on the value of
+the org attribute of the enclosing fDecl) more
+fs elements or primitive values;
+if conditional, it is specified as
+one or more if elements; if no default is specified, or no
+condition matches, the value none is assumed.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>vLabel</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>represents the value part of a feature-value specification
+  which appears at more than point in a feature structure
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>name</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.singleVal]
+    </tei:item>
+  <tei:label><tei:gi>vMerge</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>represents a feature value which is the result of merging
+  together the feature values contained by its children, using the organization
+  specified by the ORG attribute.
+      [<tei:emph>Attributes</tei:emph>: org]
+      [<tei:emph>Classes</tei:emph>: tei.complexVal]
+    </tei:item>
+  <tei:label><tei:gi>vNot</tei:gi>
+    (<tei:emph>iso-fs</tei:emph>)</tei:label>
+  <tei:item>represents a feature value which is the negation of its content.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.complexVal]
+    </tei:item>
+  <tei:label><tei:gi>vRange</tei:gi>
+    (<tei:emph>declarefs</tei:emph>)</tei:label>
+  <tei:item>defines the range of allowed values for a feature, in the form of
+an fs, vAlt, or primitive value;
+for the value of an f to be valid, it must be
+subsumed by the specified range; if the f
+contains multiple values (as sanctioned by the org attribute),
+then each value must be subsumed by the vRange.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>val</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains a single attribute value.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.oddPhr]
+    </tei:item>
+  <tei:label><tei:gi>valDesc</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>specifies any semantic or syntactic constraint on the value that
+an attribute may take, additional to the information carried by the
+datatype element.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>valItem</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains a single value and gloss  pair for an attribute.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.identifiable]
+    </tei:item>
+  <tei:label><tei:gi>valList</tei:gi>
+    (<tei:emph>tagdocs</tei:emph>)</tei:label>
+  <tei:item>contains one or more valItem elements defining possible
+  values for an attribute.
+      [<tei:emph>Attributes</tei:emph>: mode, type]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>value</tei:gi>
+    (<tei:emph>gaiji</tei:emph>)</tei:label>
+  <tei:item>contains a single value for some property, attribute, or other
+  analysis.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>variantEncoding</tei:gi>
+    (<tei:emph>header</tei:emph>)</tei:label>
+  <tei:item>declares the method used to encode text-critical variants.
+      [<tei:emph>Attributes</tei:emph>: <tei:hi>location</tei:hi>, <tei:hi>method</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.encoding]
+    </tei:item>
+  <tei:label><tei:gi>vername</tei:gi>
+    (<tei:emph>concurrent-decl</tei:emph>)</tei:label>
+  <tei:item>serves as the root element for a concurrent markup stream which
+will be used to mark page and line numbers of a reference edition of the
+text.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>view</tei:gi>
+    (<tei:emph>drama</tei:emph>)</tei:label>
+  <tei:item>describes the visual context of some part of a screen play in
+terms of what the spectator sees, generally independent of any
+dialogue.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.stageDirection]
+    </tei:item>
+  <tei:label><tei:gi>vocal</tei:gi>
+    (<tei:emph>spoken</tei:emph>)</tei:label>
+  <tei:item>any vocalized but not necessarily lexical phenomenon, for example
+voiced pauses, non-lexical backchannels, etc.
+      [<tei:emph>Attributes</tei:emph>: desc, iterated, who]
+      [<tei:emph>Classes</tei:emph>: tei.comp.spoken, tei.timed]
+    </tei:item>
+  <tei:label><tei:gi>vol</tei:gi>
+    (<tei:emph>concurrent-decl</tei:emph>)</tei:label>
+  <tei:item>marks the individual volumes of a reference edition.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>w</tei:gi>
+    (<tei:emph>analysis</tei:emph>)</tei:label>
+  <tei:item>represents a grammatical (not necessarily orthographic) word.
+      [<tei:emph>Attributes</tei:emph>: lemma]
+      [<tei:emph>Classes</tei:emph>: tei.seg]
+    </tei:item>
+  <tei:label><tei:gi>watermark</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a word or phrase describing a
+watermark or similar device.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.phrase]
+    </tei:item>
+  <tei:label><tei:gi>week</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>the week component of a structured date.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.temporalExpr]
+    </tei:item>
+  <tei:label><tei:gi>when</tei:gi>
+    (<tei:emph>linking</tei:emph>)</tei:label>
+  <tei:item>indicates a point in time either relative to other elements in the
+same timeline tag, or absolutely.
+      [<tei:emph>Attributes</tei:emph>: absolute, interval, since, unit]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>width</tei:gi>
+    (<tei:emph>msdescription</tei:emph>)</tei:label>
+  <tei:item>contains a measurement measured along the axis perpendicular to the spine. 
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.measured]
+    </tei:item>
+  <tei:label><tei:gi>wit</tei:gi>
+    (<tei:emph>textcrit</tei:emph>)</tei:label>
+  <tei:item>contains a list of one or more sigla of witnesses attesting a
+given reading, in a textual variation.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>witDetail</tei:gi>
+    (<tei:emph>textcrit</tei:emph>)</tei:label>
+  <tei:item>gives further information about a particular witness, or
+witnesses, to a particular reading.
+      [<tei:emph>Attributes</tei:emph>: place, resp, <tei:hi>target</tei:hi>, type, <tei:hi>wit</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: tei.notes]
+    </tei:item>
+  <tei:label><tei:gi>witEnd</tei:gi>
+    (<tei:emph>textcrit</tei:emph>)</tei:label>
+  <tei:item>indicates the end, or suspension, of the text of a fragmentary
+witness.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.fragmentary]
+    </tei:item>
+  <tei:label><tei:gi>witList</tei:gi>
+    (<tei:emph>textcrit</tei:emph>)</tei:label>
+  <tei:item>contains a list of all the witnesses referred to in
+wit elements or wit attributes
+within the critical apparatus.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.chunk]
+    </tei:item>
+  <tei:label><tei:gi>witStart</tei:gi>
+    (<tei:emph>textcrit</tei:emph>)</tei:label>
+  <tei:item>indicates the beginning, or resumption, of the text of a
+fragmentary witness.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.fragmentary]
+    </tei:item>
+  <tei:label><tei:gi>witness</tei:gi>
+    (<tei:emph>textcrit</tei:emph>)</tei:label>
+  <tei:item>contains either a description of a single witness referred to
+within the critical apparatus, or a list of witnesses which is to be
+referred to by a single sigil.
+      [<tei:emph>Attributes</tei:emph>: included, <tei:hi>sigil</tei:hi>]
+      [<tei:emph>Classes</tei:emph>: ]
+    </tei:item>
+  <tei:label><tei:gi>writing</tei:gi>
+    (<tei:emph>spoken</tei:emph>)</tei:label>
+  <tei:item>a passage of written text revealed to participants in the course
+of a spoken text.
+      [<tei:emph>Attributes</tei:emph>: gradual, script, type, who]
+      [<tei:emph>Classes</tei:emph>: tei.comp.spoken]
+    </tei:item>
+  <tei:label><tei:gi>xr</tei:gi>
+    (<tei:emph>dictionaries</tei:emph>)</tei:label>
+  <tei:item>contains a phrase, sentence, or icon referring the reader to
+some other location in this or another text.
+      [<tei:emph>Attributes</tei:emph>: type]
+      [<tei:emph>Classes</tei:emph>: tei.dictionaries, tei.dictionaryParts, tei.dictionaryTopLevel]
+    </tei:item>
+  <tei:label><tei:gi>year</tei:gi>
+    (<tei:emph>namesdates</tei:emph>)</tei:label>
+  <tei:item>the year component of a date.
+      [<tei:emph>Attributes</tei:emph>: ]
+      [<tei:emph>Classes</tei:emph>: tei.temporalExpr]
+    </tei:item>
+</tei:glossList>

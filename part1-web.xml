@@ -1,0 +1,89 @@
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="chap-xml"><!-- revised $Date$ -->
+<head>Making a web site</head>
+
+<opener>
+Most people making texts want to publish them on the web at some
+point. Are there special considerations here, and can the TEI cover
+all the features of web pages?  In this chapter we will look at
+creating a web site using TEI markup, using the example of an
+archaeological catalogue. We find that most features of web pages are
+already covered by the TEI, but that a few extensions may be
+helpful. We assume that the reader has a basic understanding
+of the web and the HTML language.
+</opener>
+
+<div>
+<head>What are the components of a web site?</head>
+
+<p>A web site consists of a set of interlinked documents or
+<soCalled>web pages</soCalled>. The <foreign>lingua franca</foreign>
+of the web is the HTML language, so we have to
+consider how TEI markup maps onto HTML. Later, in section <ptr
+target="web-delivery"/>, we will consider how and when this mapping
+takes place. For example, let us consider a simple web page and its
+   corresponding HTML code:
+
+  <graphic url="figures/web/web1.png" xml:id="web1"/>
+     
+<!--  <verbatim url="examples/web/ex1.html"/>-->
+  </p>
+<!--The TEI source of this 
+
+div  & 
+head (inside div) & h1, h2, h3 etc
+emph & i
+list & ol, ul, dl
+item & li, dl
+label & dt
+- & hr
+pb & -
+lb & br
+p & p
+table & table
+row & tr
+cell & td
+q & blockquote
+-->
+</div>
+
+<div xml:id="web-delivery">
+<p>So far we have seen how to express the elements of a web page
+in TEI, by considering how it maps to HTML. How does that
+transformation take place? It can happen in three ways:
+<list type="ordered">
+<item>We can convert the TEI XML into a static HTML file, and publish
+that in the normal way on a web server. For the reader, there will
+probably be no evidence the original was in HTML, and we need take no
+especial care on the web server. The downside is that we need to
+repeat the conversion each time we change the original source, which
+can lead to inconsistency without a firm process in mind. The
+advantage is that we <emph>can</emph> conceal the existence of the TEI
+document from the reader. If we have a very complex, or very richly
+marked-up, document, we may not want to expose all the details to the
+casual reader, or let them see all the text.</item>
+<item>We can solve one of the problems of the first approach
+by managing the conversion from TEI to HTML on the web server.
+The original XML file is put in the normal web server filestore,
+but any request for it is routed through an automatic translation
+process (the results of which will probably be cached). 
+This has the advantage that no-one needs to remember to do the
+conversion, and that the web server can do <emph>different</emph>
+translations depending on requests from the reader. We can decide
+whether or not to allow access to the original file. The downside
+is that the web server has to do a lot more work, and the whole
+process may slow down.</item>
+<item>The last alternative is to deliver the TEI XML file down
+to the reader, with an associated transformation stylesheet, and
+allow the web browser client to do all the work. It does mean that
+the reader has full access to the entire text (including comments; if
+you use this method, remember not to include subversive messages in
+comments!), but it has the advantage that all transformations use the
+local computer, which is very likely  to have un-used processing
+power; subsequent re-transformations can happen locally, without
+a trip back to the web server.</item>
+   </list>
+  </p><closer>
+<!-- what we learnt in this chapter-->
+</closer>
+</div></div>
+

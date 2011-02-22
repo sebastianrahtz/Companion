@@ -1,0 +1,73 @@
+<specGrp xml:id="LITEADD">
+ <elementSpec ident="eg">
+ <desc>Example code</desc>
+  <classes>
+    <memberOf key="tei.data"/>
+    <memberOf key="tei.common"/>
+  </classes>
+  <content>
+    <rng:text/>
+  </content>
+</elementSpec>
+
+ <elementSpec ident="gi">
+  <desc>contains the name (generic identifier) of an element.</desc>
+  <classes><memberOf key="tei.data"/></classes>
+  <content>
+    <rng:text/>
+  </content>
+  <attList>
+    <attDef usage="opt" ident="tei">
+      <equiv/>
+      <desc>indicates whether this element is part of the TEI encoding
+		scheme (i.e. defined in a TEI DTD fragment) or not.</desc>
+      <datatype><rng:data type="boolean"/></datatype>
+      <defaultVal>true</defaultVal>
+      <valList type="closed">
+        <valItem ident="true">
+          <equiv/>
+          <gloss>this element is part of the TEI scheme.</gloss>
+        </valItem>
+        <valItem ident="false">
+          <equiv/>
+          <gloss>this element is not part of the TEI scheme.</gloss>
+        </valItem>
+      </valList>
+    </attDef>
+  </attList>
+  <exemplum>
+    <eg>An &lt;gi tei="false">LI&lt;/gi> element is roughly analagous 
+    to an &lt;gi>item&lt;/gi> element.
+    </eg>
+  </exemplum>
+</elementSpec>
+
+ <elementSpec ident="ident">
+  <classes>
+    <memberOf key="tei.data"/>
+    <memberOf key="tei.typed"/>
+  </classes>
+  <content>
+    <rng:text/>
+  </content>
+ </elementSpec>
+ 
+ <elementSpec ident="code">
+  <classes>
+    <memberOf key="tei.typed"/>
+    <memberOf key="tei.data"/>
+  </classes>
+  <content>
+    <rng:text/>
+  </content>
+ </elementSpec>
+ 
+ <elementSpec ident="kw">
+   <classes>
+     <memberOf key="tei.data"/>
+   </classes>
+   <content>
+     <rng:text/>
+   </content>
+ </elementSpec>
+</specGrp>

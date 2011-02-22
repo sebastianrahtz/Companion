@@ -1,0 +1,432 @@
+<div 
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+xmlns="http://www.tei-c.org/ns/1.0" xml:id="back-teixsl"><!-- revised $Date$ -->
+
+<head>TEI XSL stylesheets</head>
+<div><head>Introduction</head>
+<p>This chapter describes a set of XSLT specifications <note
+place="foot">Maintained and distributed as part of the Sourceforge TEI
+project
+at <ptr target="http://www.tei-c.org/"/>.
+The stylesheets have internal documentation, using
+<ref target="http://www.pnp-software.com/">P&amp;P Software</ref>'s
+XSLTdoc system; the results can be browsed in the <ref
+target="xsltdoc/">technical documentation</ref> section.
+</note>to transform TEI XML
+documents to HTML, to LaTeX, and to XSL Formatting Objects. </p>
+
+<p>The stylesheets attempt to work in the same way with each of the
+three supported output formats, but inevitably the different paradigms
+will produce different results:
+<list type="ordered">
+<item>The HTML output is designed to work with an associated CSS
+stylesheet, which takes care of much of the detailed spacing and font
+work; however, the HTML is in charge of features such as the numbering
+of sections.</item>
+<item>The LaTeX output is designed for people who understand how to
+use existing LaTeX packages and classes; it therefore tries to produce
+reasonably readable TeX markup, with high-level commands whose effects
+will be determined by LaTeX (including numbering and spacing).</item>
+<item>The XSL FO output produces a very detailed specification of the
+output layout, with all the details of fonts, numbering, vertical and
+horizontal spacing specified <foreign>in situ</foreign>. The FO
+processor is only responsible for line and page breaking, and hyphenation.</item>
+</list>
+</p>
+
+<p>The stylesheets are divided into four directories:
+<list type="gloss">
+<label>common</label><item>templates which are independent of output type</item>
+<label>fo</label><item>templates for making XSL FO output</item>
+<label>html</label><item>templates for making HTML output</item>
+<label>latex</label><item>templates for making LaTeX output</item>
+</list>
+Within each directory there is a separate file for the templates
+which implement each of the TEI modules (eg
+<path>textstructure.xsl</path>,
+<path>linking.xsl</path>, or <path>drama.xsl</path>); these
+are included by a master file <path>tei.xsl</path>. This also
+includes a parameterization layer in the file
+<path>tei-param.xsl</path>, and the parameterization file from
+the <path>common</path> directory. The <path>tei.xsl</path> does
+any necessary declaration of constants and XSL keys.</p>
+<p>In the examples that follow, the location of the stylesheets is
+assumed to be <path>/usr/share/xml/tei/stylesheet/</path> on a
+Unix/Linux system, and this path will have to be adjusted depending on
+where the files have been installed.</p>
+<p>The normal method of use is to decide which of the three output methods
+is wanted, and then reference the corresponding <path>tei.xsl</path>
+file.<note place="foot">Any other use of the stylesheets, eg by referencing individual
+modules, is not supported and requires good understanding of
+XSL.</note></p>
+
+<p>The stylesheets are designed to be customized, by overriding a large
+set of  parameters and templates; these are documented in detail in <ptr
+target="#teixsl-cust"/>. This could be done by passing parameters and
+values to an XSLT processor, or by constructing an
+XSL wrapper stylesheet of your own. For example, using a command-line processor, we
+might turn <path>test.xml</path> into <path>test.html</path> by typing
+<eg>
+xsltproc -o test.html /usr/share/xml/tei/stylesheet/html/tei.xsl test.xml
+</eg>
+and then change the result by passing a parameter to specify which CSS file to use:
+<eg>
+xsltproc --stringparam cssFile http://localhost/mytei.css \
+   -o test.html /usr/share/xml/tei/stylesheet/html/tei.xsl test.xml
+</eg>
+If you have many parameters to change, and if you want to override any
+templates, it is usually more convenient to construct a small local stylesheet
+which refers to the public one, and add overrides to that.</p>
+
+</div>
+
+
+<div xml:id="teixsl-usehtml">
+<head>Using the HTML stylesheets</head>
+<p>Stylesheets to make web pages can be applied in a number of ways:
+<list type="ordered">
+<item>A reference to the stylesheet can be embedded in the XML
+file using a processing instruction. Some web browsers, including
+Internet Explorer and the Mozilla family, can then view the XML file directly by
+transforming it to HTML dynamically. This is a very easy and effective
+way to publish TEI XML documents, if you can be sure the
+potential readers use the the right web client.</item>
+<item>A web server can be set up to transform XML to HTML on
+request; the Cocoon and AxKit systems are examples of this. They trap
+incoming requests for XML documents, perform the transform, and
+return the HTML results. As the results are cached, this can be
+very efficient, and has the advantage that it works with any
+browser. The disadvantage is that the reader does not get
+access to the original XML (this may also be seen as an
+advantage). Different renditions can be made on the server by
+providing appropriate instructions as part of the URL
+(ie a URL ending in  <code>xyz.xml?style=print</code>
+will be processing to pass the parameter <ident>style</ident> with the
+value <value>print</value> to the stylesheet engine).</item> 
+<item>The XML can be transformed to a different format statically, and
+the result processed, or perhaps uploaded to a normal web server.  In
+the case of web pages, this is the most cumbersome method, as the text
+owner has to remember to remake the HTML each time there is a change
+in the original, and any different renditions also have to be
+precreated. However, if you are making LaTeX or XSL FO output, you
+will probably use this method, either directly with a command-line
+utility, or from within your XML editing environment.
+</item>
+</list>
+</p>
+
+<p> The simplest example of making a wrapper for the HTML stylesheets
+is:
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<xi:include href="examples/teixsl/battle1.xsl"/>
+</egXML>
+which loads the HTML stylesheet, and leaves all the settings to their
+defaults. The result will look like <ptr target="#battle1a"/>, where
+the input XML file is an edition of Kemp P. Battle's <title>History of
+the University of North Carolina</title><note place="foot">This
+edition is the property of the University of North Carolina at Chapel
+Hill. It is a part of the UNC-CH digitization project,
+<emph>Documenting the American South.</emph> We are very grateful to
+the University of North Carolina, through the good offices of Natasha
+Smith, for permission to use their texts in preparing and supporting
+this book. The representations of the text in this book are, however,
+<hi>purely illustrative of layout possibilities</hi> and do not represent the
+design or the intent of the University of North Carolina.</note> </p>
+
+<div>
+<head>Overall layout</head>
+
+<p>The whole file is transformed to a single stream of HTML on
+standard output, following the arrangement of the input XML. The only
+feature added is an automatic table of contents (<ptr
+target="#battle1b"/>) if no <gi>divGen type='toc'/</gi> is found in
+the text.
+<figure xml:id="battle1a">
+<graphic width="6in" url="examples/teixsl/battle1a.png"/>
+<head>Default HTML output</head>
+</figure>
+<figure xml:id="battle1b">
+<graphic width="6in" url="examples/teixsl/battle1b.png"/>
+<head>Default HTML output (detail of table of contents)</head>
+</figure>
+</p>
+
+<p>A more sophisticated display can be created by changing one
+parameter, <ident>pageLayout</ident>, from its default value of
+<value>Simple</value> to <value>CSS</value>:
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<xi:include href="examples/teixsl/battle2.xsl"/>
+</egXML>
+This creates a display like <ptr target="#battle2"/> in which the
+web page is divided into three main areas (top area for titles,
+right-hand column for main text and left-hand column for navigation).
+A table of contents is created in the left-hand column, using the
+<gi>div</gi> structure.<note place="foot">This layout is mainly intended for texts
+which use this sort of <gi>div</gi> markup.</note>
+<figure xml:id="battle2">
+<graphic width="6in" url="examples/teixsl/battle2.png"/>
+<head>HTML output with title and navigation areas</head>
+</figure>
+This layout is created using Cascading Stylesheets (CSS); for use with
+older browsers who do not support CSS properly, an alternative value
+for <ident>pageLayout</ident> of 
+<value>Table</value> will produce approximately the same effect using
+HTML tables.</p>
+
+<p>So far, the result has been to put the whole document into a single
+web page. It would be easier to use if we split it up into separate
+pages, one for each chapter. This could be done statically, by making
+separate HTML files, or dynamically, asking an application (such as
+the web server) for each section as it is needed, creating only a
+table of contents initially. Which behaviour is activated depends
+on the setting of the <ident>STDOUT</ident> parameter; here we set it
+to <value>false</value>, to indicate that we want separate HTML
+files. We also set <ident>outputName</ident>, which specifies what the
+initial output file should be called (this defaults to
+<path>index.html</path>). Finally, we say how we want the input split
+up, with the <ident>splitLevel</ident> parameter. Setting it to
+<value>0</value> means that it will create a new output file for each
+top-level <gi>div0</gi> or <gi>div</gi> element. 
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<xi:include href="examples/teixsl/battle2a.xsl"/>
+</egXML>
+The result is shown in  <ptr target="#battle2a"/>, with the 
+left-hand column showing the table of contents expanded for the
+current chapter.
+<figure xml:id="battle2a">
+<graphic width="6in" url="examples/teixsl/battle2a.png"/>
+<head>Display of individual chapter, with navigation TOC</head>
+</figure>
+</p>
+
+<p>If the <ident>splitLevel</ident> is set to 0 or greater, and
+<ident>STDOUT</ident> is <value>true</value>, only the summary page is
+created, and the links to other sections are of the form
+<path>filename.xml</path><code>?ID=xxx</code> where <code>xxx</code>
+is the identifier of a section.<note place="foot">The identifier is
+either a pre-existing XML ID, or constructed from the section's
+location in the document tree.</note>. If the HTML is being delivered
+by a web server, the <code>?ID=</code> notation on the link will
+request that the XSLT parameter <ident>ID</ident> be set to the
+relevant value. If <ident>ID</ident> is not empty, the stylesheets
+deliver just that section of the document.</p>
+
+<p>The effect of setting <ident>splitLevel</ident> to <value>1</value>
+is shown in <ptr target="#battle4"/>. This document is encoded with a
+<gi>div1</gi>, <gi>div2</gi>, <gi>div3</gi> etc structure, and each
+<gi>div2</gi> now generates its own web page. The display of the
+current location within the table of contents on the left-hand side
+shows the current chapter and section; it will not, unfortunately,
+continue to expand correctly to the lower levels if higher levels of
+<ident>splitLevel</ident> are set.
+<figure xml:id="battle4">
+<graphic width="6in" url="examples/teixsl/battle4.png"/>
+<head>Display of section within chapter</head>
+</figure>
+</p>
+<p>What else can be done to improve the layout? In the following
+stylesheet, for a simpler document which is the manual for TEI Lite,
+we:
+<list type="ordered">
+<item>Set the name of the <emph>Parent Institution</emph> (displayed
+by default in the navigation bar under the header).</item>
+<item>Override the template <ident>navbar</ident> (by default this is
+empty) to add a set of standard links which will appear on generated
+pages.</item>
+<item>Provide a set of replacement settings for the CSS
+stylesheet. This makes use of the template <ident>cssHook</ident>
+which is by default (like all templates ending in <q>Hook</q>)
+empty. Here we provide a background image for the header, change the
+colour and margin of the main title, and change the main background colour.</item>
+</list>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<xi:include href="examples/teixsl/teilite2.xsl"/>
+</egXML>
+The effect is shown in <ptr target="#teilite2"/>.
+<figure xml:id="teilite2">
+<graphic width="6in" url="examples/teixsl/teilite2.png"/>
+<head>HTML display with full navigation bar</head>
+</figure>
+The main sections of the page where the behaviour can be affected by
+CSS are shown in <ptr target="#csslayout"/>. The top part of the page
+has three HTML <gi>div</gi> elements with ID values
+(<value>hdr</value>, <value>hdr2</value>,  and <value>hdr3</value>),
+and the page title is put inside an <gi>h1</gi> with a class of
+<value>maintitle</value>. The main page of the page is a <gi>div</gi>
+with an ID of <value>rh-col</value>, and left-hand navigation part 
+is a <gi>div</gi>
+with an ID of <value>lh-col</value>. 
+<figure xml:id="csslayout">
+<graphic width="6in" url="examples/teixsl/csslayout.pdf"/>
+<head>CSS areas in HTML display</head>
+</figure>
+</p>
+<p>How do you determine what goes into the different areas of the
+page?  <ptr target="#csslayout2"/> shows the XSLT code which is
+executed for the five main areas. In each case, a
+<soCalled>stub</soCalled> template is called, which is then
+instantiated in the file <path>tei-param.xsl</path>. You can redefine
+any of these templates to move the parts of the text around the
+page. The default action of the different templates is shown below:
+<table rend="rules">
+<row role="label">
+<cell>Stub template</cell>
+<cell>Actual template</cell>
+<cell>Effect</cell>
+</row>
+<row><cell><ident>hdr</ident></cell><cell><ident>pageHeader</ident></cell><cell>Document title,
+subtitle etc</cell></row>
+<row><cell><ident>hdr2</ident></cell><cell><ident>navbar</ident></cell><cell>(empty)</cell></row>
+<row><cell>hdr3</cell><cell>crumbPath</cell><cell>Make breadcrumb trail</cell></row>
+<row><cell><ident>rh-col-top</ident></cell><cell><ident>columnHeader</ident></cell><cell>(empty)</cell></row>
+<row><cell><ident>rh-col-bottom</ident></cell><cell><ident>mainFrame</ident></cell><cell>Main page content</cell></row>
+<row><cell><ident>lh-col-top</ident></cell><cell><ident>searchbox,
+printLink</ident></cell><cell>standard navigation aids</cell></row>
+<row><cell><ident>lh-col-bottom</ident></cell><cell><ident>leftHandFrame</ident></cell><cell>Table
+of contents links</cell></row>
+</table>
+<figure xml:id="csslayout2">
+<graphic width="6in" url="examples/teixsl/csslayout2.pdf"/>
+<head>XSLT code executed for different areas of HTML page</head>
+</figure>
+</p>
+<p>The area labelled <value>hdr3</value> requires some
+explanation. This is intended to deliver a <soCalled>bread crumb
+trail</soCalled>, showing the position in the web site directory
+structure that the page is on. This is constructed by parsing an XSLT
+variable called <ident>REQUEST</ident> which is expected to be set by
+(for example) the web server. The effect is shown in the fragment of
+web page in <ptr target="#breadcrumbs"/>.
+<figure xml:id="breadcrumbs">
+<graphic width="3in" url="examples/teixsl/breadcrumbs.png"/>
+<head><soCalled>Breadcrumb Trail</soCalled> on HTML page</head>
+</figure>
+ </p>
+
+<p>As an example of manipulating the main layout areas, consider this
+stylesheet, which goes back to the Battle book:
+<egXML xmlns="http://www.tei-c.org/ns/Examples"
+       url="examples/teixsl/battle5.xsl"/>
+Here we have
+<list type="ordered">
+<item>Changed the <ident>hdr</ident> template to simply put out a
+generic title for the project.</item>
+<item>Set the <ident>hdr2</ident> and <ident>hdr3</ident> templates to
+do nothing, and set the CSS divisions to have a white background so
+that they have no effect.</item>
+<item>Put the document heading into the top of the right-hand
+column</item>
+<item>Set the left-hand column to have a fixed generic menu of options
+for the project.</item>
+<item>Adjusted some colours in the CSS.</item>
+</list>
+and the effect is shown in <ptr target="#battle5"/>.
+<figure xml:id="battle5">
+<graphic width="6in" url="examples/teixsl/battle5.png"/>
+<head>HTML variant layout</head>
+</figure>
+</p>
+</div>
+
+
+</div>
+
+<div xml:id="teixsl-usefo">
+<head>Using the XSL FO stylesheets</head>
+<p>Each of the available XSL FO engines has some extensions to the
+Recommendation, and some have limitations; the stylesheets therefore
+have conditional sections to cater for this. The parameter
+<ident>foEngine</ident> can be set to one of the following values
+<list type="ordered">
+<item><value>antenna</value> (Antenna House processor)</item>
+<item><value>fop</value> (Apache FOP)</item>
+<item><value>passivetex</value> (TeX-based PassiveTeX)</item>
+<item><value>xep</value> (RenderX XEP)</item>
+</list>
+</p>
+</div>
+
+<div xml:id="teixsl-uselatex">
+<head>Using the LaTeX stylesheets</head>
+<p> The simplest example of making a wrapper for the LaTeX stylesheets
+is:
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<xi:include href="examples/teixsl/pdf1.xsl"/>
+</egXML>
+</p>
+</div>
+
+<div xml:id="teixsl-cust">
+<head>Customization Reference</head>
+<p>There are several hundred parameters which you can set to change
+the output. They are either XSLT
+variables, or named templates, so you need to understand a little of
+XSL syntax. If you know a bit more, you can override any of the
+templates in the style files, but then you are on your own.
+</p>
+<p>The followings section describes all the parameters which you can
+set, the templates which are designed to be changed, and the empty
+templates provided into which you can add your own code. There is a
+web form at <ptr
+target="http://www.tei-c.org/Stylesheets/teic/style.xml"/> (jocularly
+known as the <soCalled>Stylebear</soCalled>) which will
+construct an XSL file for you, with all the variables configured.
+</p>
+
+<p> There are thirteen areas for customization. In most cases there are
+parameters and templates which are specific to one of the three
+output methods (HTML, XSL FO and LaTeX), and those which are common to all
+three.</p>
+</div>
+
+<xi:include href="examples/teixsl/customize.xml"/>
+
+
+<div>
+<head>XSL processors and dependencies</head>
+<p>
+The stylesheets have been tested at various times with the Microsoft,
+XT, Saxon, jd, libxslt, Mozilla, Xalan, Sablotron and Oracle XSLT processors;
+but at present the ones which are known to work fully are Xalan, Saxon
+and libxslt. The Microsoft processor can be used, but does not support
+multiple file output, which means that you cannot use the `split'
+feature of the stylesheets to make multiple HTML files from one XML
+file. There are ways to achieve the same effect, if you know what you
+are doing, using Javascript. </p>
+
+<p>If you have not yet installed an XSLT processor, it is probably
+sensible to pick Mike Kay's Saxon (from <ptr
+target="http://saxon.sourceforge.net"/>) or Daniel Veillard's libxslt
+(from <ptr target="http://www.xmlsoft.org"/>), as they seem to be the
+best implementations of the specification.  It is up to the user to
+find out how to run the XSLT processor! This may be from within a Java
+program, on the command-line, or inside a web server.</p>
+
+<p>The XSL FO style sheets were developed for use with PassiveTeX
+(<ptr target="http://www.tei-c.org/Software/passivetex/"/>), a system
+using XSL formatting objects to render XML to PDF via LaTeX. They have
+also been tested with the other XEP and Antenna House XSL FO
+implementations.</p>
+
+<p>Although the stylesheets are all written to work with XSL version
+1.0 processors, they do make occasional use of extensions, usually from
+the EXSL (<ptr target="http://www.exslt.org/"/>) set:
+<list type="ordered">
+<item>Processing tables in XSL FO sometimes uses the EXSL
+<ident>node-set</ident> function</item>
+<item>The <ident>tagdocs</ident> HTML module (not included in normal
+use) uses the EXSL
+<ident>node-set</ident> function</item>
+<item>The HTML output will make use of the EXSLT <ident>document</ident>
+element if it is available, or the Saxon output extensions if a
+version of Saxon is detected, or the Xalan output extensions if that
+is detected.</item>
+<item>The LaTeX table module uses the EXSL
+<ident>node-set</ident> function if it is available</item>
+</list>
+</p>
+</div>
+
+
+</div>
+

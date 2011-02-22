@@ -1,0 +1,232 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     xmlns:rng="http://relaxng.org/ns/structure/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Schema for EETS</title>
+            <author>Sebastian Rahtz</author>
+         </titleStmt>
+         <publicationStmt>
+	   <p>for TEI web site only</p>
+	 </publicationStmt>
+         <sourceDesc>
+            <p>derived from old DTD extension files for P4</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+<text>
+<body>
+<p>The <ident>eets</ident> schema consists of some new elements,
+and a subset of the TEI.
+<schemaSpec ident="eets" start="TEI div">
+  <moduleRef key="tei"/>
+  <moduleRef key="core"/>
+  <moduleRef key="header"/>
+  <moduleRef key="textstructure"/>
+  <moduleRef key="figures"/>
+  <moduleRef key="gaiji"/>
+  <moduleRef key="linking"/>
+  <moduleRef key="transcr"/>
+<elementSpec module="analysis" ident="cl" mode="delete"/> 
+<elementSpec module="analysis" ident="c" mode="delete"/> 
+<elementSpec module="analysis" ident="m" mode="delete"/> 
+<elementSpec module="analysis" ident="phr" mode="delete"/> 
+<elementSpec module="analysis" ident="s" mode="delete"/> 
+<elementSpec module="core" ident="address" mode="delete"/> 
+<elementSpec module="core" ident="addrLine" mode="delete"/> 
+<elementSpec module="core" ident="cb" mode="delete"/> 
+<elementSpec module="core" ident="dateRange" mode="delete"/> 
+<elementSpec module="core" ident="distinct" mode="delete"/> 
+<elementSpec module="core" ident="gap" mode="delete"/> 
+<elementSpec module="core" ident="headItem" mode="delete"/> 
+<elementSpec module="core" ident="headLabel" mode="delete"/> 
+<elementSpec module="core" ident="measure" mode="delete"/> 
+<elementSpec module="core" ident="meeting" mode="delete"/> 
+<elementSpec module="core" ident="mentioned" mode="delete"/> 
+<elementSpec module="core" ident="milestone" mode="delete"/> 
+<elementSpec module="core" ident="num" mode="delete"/> 
+<elementSpec module="core" ident="postBox" mode="delete"/> 
+<elementSpec module="core" ident="postCode" mode="delete"/> 
+<elementSpec module="core" ident="rs" mode="delete"/> 
+<elementSpec module="core" ident="speaker" mode="delete"/> 
+<elementSpec module="core" ident="sp" mode="delete"/> 
+<elementSpec module="core" ident="stage" mode="delete"/> 
+<elementSpec module="core" ident="street" mode="delete"/> 
+<elementSpec module="core" ident="time" mode="delete"/> 
+<elementSpec module="core" ident="timeRange" mode="delete"/> 
+<elementSpec module="corpus" ident="setting" mode="delete"/> 
+<elementSpec module="figures" ident="formula" mode="delete"/> 
+<elementSpec module="linking" ident="ab" mode="delete"/> 
+<elementSpec module="linking" ident="altGrp" mode="delete"/> 
+<elementSpec module="linking" ident="alt" mode="delete"/> 
+<elementSpec module="linking" ident="joinGrp" mode="delete"/> 
+<elementSpec module="linking" ident="join" mode="delete"/> 
+<elementSpec module="linking" ident="seg" mode="delete"/> 
+<elementSpec module="linking" ident="timeline" mode="delete"/> 
+<elementSpec module="linking" ident="when" mode="delete"/> 
+<elementSpec module="namesdates" ident="dateStruct" mode="delete"/> 
+<elementSpec module="textstructure" ident="closer" mode="delete"/> 
+<elementSpec module="textstructure" ident="dateline" mode="delete"/> 
+<elementSpec module="textstructure" ident="div0" mode="delete"/> 
+<elementSpec module="textstructure" ident="div1" mode="delete"/> 
+<elementSpec module="textstructure" ident="div2" mode="delete"/> 
+<elementSpec module="textstructure" ident="div3" mode="delete"/> 
+<elementSpec module="textstructure" ident="div4" mode="delete"/> 
+<elementSpec module="textstructure" ident="div5" mode="delete"/> 
+<elementSpec module="textstructure" ident="div6" mode="delete"/> 
+<elementSpec module="textstructure" ident="div7" mode="delete"/> 
+<elementSpec module="textstructure" ident="epigraph" mode="delete"/> 
+<elementSpec module="textstructure" ident="opener" mode="delete"/> 
+<elementSpec module="textstructure" ident="salute" mode="delete"/> 
+<elementSpec module="textstructure"  ident="signed" mode="delete"/> 
+<elementSpec module="transcr" ident="damage" mode="delete"/> 
+<elementSpec module="transcr" ident="fw" mode="delete"/> 
+<elementSpec module="transcr" ident="restore" mode="delete"/> 
+<elementSpec module="transcr" ident="space" mode="delete"/> 
+
+
+<elementSpec ident="ed" mode="add">
+  <desc>Editorial comments</desc>
+  <classes>
+    <memberOf key="tei.hqphrase"/>
+  </classes>
+  <content>
+    <rng:oneOrMore>
+      <rng:choice>
+	<rng:text/>
+	<rng:ref name="unclear"/>
+      <rng:ref name="expan"/>
+      <rng:ref name="lb"/>
+      <rng:ref name="g"/>
+      </rng:choice>
+    </rng:oneOrMore>
+  </content>
+</elementSpec>
+
+<elementSpec ident="me" mode="add">
+  <desc>Medieval</desc>
+  <classes>
+    <memberOf key="tei.hqphrase"/>
+  </classes>
+  <content>
+    <rng:ref name="macro.paraContent"/>
+  </content>
+</elementSpec>
+
+<elementSpec ident="lat" mode="add">
+  <desc>Latin</desc>
+  <classes>
+    <memberOf key="tei.hqphrase"/>
+  </classes>
+  <content>
+    <rng:ref name="macro.paraContent"/>
+  </content>
+</elementSpec>
+
+<elementSpec ident="oe" mode="add">
+  <desc>Old English</desc>
+  <classes>
+    <memberOf key="tei.hqphrase"/>
+  </classes>
+  <content>
+    <rng:ref name="macro.paraContent"/>
+  </content>
+</elementSpec>
+
+<elementSpec ident="fr" mode="add">
+  <desc>French</desc>
+  <classes>
+    <memberOf key="tei.hqphrase"/>
+  </classes>
+  <content>
+    <rng:ref name="macro.paraContent"/>
+  </content>
+</elementSpec>
+
+<elementSpec ident="page" mode="add">
+  <desc>A manuscript page</desc>
+  <classes>
+    <memberOf key="tei.chunk"/>
+  </classes>
+  <content>
+    <rng:ref name="macro.paraContent"/>
+  </content>
+  <attList>
+    <attDef ident="url" usage="opt" mode="add">
+      <gloss>a page image</gloss>
+      <datatype>
+	<rng:data type="anyURI"/>
+      </datatype>
+    </attDef>
+  </attList>
+
+</elementSpec>
+
+<elementSpec ident="np" mode="add">
+  <desc>Pointer to a note</desc>
+  <classes>
+    <memberOf key="tei.refsys"/>
+  </classes>
+  <content>
+    <rng:text/>
+  </content>
+  <attList>
+    <attDef ident="target" usage="opt">
+      <gloss>object being pointed to</gloss>
+      <datatype>
+	<rng:text/>
+      </datatype>
+    </attDef>
+  </attList>
+</elementSpec>
+
+<elementSpec ident="pp" mode="add">
+  <desc>Pointer to a paragraph</desc>
+  <classes>
+    <memberOf key="tei.refsys"/>
+  </classes>
+  <content>
+    <rng:text/>
+  </content>
+  <attList>
+    <attDef ident="target" usage="opt">
+      <gloss>object being pointed to</gloss>
+      <datatype>
+	<rng:text/>
+      </datatype>
+    </attDef>
+  </attList>
+
+</elementSpec>
+
+
+
+<elementSpec ident="text" module="core" mode="change">
+  <attList>
+    <attDef ident="type" usage="opt" mode="add">
+      <gloss>a type of text</gloss>
+      <datatype>
+	<rng:text/>
+      </datatype>
+    </attDef>
+  </attList>
+</elementSpec>
+
+<elementSpec ident="pb" module="core" mode="change">
+  <attList>
+    <attDef ident="url" usage="opt" mode="add">
+      <gloss>associated page image</gloss>
+      <datatype>
+	<rng:data type="anyURI"/>
+      </datatype>
+    </attDef>
+  </attList>
+</elementSpec>
+
+</schemaSpec>
+</p>
+
+</body>
+</text>
+</TEI>

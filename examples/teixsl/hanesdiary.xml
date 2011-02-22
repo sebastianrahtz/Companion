@@ -1,0 +1,358 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader type="">
+    <fileDesc>
+      <titleStmt>
+        <title><emph>Robert March Hanes Papers (no.4534). Diary, 30 April-2 December 1918:</emph>
+Electronic Edition.</title>
+        <author>Hanes, Robert March, 1890-1959</author>
+        <funder>Funding from the  State Library of North Carolina  
+ supported the electronic publication of this title.</funder>
+        <respStmt>
+          <resp>Diary  transcribed by</resp>
+          <name>Amy Davis </name>
+        </respStmt>
+        <respStmt>
+          <resp>Page images scanned by</resp>
+          <name>Harris Henderson</name>
+        </respStmt>
+        <respStmt>
+          <resp>Text encoded by </resp>
+          <name xml:id="ns">Melissa Meeks  and Natalia Smith</name>
+        </respStmt>
+      </titleStmt>
+      <editionStmt>
+        <edition>First edition, <date>2002</date></edition>
+      </editionStmt>
+      <extent>ca.   40 K</extent>
+      <publicationStmt>
+        <publisher>Academic Affairs Library, UNC-CH</publisher>
+        <pubPlace>University of North Carolina at Chapel Hill, </pubPlace>
+        <date>2002.</date>
+        <availability>
+          <p>© This work is the property of the University of North Carolina 
+at Chapel Hill. It may be used freely by individuals for research, teaching and personal use as long as this statement of availability is included in the text.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <biblFull>
+          <titleStmt>
+            <title type="manuscript"> Robert March Hanes Papers (#4534). Diary, 30 April-2 December 1918</title>
+            <author>Robert March Hanes</author>
+          </titleStmt>
+          <extent> 18  p., page images</extent>
+          <publicationStmt>
+            <pubPlace/>
+            <publisher/>
+            <date/>
+            <authority/>
+          </publicationStmt>
+          <notesStmt>
+            <note anchored="true">Call number SHC#4534 (Manuscripts Dept., Southern 
+Historical Collection, 
+University of North Carolina at Chapel Hill)</note>
+          </notesStmt>
+        </biblFull>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>The electronic edition is a part of the UNC-CH
+digitization project, <hi rend="italics">Documenting the American South.</hi></p>
+      </projectDesc>
+      <editorialDecl>
+        <p>The text has been encoded using the
+recommendations for Level 4 of the TEI in Libraries Guidelines.</p>
+        <p> Transcript of the diary. The original is in the 
+Southern Historical Collection, University of North Carolina at Chapel 
+Hill.  </p>
+        <p>Page images can be                                                 
+viewed and compared in parallel with the text.</p>
+        <p>Original grammar, punctuation, and spelling have been preserved.  Encountered
+typographical errors have been preserved, and appear in red type.</p>
+        <p>Any hyphens occurring in line breaks have been 
+removed, and the trailing part of a word has been joined to 
+the preceding line.</p>
+        <p>All quotation marks, em dashes  and ampersand have been transcribed as entity references.</p>
+        <p>All double right and left quotation marks are encoded as ” and “ respectively.</p>
+        <p>All single right and left quotation marks are encoded as ’ and ‘ respectively.</p>
+        <p>All em dashes are encoded as —</p>
+        <p>Indentation in lines has not been preserved.</p>
+        <p>Spell-check and verification made against printed text using Author/Editor (SoftQuad) and Microsoft Word spell check programs.</p>
+      </editorialDecl>
+      <classDecl>
+        <taxonomy xml:id="lcsh">
+          <bibl>
+            <title>Library of Congress Subject Headings</title>
+            <edition/>
+          </bibl>
+        </taxonomy>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="eng">English</language>
+      </langUsage>
+      <textClass>
+        <keywords scheme="#lcsh">
+          <list type="simple">
+            <item>United States. Army -- Military life.</item>
+            <item>Soldiers -- North Carolina -- Diaries.</item>
+            <item>World War, 1914-1918 -- North Carolina.</item>
+            <item>World War, 1914-1918 -- Campaigns -- France.</item>
+            <item>World War, 1914-1918 -- Personal narratives, American.</item>
+            <item>Hanes, Robert March, 1890-1959 -- Diaries.</item>
+            <item>Soldiers -- France -- Diaries.</item>
+            <item>United States. Army -- Officers -- Diaries.</item>
+            <item>World War, 1914-1918 -- France.</item>
+          </list>
+        </keywords>
+      </textClass>
+    </profileDesc>
+    <revisionDesc>
+      <change>
+        <date>2002-06-12, </date>
+        <respStmt>
+          <name>Celine Noel and Wanda Gunther </name>
+          <resp/>
+        </respStmt>
+        <item> revised TEIHeader and created catalog 
+record for the electronic edition.</item>
+      </change>
+      <change>
+        <date>2002-05-,  </date>
+        <respStmt>
+          <name>  Natalia Smith, </name>
+          <resp>project manager, </resp>
+        </respStmt>
+        <item>finished TEI-conformant encoding and final proofing.</item>
+      </change>
+      <change>
+        <date>2002-04-10, </date>
+        <respStmt>
+          <name>Melissa Meeks</name>
+          <resp/>
+        </respStmt>
+        <item> finished TEI/SGML encoding</item>
+      </change>
+      <change>
+        <date>2002-04-01, </date>
+        <respStmt>
+          <name>Amy Davis</name>
+          <resp/>
+        </respStmt>
+        <item> finished transcribing the manuscript.</item>
+      </change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <front>
+      <pb xml:id="hanescv" url="rhdiarycv.jpg" n="cover"/>
+      <titlePage>
+        <docTitle>
+          <titlePart type="main">Capt. Robt. M. Hanes<lb/>
+Battery A-113 F.A.<lb/>
+30 Div.</titlePart>
+        </docTitle>
+      </titlePage>
+    </front>
+    <body>
+      <div1 type="text">
+        <pb xml:id="hanes1" url="rhdiary0001.jpg" n="1"/>
+        <head>1918</head>
+        <div2 type="section">
+          <head>April 30—</head>
+          <p>left Camp Sevier with Advanced School Detachment 30. Division composed of 135 officers and 174 enlisted men. Left at 2 P.M. </p>
+        </div2>
+        <div2 type="section">
+          <head>May 1—</head>
+          <p>Arrived at Camp Merritt N.J. at 12 m. Put into barracks there and remained until May 7 getting men equipped for the trip.</p>
+        </div2>
+        <div2 type="section">
+          <head>May 7—</head>
+          <p>Left Camp Merritt at 7:30 arrived at Hoboken about 10:00 A.M. Went aboard the George Washington at 11:45 A.M. and were assigned to staterooms.</p>
+        </div2>
+        <div2 type="section">
+          <head>May 8—</head>
+          <p>Sailed from New York at 4:00 P.M. about 6000 officers and men aboard—Very uneventful trip over. Look out watches 3 hours per day 12:30-1:30  P.M., 8:30-9:30 P.M. and 4:30-5:30 A.M. being only duties aboard. Sighted one submarine on the morning of May 17th but it submerged and disappeared. Food very good—weather delightful.</p>
+        </div2>
+        <div2 type="section">
+          <head>May 18</head>
+          <p> Landed at Brest, France about 6 P.M. Had charge of the enlisted men of 30 Div. and marched them straight to Camp Pontonozen arriving about 9 P.M. Got them placed in tents, drew rations and fed them about 12 m.</p>
+        </div2>
+        <div2 type="section">
+          <pb xml:id="hanes2" url="rhdiary0002.jpg" n="2"/>
+          <head>May 23</head>
+          <p> Left Pontonozen at 6:30 A.M. and Brest at 9:30—Had a beautiful trip for two days and nights on train.</p>
+        </div2>
+        <div2 type="section">
+          <head>May 25</head>
+          <p> Arrived at Valdahon School of instruction for artillery. Wonderful barracks, fine meals, perfect weather all conducive to work. Capt. McLendon and I have room together.</p>
+        </div2>
+        <div2 type="section">
+          <head>May 27—</head>
+          <p>Had a wonderful automobile trip to Besancon about 18 miles distant at J. M.'s expense in Peugot. Very old town part of wall built by Caesar still standing. Clock with dials keeping time of all principal cities of world, tides at principal seaports, complete solar system, resurrection of Christ each day at noon—very wonderful—</p>
+        </div2>
+        <div2 type="section">
+          <head>June 20</head>
+          <p>After finishing 3 weeks of instruction at Valdahon the Advanced Detachment was ordered back to join the Regiment at Camp Coëtquidan, Guer, France. About 20 miles from Rennes.</p>
+        </div2>
+        <div2 type="section">
+          <head>June 25—</head>
+          <p>Arrived at Guer and reported to Regiment for course in firing and drill.</p>
+        </div2>
+        <div2 type="section">
+          <head>Aug 23</head>
+          <p> Left Guer for Toul. Arrived at Toul with my Battery Aug 25—Detrained immediately and pulled out to a wood about ten miles for encampment.</p>
+        </div2>
+        <div2 type="section">
+          <head>Aug 26</head>
+          <p> Arrived at 4:30 A.M. in woods for encampment. This used as <choice><sic>eschelon</sic><corr>echelon</corr></choice> for some weeks.</p>
+        </div2>
+        <div2 type="section">
+          <head>Aug. 31st—</head>
+          <p>Went into position for first time. <pb xml:id="hanes3" url="rhdiary0003.jpg" n="3"/>
+ Old French position camouflaged but not protected otherwise. Dug outs across road for some of men but these very bad. Position on road from Bernecount to Beaumont. Flares sent up by Infantry to signal “all is well” made great impression on us. At that time we did not know what they meant and as they lighted the road on which we were very brightly we expected the Germans to fire on us at any moment. Just before we got into position a gas alarm was given and we had our first experience putting horse masks on and driving in our own. The alarm proved to be a mistake so we soon unmasked.  </p>
+        </div2>
+        <div2 type="section">
+          <head>September 1st—</head>
+          <p>Fired my first shot at the Germans using aeroplane observation. Fired on a railroad crossing with a main highway and the fire was reported by the aeroplane to have good effect.</p>
+        </div2>
+        <div2 type="section">
+          <head>Sept. 3—</head>
+          <p>Went out of position back to <choice><sic>eschelon</sic><corr>echelon</corr></choice>. All movement being by night. I was relieved by D battery.</p>
+        </div2>
+        <div2 type="section">
+          <head>Sept. 6—</head>
+          <p>Went into position just north of first one. Good dug outs and cover for  all the men. Old French position. very good one—Registered on <choice><sic>St. Baussont</sic><corr>St. Baussant</corr></choice> and did quite a bit of firing on Germans. Relieved by a battery of the 3rd Field Artillery. Relief was to have been made at ten o'clock. My limbers came up about  9:30 and as we had no mission to perform I pulled my guns out and limbered up about ten to await the arrival of the other battery. The battery hadn't shown up at 2 AM and knowing the road on which 
+ <pb xml:id="hanes4" url="rhdiary0004.jpg" n="4"/> my battery was would surely be shelled between 3 and 5, as it had been every morning. I tried to get permission to move my guns on out. This was not permitted—I then ordered the guns turned round and run back into the emplacement and the horses taken on back. In turning round one driver drove into a trench and had two of his horses feet in the air on their backs. About the time the others got turned round the relieving battery turned up out of a traffic jamb—To add to the present confusion the Germans opened fire on the road. Fortunately their fire fell short and we finally got out with no one hurt. I stayed behind and with the help of the relieving battery got the horses out of the ditch and took them back to the <choice><sic>eschelon</sic><corr>echelon</corr></choice> arriving about six A.M. </p>
+        </div2>
+        <div2 type="section">
+          <head>Sept 9th—</head>
+          <p>St. Mihiel Drive</p>
+        </div2>
+        <div2 type="section">
+          <head>Sept 10th </head>
+          <p>Went into forward position 362.530—231,937 to start our first  offensive. Got the guns placed about eleven <choice><sic>oclock</sic><corr>o'clock</corr></choice> and then put everyone to digging holes for cannoneers and carrying ammunition from the dump about 1/2 of a mile—The rain was pouring  and everyone got drenched. Carried ammunition all night of tenth and eleventh until everyone was broken down. Raining and black as pitch each night. Men stayed in shelter tents in woods in day time—I stayed in dug out near guns. Telephone central in dug out in front of guns.</p>
+        </div2>
+        <div2 type="section">
+          <head>Sept 12th</head>
+          <p>Started firing at 4:15 first cutting barbed wire for fifteen minutes 
+ <pb xml:id="hanes5" url="rhdiary0005.jpg" n="5"/> then <choice><sic>harrassing</sic><corr>harassing</corr></choice> fire until 5 <choice><sic>oclock</sic><corr>o'clock</corr></choice> when the rolling <choice><sic>barage</sic><corr>barrage</corr></choice> began, this continued until 7:30 steadily. We rested until 8 and fired again until 9:30. Then closed firing as the enemy had been driven back  out of our range. The limbers were brought up at 3 o'clock and at 4:30 we moved out to follow up the Infantry. We spent the night of the 12th in a German position which they had just left about twelve hours before in the Bois du Beau Villon. The Germans had evidently departed “toute de suite” as they left practically everything behind them. On the way up to this place we passed the spot where E Battery was shot up and Lt. Douglass with a private were killed while four others were seriously wounded. No rations for men or feed for horses was sent up with us so we had to live on what we could pick up for about two days. </p>
+        </div2>
+        <div2 type="section">
+          <head>Sept 13.</head>
+          <p> March was resumed and the battery put in position just west of Thiacount at about 3:30 in the afternoon. On the way here Shikery Salem got two German cows and later we got six German horses which proved to be about the best we had. The battery was put in an open field with only the nets as camouflage. The Germans soon saw us from their balloons and opened upon  us. Firing continued by the Germans for two days. Battys. C and B 
+ <pb xml:id="hanes6" url="rhdiary0006.jpg" n="6"/> lost three men each here but we lost none. One of the cows was killed here to furnish us some food until we could get some rations. This saved us.</p>
+          <p>The German fire became so hot that we reconnoitered a new position and were preparing to move into it when on the night of the 14th we got orders to pack up and move out altogether.</p>
+        </div2>
+        <div2 type="section">
+          <head>Sept 14th</head>
+          <p>We moved out of position at <choice><sic>Thiacourt</sic><corr>Thiaucourt</corr></choice> about 8 P.M. and marched to <choice><sic>Ramboucourt</sic><corr>Rambucourt</corr></choice> arriving about 7 AM.  Were <choice><sic>heavilly</sic><corr>heavily</corr></choice> shelled with gas, shrapnel and H.E. on the road—Lost our other cow during the shelling and Batty B lost a couple of horses. We spent the day of the 15th at <choice><sic>Ramboucourt</sic><corr>Rambucourt</corr></choice> and at 7 P.M. resumed the march which terminated at Mecain. Here in the rain and heavy wind we pitched tents in an open field and spent the day of the 16th. The night of the 16th was spent in a march to Nicey From Nicey we marched to <choice><sic>Deuxnoeads</sic><corr>Deuxnouds</corr></choice> arriving about 2 A.M. </p>
+        </div2>
+        <div2 type="section">
+          <head>Sept 19th.</head>
+          <p> camped here in a swamp which had been rained  upon for about a week steadily and was just like a wet sponge all over. From<choice><sic> Deuxnoeads</sic><corr> Deuxnouds</corr></choice> we marched the night of the 19th to a woods north of <choice><sic>Raricourt</sic><corr>Rarecourt</corr></choice> arriving there about 8 A.M.</p>
+          <p> During all this march the horses had scarcely no food and the roads were very heavy on account of the rains. They were completely exhausted from heavy pulling and lack of food. 
+ <pb xml:id="hanes7" url="rhdiary0007.jpg" n="7"/> The men were pretty well fogged out too. </p>
+        </div2>
+        <div2 type="section">
+          <head>Sept 22nd—</head>
+          <p>Pulled out of these woods about 7 P.M. and marched to a woods near <choice><sic>Raricourt</sic><corr>Rarecourt</corr></choice>. The distance was only about seven kilometers but we were on the road about seven hours making it on account of the <choice><sic>terriffic</sic><corr>terrific</corr></choice> traffic jambs. The rain poured all night and the wind blew a gale. This is the most horrible night I have ever had—</p>
+        </div2>
+        <div2 type="section">
+          <head>Sept 23</head>
+          <p>At about eleven o'clock all B.C.'s were ordered forward to make a reconnaissance for positions in <choice><sic>Bois D'Esnes</sic><corr>Bois-De-Cene</corr></choice>  from which to start the Argonne drive. The front was so filled with artillery that batteries had to be almost put on top of each other. I got my battery staked out and had a wonderful supper with the Infantrymen who were occupying the dug outs where my men were to stay. The battery came forward often an all night march and we went into position at 6 A.M.. with a German balloon apparently looking right at us. Nets were put up over the guns at once and everything was put in readiness for firing.</p>
+        </div2>
+        <div2 type="section">
+          <head>Sept 24—</head>
+          <p>Men slept all day and carried ammunition all night.</p>
+        </div2>
+        <div2 type="section">
+          <head>Sept 26th—</head>
+          <p>Barrage was started at 4:45 after having fired preparation fire from 1 A.M. on. At noon the 
+ <pb xml:id="hanes8" url="rhdiary0008.jpg" n="8"/> B.C.s were ordered forward to reconnoitre new gun positions following up the advance. The positions assigned to us could not be occupied as they were still held by the enemy and on our attempting to approach them he very nastily covered the road with machine gun fire. We dropped back and picked out other positions after dark in the Bois D' Avicourt. The batteries came in about two A.M. and were put into position while the limbers and horses were carried to a ravine to the left front. </p>
+          <p>The major was, as usual, “trés fatigué” and when called to report to the General about three A.M. saw he was “dead” and couldn't possibly  go. Col. Chambers went in his place.</p>
+        </div2>
+        <div2 type="section">
+          <head>Sept. 27th—</head>
+          <p>The battery was ordered forward before a round was fired from this position and we went into position again about five kilometers farther on in front of a German 150 Battery. Ben Lacy turned the German guns around and fired them all day. The roads on all of this advance were fearful and the rain and mud were present in large quantities.</p>
+          <p> During the two days we stayed in this position an air fight took place just above my battery and a German plane was brought down just in rear of my battery. The pilot was crushed to a pulp. We were 
+ <pb xml:id="hanes9" url="rhdiary0009.jpg" n="9"/> certainly glad to see him fall as he had our absolute location and would have had German fire on us shortly if he had been allowed to get back to the German lines. Before he fell however he brought down one of our balloons in flames just to our right.  </p>
+        </div2>
+        <div2 type="section">
+          <head>Sept 28th—</head>
+          <p>B.C.s went forward to reconnoitre new positions and finally a reverse slope on the road from Montfaucon to Ivney was picked. We went back for our batteries and the rain poured down in torrents. I had taken up my “pup” tent thinking the battery would move forward that night and got back to find orders were changed and we should not move until morning. I spent the night in a  dug out with the Colonel and got rained on all night as a consequence of a sieve roof.</p>
+        </div2>
+        <div2 type="section">
+          <head>Sept 29th—</head>
+          <p> At 5 A.M. I was up and soon started to the forward position to get the guns staked out and everything in readiness for the battery. While I was staking out the line of guns the Germans opened up on the slope. Three Infantrymen about a hundred feet from me jumped into a shell hole and almost immediately after they got into it a German shell hit in it—one mans foot was cut off. I put him on my horse and sent him back to the first aid station. 
+ <pb xml:id="hanes10" url="rhdiary0010.jpg" n="10"/> Another was shot <choice><sic>thru</sic><corr>through</corr></choice> the groin and the third was badly burned up the back. </p>
+          <p>The <choice><sic>battallion</sic><corr>battalion</corr></choice> moved in about eight <choice><sic>oclock</sic><corr>o'clock</corr></choice> over a road that was continually shelled by the Germans and the only thing that kept it from being entirely shot up was a heavy fog which prevented the German balloons from seeing the road. This was a very lucky thing for us.</p>
+          <p>After getting the nets over the guns and getting trenches dug for the <choice><sic>canoneers</sic><corr>cannoneers</corr></choice> the rest of the men were put to digging in in a sunken road just behind the battery. The Germans fired heavily to our front on both flanks and to our rear but couldn't get in on us. We must have been in “dead space” for their guns. Battery E just to our left had four men killed here and several wounded. B. and C both had men wounded and we had one, Ira Culppepper wounded at the horse lines about five hundred meters to the left rear of the battery. We had several horses also killed here by shell fire.</p>
+          <p>The Germans held us up here and we were too short of ammunition to do much firing at them. We at one time had only 150 rounds of ammunition left to the battery and about this time the Infantry reservers were retreating by and back of us as hard as they could, the General commanding the Division. Come up and ordered the crest behind which we 
+ <pb xml:id="hanes11" url="rhdiary0011.jpg" n="11"/> were to be held at all costs, each battery to put an observer out on the crest at once and as soon as any Germans were seen to start our way to hail the guns to the top of the crest and fire directly on them until our ammunition gave out. We didn't have to actually do this <choice><sic>altho</sic><corr>although</corr></choice> we expected to at any time— </p>
+          <p>We finally got ammunition coming up after the engineers had put the roads in passable shape and then did much firing. I got on a German battery with my guns and ran off the <choice><sic>personnell</sic><corr>personnel</corr></choice>, I also shot up a cross road where there was much traffic. The Infantry observer reported the first volley hit just in the middle of the road tearing up traffic and completely stopping it.</p>
+        </div2>
+        <div2 type="section">
+          <head>Oct. 1</head>
+          <p> My battery was designated as the accompanying battery for the Infantry and together with Col. Cox I went to P.C. Pickering to arrange the details with General McKoy. I talked with the Infantry Major that I was to support and had all the details settled.</p>
+        </div2>
+        <div2 type="section">
+          <head>Oct 4—</head>
+          <p>The <choice><sic>barage</sic><corr>barrage</corr></choice> was started for the advance at 4:45. I left the battery under Lt. Royster firing the <choice><sic>barage</sic><corr>barrage</corr></choice> with orders to move out on a certain road at 6 o'clock and I should send them word where to come. I went forward to the Infantry Major's Command Post in a woods about two miles farther on. His troops were all in these woods and had not 
+ <pb xml:id="hanes12" url="rhdiary0012.jpg" n="12"/> advanced with our barage on account of German heavy counter barage work. I went in with the major into a small hole in the ground and the Germans made the place a perfect hell with all sorts of fire for about two hours. We had to wear our gas masks almost all that time on account of gas shells put over by the Germans. Men were being brought back by us all the time wounded and shot up. Finally the major decided to go out and see what was the trouble that his troops were not advancing. We went out over a field covered with heavy fire and found some of his companys already pretty badly shot up and disorganized. We finally got to a sunken road about four hundred meters ahead and stopped there to reorganize. I sent a runner back to the battery to tell them to stay where they were until further orders as the Infantry had not advanced much. After getting the troops fixed up we went on ahead to another sunken road and established a P.C. in a field behind some dirt bunkers. Here I got different targets from the major and sent data back to the battery which I had brought up and put into position just beside the woods that we first were in. We had four apple trees to put one platoon under and a hedge 
+ <pb xml:id="hanes13" url="rhdiary0013.jpg" n="13"/> behind which the men got to dig their holes. On the road coming up we passed one battery completely shot to pieces. One caisson had a direct hit on it and dead horses were all over the road. The men had been removed. They had preceded us about two hours and  didn't present a very favorable sight as we passed them. All firing data had to be sent back by messengers over a shell swept field as telephone lines were cut as fast as they could be repaired and were of no use at all. German airplanes came over and got our location at the P.C. and the 77s opened up on us and fired almost continuously at us for two days. One shell burst in the bunker just back of my head but beside covering me with dirt and deafening me it did not harm. Men were killed and wounded all round us but we did not get a direct hit. Two men walking down the road just in front of us were blown to nothing by a shell which burst just in front of them. On the second day the major with whom I started was wounded and a machine gun Captain was put in charge of the <choice><sic>battallion</sic><corr>battalion</corr></choice>. He was perfectly rotten—didn't know what he was trying to do at all. I went “over the top” with the Infantry one time. 
+ <pb xml:id="hanes14" url="rhdiary0014.jpg" n="14"/> His men were ordered to advance and fell back before machine gun fire all shot up and disorganized. Finally 5 French tanks came up and we organized a charge to follow them. I opened up fire and worked on some small patches of woods for half an hour beforehand to clear them of machine guns and minnywerfers and at the end of that time the charge started. Three of the tanks were blown up by German anti tank guns but the Infantry advanced about six hundred meters and dug themselves in there. </p>
+          <p>On the night of the 5th I was relieved by B battery. They took over our guns and all complete and we went back to their position and took over their equipment. We had another man wounded at the horse lines from the forward position.</p>
+        </div2>
+        <div2 type="section">
+          <head>Oct. 6th</head>
+          <p> We were ordered out of the lines and we marched that night back to Racicount after having got our guns from Battery B. We spent two days here resting up and I got my first bath in three weeks as well as some clean clothing. The men were billetted around in houses and dumps whenever they could get and the carriages were parked on the side of the road. A Provost marshal Lieutenant took us in with him and gave us a  good place to stay.</p>
+          <pb xml:id="hanes15" url="rhdiary0015.jpg" n="15"/>
+          <p>The Colonel came ahead of the Regiment to Racicount saying he would find places for the batteries to put in. He got there found a good dug out for himself, fixed himself up comfortably and left the batteries all to shell for themselves in the rain and do the best they could. An absolutely rotten performance.</p>
+        </div2>
+        <div2 type="section">
+          <head>October 8th</head>
+          <p> left Racicount and marched by day to Senoncount where we spent the night in barracks. Everyone very comfortably fixed.</p>
+        </div2>
+        <div2 type="section">
+          <head>October 9th—</head>
+          <p>Marched to Boucemont a deserted old town where we spent the night in the old ruins of houses.</p>
+        </div2>
+        <div2 type="section">
+          <head>Oct 10—</head>
+          <p>I left with one gun by motor truck to follow the three guns that had been sent on under Lieutenant Stackpole to go into position East of Dommartin to relieve the 101st F.A. The relief was completed at 2 A.M. Oct 11th. They pulled our guns into position for us as we had no horse along. The best of the battery came to the woods in rear of us where our <choice><sic>eschelon</sic><corr>echelon</corr></choice> was established. Lt. Royster had been sent to the hospital and Stackpole and I were left alone with the battery. Roberts was sent up with the Infantry as <choice><sic>liason</sic><corr>liaison</corr></choice> officer and when he came back was sent to the [8. 0. 8.] to be reclassified.
+ <pb xml:id="hanes16" url="rhdiary0016.jpg" n="16"/>We remained in this position overlooking the plains toward Metz until Oct. 19th when we were moved about three kilometers down the road to another position where we relieved a French battery. We enlarged the shacks for the men and sent to Hannonville and got china and linen enough for everyone. Lived “de luxe” here.</p>
+        </div2>
+        <div2 type="section">
+          <head>Oct 31st</head>
+          <p> Moved back to former position. Found all of our dug outs torn up and ruined by a  French battery and a battery of the 115th who had moved in. We fired considerably every night here. The French battery observing no camouflage discipline drew fire on us constantly which culminated in a gas shelling on Nov. 6th from 10:30 to 2:30 A.M. We fired a barage at 5 A.M. for the Infantry who took Marcheville. About 15 of my men were gassed and became so badly burned and gassed by the mustard that they had to be evacuated to the hospital. A French Captain in a dug out not 50 feet from mine was so badly burned he had to be taken out in an ambulance.</p>
+          <p>One of my men, Culp, who was on duty with a Battery B man at the Battallion O.P. was gassed very badly and afterward died. A shell hit the O.P. killing the 
+ <pb xml:id="hanes17" url="rhdiary0017.jpg" n="17"/> Battery B man. I got a fair dose of gas in my eyes but it proved not to be serious. We had to move the first platoon out of its position on account of the gas and place it forward with the second.  </p>
+        </div2>
+        <div2 type="section">
+          <head>Nov 10th</head>
+          <p> Fired our last barage for the Infantry. It was reported  by them to be a dandy.</p>
+        </div2>
+        <div2 type="section">
+          <head>Nov 11th</head>
+          <p> At eleven <choice><sic>oclock</sic><corr>o'clock</corr></choice> all firing closed according to the armistice agreement with Germany. Fire was kept up by both sides until eleven o'clock. I fired my last shot just at  eleven. This was a great day for us as it meant the end of the war. Germany was completely defeated. The Kaiser and Crown  Prince flew the country giving up all rights to the German throne.</p>
+        </div2>
+        <div2 type="section">
+          <head>Nov 12th</head>
+          <p>Ben Lacy and I went to Butgreville, a little town on the plains about eight kilometers in front of us. It proved to be occupied entirely by Germans, not an American in the town. We passed the German sentry with the pretext that we had official business, talked to the German soldiers and then called on the German officers. We chatted with them a half hour, drank a glass of Schnapps with them and 
+ <pb xml:id="hanes18" url="rhdiary0018.jpg" n="18"/> returned home. Within 50 hours after the Armistice was signed we were in the German lines drinking Schnapps with the officers. Passed on the way in 37 Italian prisoners coming out of the German lines. Had walked 30 kilometers that day, had had no food for six days but were radiantly happy to be free and all sang Americas praises. </p>
+          <p>Forty Americans lay dead on the barbed wire outside Butgreville killed in an attack started after the Armistice was signed on the morning of the 11th. The German officers said the couldn't understand why they were sent against them when everyone was so positive the Armistice would be signed. Forty lives wasted.</p>
+        </div2>
+        <div2 type="section">
+          <head>Nov 18—</head>
+          <p>Ordered out of position to <choice><sic>eschelon</sic><corr>echelon</corr></choice> in Foret de la Montagne on the Grand Francheé—</p>
+        </div2>
+        <div2 type="section">
+          <head>Dec 2—</head>
+          <p>Ben Lacy and I rode to Vendon a trip of about 38 miles. Very interesting old citadel and fortifications with many underground passages. Forts all round town very interesting. Town completely deserted except for soldiers, pretty badly shot up. One grave yard with 8000 graves.</p>
+        </div2>
+      </div1>
+    </body>
+  </text>
+</TEI>

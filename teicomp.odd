@@ -1,0 +1,262 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     xmlns:rng="http://relaxng.org/ns/structure/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>TEI Documentation</title>
+            <author>Sebastian Rahtz</author>
+         </titleStmt>
+         <publicationStmt>
+	   <p>for TEI web site only</p>
+	 </publicationStmt>
+         <sourceDesc>
+            <p>derived from old DTD extension files for P4</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+<text>
+<body>
+<p>The <ident>teicomp</ident> schema consists of some new elements,
+and a subset of the TEI.</p>
+
+<div>
+<head>Elements to mark up examples or other computer code</head>
+<specGrp xml:id="EX">
+      <elementSpec module="tagdocs" ns="http://www.tei-c.org/ns/Examples" ident="egXML"
+mode="change">
+	<content>
+	  <oneOrMore xmlns="http://relaxng.org/ns/structure/1.0">
+	    <choice>
+	      <text/>
+	      <ref name="anyTEI"/>
+	      <ref name="macro.schemaPattern"/>
+	      <ref name="mathml.math"/>
+	    </choice>
+	  </oneOrMore>
+	</content>
+	<attList>
+	  <attDef ident="url" usage="opt" mode="add">
+	    <gloss>Location of file containing code</gloss>
+	    <datatype>
+	      <rng:data type="anyURI"/>
+	    </datatype>
+	  </attDef>
+	</attList>
+      </elementSpec>
+
+    <macroSpec ident="anyTEI" mode="add">
+     <content>
+      <element xmlns="http://relaxng.org/ns/structure/1.0"
+	       ns="http://www.tei-c.org/ns/Examples">
+        <xi:include href="oddnames.xml">
+          <xi:fallback> ERROR: cannot locate list of names</xi:fallback>
+	</xi:include>
+       <ref name="att.global.attribute.xmlid"/>
+       <ref name="att.global.attribute.xmllang"/>
+       <zeroOrMore>
+        <attribute>
+         <anyName>
+          <except>
+           <name>xml:id</name>
+           <name>xml:lang</name>
+          </except>
+         </anyName>
+        </attribute>
+       </zeroOrMore>
+       <zeroOrMore>
+        <choice>
+         <text/>
+         <ref name="anyTEI"/>
+         <ref name="macro.schemaPattern"/>
+         <ref name="mathml.math"/>
+        </choice>
+       </zeroOrMore>
+      </element>
+     </content>
+    </macroSpec>
+
+</specGrp>
+</div>
+
+<div>
+<head>Markup of terms, values, names etc </head>
+<specGrp xml:id="NAMING">
+
+ <elementSpec ident="value">
+   <desc>The value of some identifier</desc>
+   <classes><memberOf key="model.pPart.data"/></classes>
+   <content>
+     <rng:text/>
+   </content>
+ </elementSpec>
+
+ <elementSpec ident="entity">
+   <desc>Something we want to decide later how to represent</desc>
+   <classes><memberOf key="model.pPart.data"/></classes>
+   <content>
+     <rng:empty/>
+   </content>
+  <attList>
+    <attDef ident="name" usage="req">
+      <gloss>The name of the thing you want to record</gloss>
+      <datatype>
+	<rng:data type="NMTOKEN"/>
+      </datatype>
+    </attDef>
+  </attList>
+
+ </elementSpec>
+
+</specGrp>
+</div>
+
+<div>
+<head>Describing computer stuff</head>
+<specGrp xml:id="COMP">
+ <elementSpec ident="kw">
+   <equiv mimetype="text/xsl" filter="equivs.xsl" name="ident"/>
+   <desc>A keyword in a computer language</desc>
+   <classes><memberOf key="model.pPart.data"/></classes>
+   <content>
+     <rng:text/>
+  </content>
+ </elementSpec>
+
+ <elementSpec ident="path">
+   <equiv mimetype="text/xsl" filter="equivs.xsl" name="ident"/>
+   <desc>A directory or file specification</desc>
+   <classes><memberOf key="model.pPart.data"/></classes>
+   <content>
+     <rng:text/>
+  </content>
+ </elementSpec>
+ 
+ <elementSpec ident="command">
+   <equiv mimetype="text/xsl" filter="equivs.xsl" name="ident"/>
+   <desc>A command to be typed in a human</desc>
+   <classes><memberOf key="model.pPart.data"/></classes>
+   <content>
+     <rng:text/>
+   </content>
+ </elementSpec>
+ 
+ <elementSpec ident="software">
+   <equiv mimetype="text/xsl" filter="equivs.xsl" name="ident"/>
+   <desc>The name of a computer program</desc>
+   <classes><memberOf key="model.pPart.data"/></classes>
+   <content>
+     <rng:text/>
+   </content>
+ </elementSpec>
+ 
+ <elementSpec ident="url">
+   <equiv mimetype="text/xsl" filter="equivs.xsl" name="ident"/>
+   <desc>A representation of a URL, without making it a link</desc>
+   <classes><memberOf key="model.pPart.data"/></classes>
+   <content>
+    <rng:data type="anyURI"/>
+   </content>
+ </elementSpec>
+</specGrp>
+
+</div>
+
+<div>
+<head>Extending existing elements</head>
+<specGrp xml:id="extensions">
+  <elementSpec mode="change" ident="table">
+    <attList>
+      <attDef ident="preamble" mode="add">
+	<gloss>LaTeX tabular preamble</gloss>
+	<datatype><rng:text/></datatype>
+      </attDef>
+    </attList>
+  </elementSpec>
+</specGrp>
+</div>
+<div>
+<head>Deletion of existing elements</head>
+<specGrp xml:id="DEL">
+  <elementSpec ident="alt" mode="delete" module="linking"  />
+  <elementSpec ident="altGrp" mode="delete" module="linking"  />
+  <elementSpec ident="analytic" mode="delete" module="core"  />
+  <elementSpec ident="broadcast" mode="delete" module="header"  />
+  <elementSpec ident="cb" mode="delete" module="core"  />
+  <elementSpec ident="correction" mode="delete" module="header"  />
+  <elementSpec ident="distinct" mode="delete" module="core"  />
+  <elementSpec ident="equipment" mode="delete" module="header"  />
+  <elementSpec ident="expan" mode="delete" module="core"  />
+  <elementSpec ident="fsdDecl" mode="delete" module="header"  />
+  <elementSpec ident="headItem" mode="delete" module="core"  />
+  <elementSpec ident="headLabel" mode="delete" module="core"  />
+  <elementSpec ident="hyphenation" mode="delete" module="header"  />
+  <elementSpec ident="interpretation" mode="delete" module="header"  />
+  <elementSpec ident="join" mode="delete" module="linking"  />
+  <elementSpec ident="joinGrp" mode="delete" module="linking"  />
+  <elementSpec ident="link" mode="delete" module="linking"  />
+  <elementSpec ident="linkGrp" mode="delete" module="linking"  />
+  <elementSpec ident="meeting" mode="delete" module="core"  />
+  <elementSpec ident="metDecl" mode="delete" module="header"  />
+  <elementSpec ident="normalization" mode="delete" module="header"  />
+  <elementSpec ident="num" mode="delete" module="core"  />
+  <elementSpec ident="recording" mode="delete" module="header"  />
+  <elementSpec ident="recordingStmt" mode="delete" module="header"  />
+  <elementSpec ident="scriptStmt" mode="delete" module="header"  />
+  <elementSpec ident="segmentation" mode="delete" module="header"  />
+  <elementSpec ident="series" mode="delete" module="core"  />
+  <elementSpec ident="state" mode="delete" module="header"  />
+  <elementSpec ident="stdVals" mode="delete" module="header"  />
+  <elementSpec ident="step" mode="delete" module="header"  />
+  <elementSpec ident="teiCorpus" mode="delete" module="core"  />
+  <elementSpec ident="timeRange" mode="delete" module="core"  />
+  <elementSpec ident="timeline" mode="delete" module="linking"  />
+  <elementSpec ident="variantEncoding" mode="delete" module="header"  />
+  <elementSpec ident="when" mode="delete" module="linking"  />
+</specGrp>
+</div>
+<div>
+<head>Class changes</head>
+<specGrp xml:id="CLASSES">
+  <classSpec module="linking" ident="tei.linking" mode="change">
+    <attList>
+      <attDef ident="corresp" mode="delete"/>
+      <attDef ident="synch" mode="delete"/>
+      <attDef ident="sameAs" mode="delete"/>
+      <attDef ident="copyOf" mode="delete"/>
+      <attDef ident="next" mode="delete"/>
+      <attDef ident="prev" mode="delete"/>
+      <attDef ident="exclude" mode="delete"/>
+      <attDef ident="select" mode="delete"/>
+    </attList>
+  </classSpec>
+</specGrp>
+</div>
+
+<div>
+<head>The Companion Schema</head>
+<p>Now for the wrapping schema.
+<schemaSpec ident="teicomp" start="TEI div">
+  <specGrpRef target="#CLASSES"/>
+  <specGrpRef target="#COMP"/>
+  <specGrpRef target="#DEL"/>
+  <specGrpRef target="#EX"/>
+  <specGrpRef target="#NAMING"/>
+  <moduleRef key="tei"/>
+  <moduleRef key="core"/>
+  <moduleRef key="header"/>
+  <moduleRef key="textstructure"/>
+  <moduleRef key="figures"/>
+  <moduleRef key="tagdocs"/>
+  <moduleRef key="namesdates"/>
+  <moduleRef key="linking"/>
+  <moduleRef url="mathml2-main.rng"/>
+  <moduleRef url="relaxng.rng"/>
+  <moduleRef url="svg-main.rng"/>
+
+</schemaSpec>
+</p>
+</div>
+</body>
+</text>
+</TEI>

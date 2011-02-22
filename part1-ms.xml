@@ -1,0 +1,133 @@
+<div xml:id="part1-ms" xmlns="http://www.tei-c.org/ns/1.0">
+<head>The Ancrene Wisse</head>
+
+<p>This chapter discuss an implementation of an electronic manuscript
+edition for the Early English Text Society (EETS)<note place="foot">See <ptr
+target="http://www.tei-c.org/Projects/EETS/"/></note>. This is one of
+the oldest-established British learned societies in the field of
+medieval studies, which has been publishing well-respected primary
+editions of medieval materials since its founding in the mid-19th
+century. Consequently, the EETS has accumulated a long list of print
+editions of scarce resources, which it would be of considerable
+interest retrospectively to digitize. </p>
+
+<p>In 2003, Dr Bella Willet was awarded a small AHRB research grant to
+investigate the feasibility of transforming a typical print EETS
+edition into a digital resource. The text chosen, the <title>Ancrene
+Wisse</title>, is a well known Middle English <q>rule</q> or
+<q>guide</q> for female recluses,  composed in the West Midlands in
+the early thirteenth century.  Dobson's edition of this text,
+published by EETS in 1976, was adopted as a starting point for the
+project.  This edition contained introductory notes, and a traditional
+apparatus derived from a collation of selected sources, but no images or
+transcription of those sources.  The <title>Ancrene Wisse</title>
+is a substantial prose text, surviving in four different manuscripts;
+for this pilot, we worked only with the preface, for which digitized
+page images of each manuscript were obtained and transcribed. The
+material in the original edition was revised and further augmented by
+these images, and also by a diplomatic transcription of each
+manuscript version, as well as a translation of the edited copy text,
+a glossary, and detailed interpretive and analytic notes. </p>
+
+<p>All of this material, it was agreed, should be integrated for
+delivery over the web, thus providing much more than the typical
+scholarly edition in both quantitative and qualitative terms. The
+material would all be stored as TEI XML, but converted to HTML for
+the convenience of current generation web browsers.</p>
+
+<p>The components of the edition are organized and encoded in such a
+way as to facilitate the automatic definition and processing of links
+between the various components. More specifically, it is possible to
+present on the screen corresponding parts of a text in different
+manuscript versions, in both page images and diplomatic transcript,
+and in the edited text. Similarly, it is necessary to align text and
+translation, to associate entries in the bibliography or notes with
+discussion elsewhere in the text. All this linking was represented
+using the ID/IDREF mechanism of XML, which meant that we had to define
+XML elements for every text component that might potentially be
+aligned in this way.</p>
+
+<p>The structure proposed for this EETS pilot e-edition may be
+summarised as follows. The entire edition is tagged as a single
+<gi>TEI.2</gi> element, containing (as usual) a <gi>teiHeader</gi>
+followed by a <gi>text</gi> element. The <gi>teiHeader</gi> contains
+descriptive metadata for the entire edition, (including details of any
+codes used in more than one of its components such as manuscript hand
+identifiers). The <gi>text</gi> element groups together, at the top
+level, the following:
+
+<list type="ordered">
+<item>front matter for the whole edition, tagged <gi>front</gi>,
+	 containing all the introductory material;</item>
+
+<item> a <gi>group</gi> element, containing a number of <gi>text</gi>
+elements, each containing a distinct version of the text in question,
+possibly with its own front and back matter; </item>
+
+	<item>back matter for the whole edition, tagged <gi>back</gi>,
+	containing sections of bibliography, analytic notes, glossary,
+	and index.
+</item>
+</list>
+</p>
+
+<p>By <soCalled>text</soCalled> above, we meant  a number of distinct
+things. Specifically, we wished to distinguish the following types:
+<list type="gloss">
+<label>edited</label><item>An edited text</item>
+<label>translated</label><item>A translated text</item>
+<label>mss</label><item>A group of transcriptions</item>
+<label>text-trans</label><item>An aligned virtual text</item>
+</list>
+</p>
+
+<p>By <soCalled>virtual</soCalled> text, we mean here a text that is
+to be generated automatically from others. For example, we wished to display text
+and translation as a single text, aligned at paragraph breaks;  since
+the whole document was generated as a series of static web pages, we
+needed to include some element to indicate where this aligned version
+was to be generated.</p>
+
+<p>Within each text component, the <gi>div</gi> element was used to
+mark further subdivisions. The TEI <gi>divGen</gi> element was used to
+ mark where <soCalled>virtual</soCalled> subdivisons are
+to be generated, for example for divisions comprising links to page
+images, or to manuscript descriptions. </p>
+<p>To simplify the encoding of the diplomatic transcriptions, we made
+a number of small modifications. We removed a large number of
+elements which we had no need of. We introduced new elements, chiefly convenience
+shortcuts such as <gi>lat</gi> (for <gi>foreign lang="lat"</gi>) or
+<gi>fr</gi> (for <gi>foreign lang="fr"</gi>) etc. We also introduced
+specialised pointing elements such as <gi>pp</gi>, used in the same
+way as the standard <gi>ptr</gi> element, but with the added
+constraint that its target should be a <gi>p</gi> element. And we
+introduced an element <gi>page</gi>, modelled on the TEI <gi>ab</gi>
+element, to delimit all the text on a given page.</p>
+
+<p>From these modifications, we generated a project-specific DTD using
+the TEI Pizza chef tool<note place="foot"><ptr
+target="http://www.tei-c.org/pizza.html"/>. At TEI P5, a much improved
+TEI schema builder called Roma is available, which amongst other
+enhancements facilitates the generation of project-specific
+documentation. </note> and used it to validate the XML components of
+the new edition. Note that, with these additional elements, we were
+able to represent both conflicting hierarchic views of the text: in
+the transcript texts, each page is a block (<gi>page</gi>) , with the
+boundaries of paragraphs represented by empty pointing elements
+(<gi>pp</gi>); in the edited texts, each paragraph is a single block
+(<gi>p</gi>), with the page boundaries represented by empty pointing
+elements (<gi>pb</gi>). This symmetry of treatment turned out to
+simplify considerably the creation of XSLT stylesheets for the task of
+rendering combined views of the whole set of texts as static HTML
+pages, which was our remaining task.</p>
+
+<p>Constraints of time and funding did not enable us to treat all the
+components of this edition as fully as might have been desired: for
+example, we were not able to include full TEI-conformant descriptions
+of the manuscripts themselves, nor were we able to transform the
+glossary provided into an integrated lexicon, or to provide more than
+a rudimentary text searching component. Nevertheless, the exercise
+demonstrated the overall viability of the TEI approach as a means of
+producing a sophisticated electronic product, capable of supporting
+the demands of traditional philology.</p>
+</div>

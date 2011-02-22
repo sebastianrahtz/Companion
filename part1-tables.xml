@@ -1,0 +1,17 @@
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="chap-tables"><head>Tables, forms, math and graphics</head>
+<p>No one DTD can cover the needs of every author. What if we need
+	  to incorporate math, advanced tables, or vector graphics in
+	    our document? We will write an illustrated statistical
+	    report and show how XML Namespaces let us use specialized external
+	    DTDs for parts of our markup.
+</p>
+<list type="gloss">
+<label>TEI coverage</label>
+<item>extension mechanism</item>
+<label>XML coverage</label>
+<item>namespaces</item>
+<label>Discussion topics</label>
+<item>
+</item>
+</list>
+  </div>

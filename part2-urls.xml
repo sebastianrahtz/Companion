@@ -1,0 +1,659 @@
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="back-urls"><!-- revised $Date$ -->
+<head>Catalogue of URLs</head>
+<listBibl>
+<bibl xml:id="AXML" rend="spec"> 
+<title>Annotated XML</title> 
+<note>The official XML 1.0 specification, with detailed explanatory and
+historical annotations by one of its editors,
+<persName><forename>Tim</forename><surname>Bray</surname></persName> </note> 
+<note><ptr type="resource" target="http://www.xml.com/axml/axml.html"/>.</note> 
+</bibl> 
+
+<bibl xml:id="AXKIT" rend="soft">
+<title>AxKit</title>
+<note>AxKit is an XML Application Server for Apache. It provides on-the-fly
+conversion from XML to any format, such as HTML, WAP or text using either
+W3C standard techniques, or flexible custom code. AxKit also uses a built-in
+Perl interpreter to provide some amazingly powerful techniques for XML
+transformation. 
+</note>
+<note>
+<ptr type="resource" target="http://www.axkit.org/"/>.</note>
+</bibl>
+
+
+<bibl xml:id="CATALOG" rend="spec">
+<title>XML Catalog</title>
+<note>The formal specification of the XML replacement
+of SGML catalogs.</note>
+<note><ptr type="resource" 
+target="http://www.oasis-open.org/committees/entity/spec-2001-08-06.html"/>.
+     </note>
+    </bibl>
+
+<bibl xml:id="CHARSET" rend="tutorial">
+<title>A tutorial on character code issues</title>
+<note>This useful tutorial by
+<persName><forename>Jukka</forename><surname>Korpela</surname> </persName>
+takes you through the morass of character encoding
+in an informal way.</note>
+<note><ptr type="resource"
+       target="http://www.cs.tut.fi/~jkorpela/chars.html"/>.
+     </note>
+    </bibl>
+
+<bibl xml:id="CRIMSON" rend="soft">
+<title>Crimson</title>
+<note>An XML parser from the Apache XML project </note>
+<note>
+<ptr type="resource" target="http://xml.apache.org/crimson/"/>;
+<ptr type="resource" target="http://xml.apache.org/dist/crimson/"/> (download).</note>
+</bibl>
+
+<bibl xml:id="CSS2" rend="spec"> 
+<title>CSS2</title> 
+<note>Cascading Style Sheets, version 2, W3C recommendation (May 1998)
+W3C.</note> 
+<note><ptr type="resource" target="http://www.w3.org/TR/REC-CSS2/"/>.</note> 
+</bibl> 
+
+
+<bibl xml:id="DOCBOOK" rend="soft"> 
+<title>DocBook</title> 
+<note>The DocBook DTDs, available in SGML and XML flavours,
+with many associated resources.
+</note> 
+<note><ptr type="resource" target="http://www.oasis-open.org/docbook/"/> (OASIS
+home for DocBook); 
+<ptr type="resource" target="http://docbook.sourceforge.net/"/>
+(Docbook Open Repository);
+<ptr type="resource" target="http://download.sourceforge.net/docbook/"/>
+(download resources from Sourceforge)</note>
+</bibl> 
+
+<bibl xml:id="DOM" rend="spec"> 
+<title>DOM</title> 
+<note>The Document Object Model (DOM) is the official W3C specification for a
+standard Application Programming Interface (API), defining how XML documents
+should be processed. </note> 
+<note>The spec has two <soCalled>levels</soCalled>. The Level 1 Specification
+(Version 1) appeared as a W3C Recommendation in 1 October, 1998 W3C.<ptr
+rend="resource" target="http://www.w3.org/TR/REC-DOM-Level-1/"/>.</note> 
+<note>The Level 2 Specification was confirmed as a W3C Recommendation in November
+2000: <ptr type="resource" target="http://www.w3.org/TR/DOM-Level-2/"/>.</note> 
+</bibl> 
+
+<bibl xml:id="Exist" rend="soft"> 
+<title>eXist</title> 
+<note>eXist is a repository and retrieval engine for XML documents build on top of an relational database
+(MySQL or Oracle). 
+It provides structured retrieval of arbitrary xml documents with support for
+fulltext search, based on traditional rdbms. </note>
+
+<note><ptr type="resource" target="http://sourceforge.net/projects/exist/"/>
+(documentation);
+<ptr type="resource" target="http://download.sourceforge.net/exist/"/> 
+(software).</note> 
+</bibl>
+<!--
+<bibl xml:id="Expat" rend="soft"> 
+<title>Expat</title> 
+<note>Expat is a fast and efficient XML processor developed by
+<persName><forename>James</forename><surname>Clark</surname></persName>,
+which is embedded in many other products.</note>
+
+<note><ptr type="resource" target="http://sourceforge.net/projects/expat/"/>
+(documentation);
+<ptr type="resource" target="http://download.sourceforge.net/expat/"/> 
+(software).</note> 
+</bibl>
+-->
+
+
+<bibl xml:id="EMACS" rend="soft"> <title>Emacs</title> <note>Gnu Emacs, the
+world's favourite text editor, can easily edit and validate XML
+documents. We include here a complete working setup for XML and TEI
+work, in <ptr target="www.tei-c.org/Software/tei-emacs/"/>;
+Windows users can run it directly from the CD - just run <ptr target="www.tei-c.org/Software/tei-emacs/emacs-21.2/bin/runemacs.exe"/>.
+Unix/Linux users need to add the following to their .emacs file:
+<eg>
+(setq homedir "/xmlcd/tei-emacs")
+(add-to-list 'load-path (concat homedir "/elisp"))
+(load-library "tei-emacs-init")
+</eg>
+if <code>/xmlcd</code> is where 
+you copied the <code>tei-emacs</code> directory to.
+</note>
+
+
+<note>The setup includes
+<persName><forename>Lennart</forename><surname>Staflin</surname></persName>'s
+PSGML emacs package for editing XML and SGML, and
+<persName><forename>Tony</forename><surname>Graham</surname></persName>'s
+XSLIDE package for editing XSL.
+<persName><forename>Bob</forename><surname>DuCharme</surname></persName>
+has published online a chapter of his SGML book which explains how to
+write and modify SGML files using Emacs and PSGML.  These 100 pages
+called "Editing SGML documents with the Emacs text editor" are an
+excellent tutorial to learn and understand PSGML thoroughly. It is at
+<ptr type="resource"
+target="http://www.snee.com/bob/sgmlfree/emcspsgm.zip"/>.  </note>
+
+<note>This enhanced Emacs distribution is also available as a single
+executable, which you can use to install the system on any Windows 95,
+98, ME, NT, or 2000 machine. You don't even need to copy it off the
+CD, just run <ptr target="www.tei-c.org/Software/tei-emacs.exe"/>.
+</note>
+</bibl>
+
+<bibl xml:id="EXSLT" rend="soft"> 
+<title>EXSLT</title>
+<note>EXSLT is an open community initiative to standardise and document
+extensions to XSLT. The extensions are broken down into a number of
+modules, currently Common, Math, Sets and Functions.</note>
+<note><ptr type="resource" target="http://www.exslt.org/"/></note>
+</bibl>
+
+<bibl xml:id="FOP" rend="soft"> 
+<title>FOP</title> 
+<note>FOP is an engine from the Apache XML Group for converting the
+Formatting Objects specified by XSL to printable form (PDF). It is
+work in progress, and does not yet implement the full specification, but it
+is very useable.
+</note>
+<note><ptr type="resource" target="http://xml.apache.org/fop/"/>;
+<ptr type="resource" target="http://xml.apache.org/dist/fop/"/> (software
+distribution).</note> 
+</bibl> 
+
+<bibl xml:id="JDXSLT" rend="soft">
+<title>JD XSLT</title>
+<note>An XSLT processor by
+<persName><forename>Johannes</forename><surname>D&#246;bler</surname></persName>
+implementing the proposed XSLT 1.1. You will also
+need an XML parser (it defaults to <ref target="CRIMSON">Crimson</ref>).</note>
+<note><ptr type="resource" target="http://www.aztecrider.com/xslt/"/>.</note>
+
+</bibl>
+<bibl xml:id="JING" rend="soft">
+<title>JING: A Relax NG validator </title>
+<note>An implementation in Java of <ptr target="#RelaxNG"/>, by James Clark.
+<ptr type="resource" target="http://www.thaiopensource.com/relaxng/jing.html"/></note>
+</bibl>
+
+<bibl xml:id="LIVEDTD" rend="soft"> 
+<title>Live DTD</title> 
+<note>
+<q rend="display">A LiveDTD is a Document Type Definition converted
+into a hypertext document. It is also a perl program (livedtd.pl) that
+performs that conversion. It parses the DTD files and generates a copy
+with HTML markup inserted. The result is the exact same text of the
+original DTD, but with live links that let you navigate through the
+DTD. Click on a name, and you are transported to where that name is
+declared in the DTD. Both elements and parameter entities are hot
+linked</q></note>
+<note><ptr type="resource" target="http://www.sagehill.net/livedtd/"/>.</note> 
+</bibl>
+
+<bibl xml:id="LTXML" rend="soft"> 
+<title>LTG XML tools</title> 
+<note>Tools from Edinburgh University's Language Technology Group for
+processing arbitrary XML documents, including sggrep (an XML-aware version of
+the popular grep utility) and others.</note> 
+<note><ptr type="resource" target="http://www.ltg.ed.ac.uk/software/xml/"/>.</note>
+
+</bibl> 
+
+<bibl xml:id="LAMPETER" rend="reference"> 
+<title>Lampeter Corpus</title> 
+<note>A corpus of 120 Early Modern English tracts marked up in XML, indexed
+and searchable with SARA (the SGML-Aware Retrieval Application developed at
+Oxford for the 
+<ref target="http://info.ox.ac.uk/bnc/">British National Corpus</ref>).
+</note> 
+<note>On the CD in <ptr target="Texts/Lampeter/"/>.</note> 
+</bibl> 
+
+<bibl xml:id="LIBXSLT" rend="soft">
+<title>Libxslt and Libxml</title>
+<note>Libxslt is a C implementation of XSLT by 
+<persName><forename>Daniel</forename><surname>Veillard</surname></persName>.
+It  is based on libxml (the Gnome XML library)
+for XML parsing, tree manipulation and XPath support.
+It is written in plain C, 
+making as few assumptions as possible, 
+and sticking closely to ANSI C/POSIX for
+easy embedding. 
+This library is released under the GNU LGPL 
+and a derivative of the W3C IPR.
+Though not designed primarily with performances in mind, 
+libxslt seems to be a relatively fast processor. </note>
+<note>Project home page at <ptr type="resource" target="http://xmlsoft.org"/>;
+downloads from <ptr type="resource" target="ftp://fr.rpmfind.net/pub/libxml/"/>.
+Windows binaries are available from <ptr type="resource" target="http://www.fh-frankfurt.de/~igor/projects/libxml"/>.</note>
+</bibl>
+
+<bibl xml:id="MXSML" rend="soft"> 
+<title>MS IE5 XML</title> 
+<note>Early versions of Microsoft's Internet Explorer version 5 were only
+partially XML aware. The current release update
+(<ptr type="resource" 
+ target="http://msdn.microsoft.com/xml/general/xmlparser.asp"/>)
+ to the popular web browser
+extends its abilities considerably, most notably in the area of conformance to
+the current XSLT specification. There has been a lot of confusion
+	    about this, so the <emph>Unofficial MSXML XSLT FAQ</emph>
+	    by
+	    <persName><forename>Joshua</forename><surname>Allen</surname></persName> will prove very helpful, at
+<ptr type="resource" target="http://www.netcrucible.com/xslt/msxml-faq.htm"/>.</note> 
+<note>There are two updates. The most recent is MSXML4,
+at <ptr type="resource" target="http://download.microsoft.com/download/xml/Install/4.0/W98NT42KMeXP/EN-US/msxml4.msi"/>.  Just run the installer.
+If that causes problems, the older MSXML3 may be more stable.
+Installing this one is in two parts; first you have to get it on
+	    your system, and then make it the default. The 
+update installer itself is 
+<ptr type="resource" 
+target="http://download.microsoft.com/download/xml/install/3.0/win98me/en-us/msxml3.exe"/>.
+      If that complains that your Microsoft installer
+is too old, here is a copy of a recent copy for <ref
+       target="Useful/instmsi.exe">Windows 9X</ref> or 
+       <ref target="Useful/instmsi-2k.exe">Windows NT/2000</ref>
+which may help.
+To get the XML parser software actually working, 
+you will need the <ptr type="resource" target="http://msdn.microsoft.com/msdn-files/027/001/469/xmlinst.exe"/> program, documented at
+<ptr type="resource" 
+target="http://msdn.microsoft.com/xml/general/replacemode.asp"/>.
+Additional 
+documentation details, the SDK, and other tools: <ptr type="resource"
+target="http://download.microsoft.com/download/xml/sdk/3.0/win98me/en-us/xmlsdk.exe"/>.</note> 
+<note>There is a lot of useful discussion on this topic
+at <ptr target="http://www.vbxml.com/parsers/"/>.</note>
+</bibl> 
+
+<bibl xml:id="MathML" rend="spec"> 
+<title>MathML</title> 
+<note>MathML is an XML document type definition for the representation of
+mathematics, now supported by the W3C. It covers most aspects of mathematical
+typesetting and representation.</note> 
+<note><ptr type="resource" target="http://www.w3.org/TR/2001/REC-MathML2-20010221/"/>.</note> 
+</bibl> 
+
+<bibl xml:id="OpenJade" rend="soft"> 
+<title>OpenJade </title> 
+<note>Jade is a processor for the Document Style and Semantics Specification
+Language (DSSSL), a precursor of the XSLT language, written by <persName><forename>James</forename><surname>Clark</surname></persName>, and now supported by the OpenJade
+group.</note> 
+<note><ptr type="resource" target="http://openjade.sourceforge.net/"/>
+(documentation);
+<ptr type="resource" target="http://download.sourceforge.net/openjade/"/>
+(software).</note> 
+</bibl> 
+
+<bibl xml:id="OTA" rend="reference"> 
+<title>Oxford Text Archive</title> 
+<note>The 
+<ref target="http://ota.ahds.ac.uk">Oxford Text Archive </ref> has a very
+large archive of SGML and XML literary and linguistic texts, from which we have
+selected a few titles here, to demonstrate how the TEI Guidelines can be used
+in practice:
+<list>
+<item>Charles Dickens <title>A  Christmas Carol</title> (with
+illustrations by J Leech)
+ in <ptr target="Texts/OTA/carol1736.xml"/>.</item>
+<item>John Milton's <title>Paradise Lost</title> 
+ in <ptr target="Texts/OTA/plost1827.xml"/>.</item>
+<item>John Webster's <title>The Duchess of Malfi</title> 
+ in <ptr target="Texts/OTA/malfi1785.xml"/>.</item>
+<item>Thomas Hardy's <title>A Pair of Blue Eyes</title> 
+ in <ptr target="Texts/OTA/beyes2167.xml"/>.</item>
+</list>
+</note>
+</bibl> 
+
+<bibl xml:id="PassiveTeX" rend="soft"> 
+<title>PassiveTeX</title> 
+<note>PassiveTex is a system developed by
+<persName><forename>Sebastian</forename><surname>Rahtz</surname></persName> for
+printing XSL formatting objects, using the TeX document processing system</note> 
+<note><ptr target="www.tei-c.org/Software/passivetex/"/>.</note> 
+</bibl> 
+
+<bibl xml:id="PROTCEM" rend="reference"> 
+<title>Protestant Cemetery</title> 
+<note>A demonstration database of archaeological records, documenting the
+gravestones in the Protestant Cemetery at Rome, marked up in XML. </note> 
+<note>On the CD in <ptr target="ProtestantCemetery/"/>; a
+demonstration catalogue derived from the XML is on the CD 
+in <ptr target="ProtestantCemetery/cem.html"/>.</note> 
+</bibl> 
+
+<bibl xml:id="RDF" rend="spec"> 
+<title>RDF</title> 
+<note>Resource Description Framework (RDF) is a W3C specification for the
+high level representation of metadata, currently expressed as an XML DTD.</note> 
+<note><ptr type="resource" target="http://www.w3.org/TR/REC-rdf-syntax/"/>.</note> 
+</bibl> 
+
+<bibl xml:id="REFDB" rend="soft">
+<title>RefDB</title>
+<note>RefDB is a reference database and bibliography tool for DocBook SGML/XML
+and LaTeX/BibTeX documents.
+It allows users to share databases over a network. 
+It is lightweight and portable to basically all platforms 
+with a decent C compiler. It is written by
+<persName><forename>Marcus</forename><surname>Hoenicka</surname></persName></note>
+<note>RefDB is available from 
+<ptr type="resource" target="http://refdb.sourceforge.net"/>;
+sources from
+<ptr type="resource" target="http://download.sourceforge.net/refdb/"/></note>
+</bibl>
+
+<bibl xml:id="RelaxNG" rend="spec">
+<title>Relax NG: A schema language for XML</title>
+
+<note>The key features of Relax NG are that it is simple, easy to learn,
+uses XML syntax, does not change the information set of an XML
+document, supports XML namespaces, treats attributes uniformly with
+elements so far as possible, has unrestricted support for unordered
+content, has unrestricted support for mixed content, has a solid
+theoretical basis, and can partner with a separate datatyping language
+(such W3C XML Schema Datatypes). A tutorial is available at <ptr
+rend="resource"
+target="http://www.oasis-open.org/committees/relax-ng/"/></note>
+<note>Trial Relax NG schemas for the TEI are available
+at <ptr target="http://www.tei-c.org/Schemas/RelaxNG/P4X" rend="resource"/>.</note>
+</bibl>
+
+<bibl xml:id="RXP" rend="soft"> 
+<title>RXP</title> 
+<note>A small and very fast XML parser developed by
+<persName><forename>Richard</forename><surname>Tobin</surname></persName>, and
+available for Windows or Unix.</note> 
+<note><ptr type="resource" target="http://www.ltg.ed.ac.uk/~richard/rxp.html"/>
+(general);
+<ptr type="resource"
+target="ftp://ftp.cogsci.ed.ac.uk/pub/richard/rxp-1.2pre3.tar.gz"/> (Unix
+source in compressed archive);
+<ptr type="resource" target="ftp://ftp.cogsci.ed.ac.uk/pub/richard/rxp.exe"/>
+(Windows binary).</note> 
+</bibl> 
+
+<bibl xml:id="SAX" rend="soft"> 
+<title>SAX</title> 
+<note>SAX is a simple, event-driven, applications programming interface for
+XML developed by
+<persName><forename>David</forename><surname>Megginson</surname></persName>.</note>
+<note><ptr type="resource"
+target="http://www.megginson.com/SAX/index.html"/>.</note> 
+</bibl> 
+
+<bibl xml:id="SAXON" rend="soft"> 
+<title>SAXON </title> 
+<note>SAXON is a fast, lightweight, and 100% conformant
+XSLT processor developed by
+<persName><forename>Michael</forename><surname>Kay</surname></persName>; it is written in Java, so it runs anywhere, 
+and there is also a Windows <code>.exe</code> file
+for easy use. It is packaged with a copy of Aelfred,
+a small and fast XML parser.</note> 
+<note><ptr type="resource"
+target="http://saxon.sourceforge.net/"/>, with downloads from
+<ptr type="resource"
+target="http://prdownloads.sourceforge.net/saxon/"/>,
+</note> 
+</bibl> 
+
+
+<bibl xml:id="sgmlnt" rend="tutorial">
+<title>SGML setup for Windows</title>
+<note><persName><forename>Marcus</forename><surname>Hoenicka</surname></persName>
+has written a useful brief tutorial how to set up a free SGML
+                      editing and publishing system for Windows NT.</note>
+<note><ptr type="resource" 
+target="http://ourworld.compuserve.com/homepages/hoenicka_markus/ntsgml.html"/>
+</note>
+</bibl>
+
+<bibl xml:id="SCHEMA" rend="spec"> 
+<title>Schema</title> 
+<note>This W3C specification defines a new schema language, designed to
+replace the DTD language inherited by XML from SGML. 
+Tools for processing Schema language are starting to appear. </note> 
+<note><ptr type="resource" target="http://www.w3.org/XML/Schema.html"/>
+	    (general notes);
+A primer on the use of schemas: 
+<ptr type="resource" target="http://www.w3.org/TR/xmlschema-0/"/>;
+Part 1, Structures: 
+<ptr type="resource" target="http://www.w3.org/TR/xmlschema-1/"/>;
+Part 2, Datatypes: 
+<ptr type="resource" target="http://www.w3.org/TR/xmlschema-2/"/>.</note>
+</bibl> 
+
+<bibl xml:id="SPlib" rend="soft"> 
+<title>SP</title> 
+<note>SP is the most widely used SGML toolkit. Originally developed by
+<persName><forename>James</forename><surname>Clark</surname></persName>, it
+includes a powerful parser, capable of processing both SGML and XML documents,
+and a suite of utilities for normalising SGML, converting it to XML, etc. </note> 
+<note><ptr type="resource" target="http://www.jclark.com/sp/"/> (documentation);
+<ptr type="resource" target="ftp://ftp.jclark.com/pub/sp/"/> (software
+distribution).</note> 
+</bibl> 
+
+<bibl xml:id="SVG" rend="spec"> 
+<title>SVG</title> 
+<note>The Standard Vector Graphics language is a W3C standard for the
+representation of vector graphics using XML.</note> 
+<note><ptr type="resource" target="http://www.w3.org/TR/SVG/"/>.</note> 
+</bibl> 
+
+<bibl xml:id="Schematron" rend="soft"> 
+<title>Schematron </title> 
+<note>Schematron is an XSL-based processor, which can be used to check the
+semantics of XML documents, developed by
+<persName><forename>Rick</forename><surname>Jelliffe</surname></persName>.</note> 
+<note><ptr type="resource"
+target="http://www.ascc.net/xml/resource/schematron/schematron.html"/>.</note> 
+</bibl> 
+
+<bibl xml:id="TIDY" rend="soft"> 
+<title>Tidy</title> 
+<note>Tidy is a utility developed by
+<persName><forename>Dave</forename><surname>Raggett</surname></persName> which
+can be used to clean up HTML files, and also to convert them to XML.</note> 
+<note><ptr type="resource" target="http://tidy.sourceforge.net/"/>.</note>
+</bibl> 
+
+<bibl xml:id="Transcoding" rend="tutorial"> 
+<title>Transcoding </title> 
+<note>Notes on Unicode Transcoders, written by
+<persName><forename>Rick</forename><surname>Jelliffe</surname></persName>.
+This is essential reading for people interested in non-Latin scripts.
+</note>
+
+<note><ptr type="resource"
+target="http://www.ascc.net/xml/en/utf-8/transcode-index.html"/>.</note> 
+</bibl> 
+
+<bibl xml:id="Unicode" rend="soft"> 
+<title>Unicode entity mappings</title> 
+<note>A set of 
+entity files which map the ISO entity sets to their
+Unicode equivalent; there is also a detailed XML document
+(<ptr target="Unicode/unicode.xml"/>) which provides detailed mapping
+information for much of the western language and symbol part of Unicode.
+</note>
+<note> <ptr type="resource" target="http://www.tei-c.org/XML_Entities/"/></note>
+</bibl> 
+
+<!--
+<bibl xml:id="XALAN" rend="soft"> 
+<title>Xalan</title> 
+<note>Xalan is an XSLT processor
+from the Apache XML Group. It has versions written in Java and in C++.
+</note>
+
+<note><ptr type="resource"
+	 target="http://xml.apache.org/xalan/index.html"/> (Java);
+<ptr type="resource" target="http://xml.apache.org/dist/xalan-j/"/>
+	    (distribution of Java version).</note>
+</bibl> 
+
+
+<bibl xml:id="XERCES" rend="soft"> 
+<title>Xerces</title> 
+<note>Xerces is an XML
+from the Apache XML Group. It has versions written in Java and in C++.
+</note>
+
+<note>
+<ptr type="resource" target="http://xml.apache.org/xerces-j/index.html"/> (Java version);
+<ptr type="resource" target="http://xml.apache.org/dist/xerces-j/"/> (software
+distribution for Java version)</note>
+</bibl> 
+-->
+
+<bibl xml:id="XHTML" rend="spec"> 
+<title>XHTML</title> 
+<note>This W3C Recommendation specifies the reformulation of HTML 4 as an XML
+DTD.</note> 
+<note><ptr type="resource" target="http://www.w3.org/TR/xhtml1/"/>.</note> 
+<note><ptr type="resource" target="http://www.w3.org/TR/html4/"/>.</note> 
+</bibl> 
+
+<bibl xml:id="XLINK" rend="spec"> 
+<title>XLINK</title> 
+<note>This W3C Proposal specifies a range of standardized hyperlinking
+functionalities in XML.</note> 
+<note><ptr type="resource" target="http://www.w3.org/TR/xlink/"/>.</note> 
+</bibl> 
+
+<bibl xml:id="XINDICE" rend="software"> 
+<title>Xindice</title> 
+<note>Apache Xindice is a database designed from the ground up to store
+XML data or what is more commonly referred to as a native XML
+database.</note>
+
+<note><ptr type="resource" target="http://xml.apache.org/xindice/"/>.</note> 
+</bibl> 
+
+
+<bibl xml:id="XMLQuick" rend="tutorial"> 
+<title>XML Quick Reference</title> 
+<note>This is a handy reference card for the essential details of XML made
+available by Mulberry Technologies.</note> 
+<note><ptr type="resource"
+target="http://www.mulberrytech.com/quickref/XMLquickref.pdf"/>.</note> 
+</bibl> 
+
+<bibl xml:id="XPATH" rend="spec"> 
+<title>XPath</title> 
+<note>This W3C Recommendation documents the XML Path Language (XPath), Version
+1.0, which is used to address arbitrary parts of an XML document, and underlies
+an increasingly large number of XML retrieval applications.</note> 
+<note><ptr type="resource"
+target="http://www.w3.org/TR/1999/REC-xpath-19991116.xml"/> (XML)
+<ptr type="resource" target="http://www.w3.org/TR/1999/REC-xpath-19991116.html"/>
+(HTML).</note> 
+</bibl> 
+
+<bibl xml:id="XSL" rend="spec"> 
+<title>XSL (Formatting Objects)</title> 
+<note>This W3C Recommendation documents the Extensible Stylesheet
+Language (XSL), which describes a standard language for formatting
+XML documents. It is
+partially implemented by several suppliers (see <ref
+target="PassiveTeX">PassiveTeX</ref> and <ref target="FOP">FOP</ref>).
+There is a useful instroduction by 
+<persName><forename>David</forename><surname>Pawson</surname></persName>
+at <ptr target="http://www.dpawson.co.uk/xsl/sect3/bk/index.html"/>.
+</note>
+<note>For the full
+specification, see
+<ptr type="resource" target="http://www.w3.org/TR/xsl/"/>.</note> 
+</bibl> 
+
+<bibl xml:id="XSLTUT" rend="tutorial"> 
+<title>XSL Tutorials and FAQ</title> 
+<note>There are plenty of useful XSL tutorial materials around:
+<list>
+<item>A handy set of <emph>XSL Frequently Asked Questions</emph> edited by
+<persName><forename>David</forename><surname>Pawson</surname></persName>
+is at <ptr type="resource" 
+target="http://www.dpawson.co.uk/xsl/xslfaq.html"/>.</item>
+<item>An extensive tutorial covering all of the XSLT specification, by
+<persName><forename>Ken</forename><surname>Holman</surname></persName>
+can be sampled at <ptr type="resource"
+target="http://www.cranesoftwrights.com/shareware/"/>, and purchased online at
+reasonable rates.
+</item>
+<item>A collection of source files demonstrating how to use XSLT,
+taken from
+<persName><forename>Michael</forename><surname>Kay</surname>'s</persName>
+<title>XSLT Programmers' Reference</title>: <ptr type="resource"
+target="ftp://ftp.wrox.co.uk/professional/3129.zip"/>.</item> 
+
+<item>The <emph>XSLT Quick Reference</emph>
+is a reference card for the essential details of XSLT made
+available by Mulberry Technologies; 
+<ptr type="resource"
+target="http://www.mulberrytech.com/quickref/XSLTquickref.pdf"/>.</item> 
+
+<item>A detailed tutorial on XSLT is an extract from
+<persName><forename>Rusty
+Elliotte</forename><surname>Harold</surname></persName>'s 
+<title>XML Bible</title>, generously made freely available as a sampler by
+its author and publisher at <ptr type="resource"
+target="http://www.ibiblio.org/xml/books/bible/"/>.</item> 
+
+<item><persName><forename>Jeni</forename><surname>Tennison</surname></persName>
+maintains a fine web site about good practice and experience in XSLT
+programming at <ptr type="resource"
+target="http://www.jenitennison.com/xslt/"/> (also needs 
+<ptr type="resource" target="http://www.jenitennison.com/resources/style/base.css"/>,
+<ptr type="resource" target="http://www.jenitennison.com/resources/icons/goto.gif"/>,
+<ptr type="resource" target="http://www.jenitennison.com/resources/icons/over-goto.gif"/>, and 
+<ptr type="resource" target="http://www.jenitennison.com/resources/icons/click-goto.gif"/>)
+</item>
+</list>
+</note>
+</bibl> 
+
+<bibl xml:id="XSLIDE" rend="soft"> 
+<title>XSL IDE</title> 
+<note>An XSL mode for Emacs, by
+<persName><forename>Tony</forename><surname>Graham</surname></persName>.</note> 
+<note><ptr type="resource"
+	 target="http://www.menteith.com/xslide/"/>.</note>
+</bibl>
+
+<bibl xml:id="XSLT" rend="spec"> 
+<title>XSLT</title> 
+<note>This W3C Recommendation documents the XSL Transformation Language
+(XSLT), Version 1.0</note> 
+<note><ptr type="resource"
+target="http://www.w3.org/TR/1999/REC-xslt-19991116.xml"/> (XML)
+<ptr type="resource" target="http://www.w3.org/TR/1999/REC-xslt-19991116.html"/>
+(HTML). A draft release of version 1.1 is also available for comment at
+<ptr type="resource" target="http://www.w3.org/TR/xslt11/"/>.
+</note> 
+</bibl> 
+
+
+<bibl xml:id="XT" rend="soft"> 
+<title>XT</title> 
+<note>XT is a fast and efficient XSLT processor developed by
+<persName><forename>James</forename><surname>Clark</surname></persName>
+available for Windows or Unix. XP is Clark's XML parser which can be
+used with XT.</note> 
+<note><ptr type="resource" target="http://www.jclark.com/xml/xt.html"/>
+(documentation);
+<ptr type="resource" target="ftp://ftp.jclark.com/pub/xml/xt.zip"/> (xt
+software);
+<ptr type="resource" target="ftp://ftp.jclark.com/pub/xml/xt-win32.zip"/> (xt
+software for Windows);
+<ptr type="resource" target="ftp://ftp.jclark.com/pub/xml/xp.zip"/> (xp software)
+.</note> 
+</bibl>
+</listBibl>
+</div>
+

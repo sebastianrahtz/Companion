@@ -1,0 +1,150 @@
+\setlength\overfullrule{0pt}
+\usepackage{fancyvrb}
+\fvset{numberblanklines=false,xleftmargin=0mm,xrightmargin=0mm}
+\usepackage{hyperref}
+\hypersetup{colorlinks=false}
+%\renewcommand\rmdefault{pjn}
+%\renewcommand\sfdefault{lmss}
+%\renewcommand\bfdefault{b}
+%\renewcommand{\ttdefault}{hlst}
+%\input t1hlst.fd
+%\DeclareFontShape{T1}{hlst}{m}{n}{<->s * [.86]hlsrt8t}{}
+%\DeclareFontShape{T1}{hlst}{m}{sl}{<->s * [.86]hlsrot8t}{}
+%\DeclareFontShape{T1}{hlst}{b}{n}{<->s * [.86]hlsbt8t}{}
+%\DeclareFontShape{T1}{hlst}{b}{sl}{<->s * [.86]hlsbot8t}{}
+
+\DefineVerbatimEnvironment{XML}{Verbatim}
+    {frame=single,xleftmargin=0pt}
+
+
+
+
+\def\WideGraphics[#1]#2{%
+ \sbox\@display{\includegraphics[#1]{#2}}
+ \ifdim\wd\@display >\textwidth
+   \setlength\ExampleWidth\fullwidth
+  \else
+   \setlength\ExampleWidth\textwidth
+  \fi
+  \global\advance\c@side@count\@ne
+  \noindent
+  \label{\thechapter:\theside@count}\nobreak
+  \ifthenelse{\isodd{\pageref{\thechapter:\theside@count}}}
+      {
+       \makebox[\textwidth][l]{\box\@display}%
+      }
+      {
+       \makebox[\textwidth][r]{\box\@display}%
+      }
+   \par\nointerlineskip
+
+}
+
+\ImplementUserEnvironment{titlepage}
+  {\frontmatterpage3
+   \toks@{}
+  }
+{
+\let\author\frontmatter@error
+\let\address\frontmatter@error
+\begin{center}
+\mbox{}\\[.5cm]
+\fontsize{40}{45}\selectfont
+ \@title\\[1cm]
+\fontsize{22}{26}\selectfont
+ \@subtitle\\[1.5cm]
+ \def\do@author##1{\fontsize{16}{18}\selectfont##1\\[1pt]}
+ \def\do@address##1{\normalsize\textit{##1}\\[4mm]}
+ \the\toks@\mbox{}
+ \vfill
+%\mbox{\includegraphics{AWlogoTitlePage_PC.eps}}\\
+\par
+\normalsize
+\def\BB{$\;\bullet\;$}
+Boston ~\BB~~
+San~Franciso ~\BB~~
+New~York ~\BB~~
+Toronto ~\BB~~
+Montral ~\BB~~
+London ~\BB~~
+Munich ~\BB~~
+Paris ~\BB~~
+Madrid ~\BB~~
+Capetown ~\BB~~
+Sydney ~\BB~~
+Tokyo ~\BB~~
+Singapore ~\BB~~
+Mexico~City
+\end{center}}
+
+
+\ImplementUserEnvironment{thebibliography}[1]
+ {\begin{list}
+    {\@biblabel{\arabic{enumiv}}}
+    {\settowidth\labelwidth{\@biblabel{#1}}%
+     \setlength\leftmargin {\labelwidth + \labelsep}
+     \usecounter{enumiv}
+     \renewcommand\p@enumiv{}
+     \renewcommand\theenumiv{\arabic{enumiv}}}
+     \newcommand\newblock{\hskip .11em plus.33em minus.07em}
+     \setinternalcounter\clubpenalty{4000}
+     \setinternalcounter\widowpenalty{10000}
+     \nonfrenchspacing
+     \rightskip \z@ plus \thr@@ em
+     \spaceskip\fontdimen\tw@\font % needs to be canceled in note!
+     \addtolength\itemsep{0pt plus 2pt minus 2pt}%
+    }
+ {\renewcommand\@noitemerr
+      {\@warning{Empty~ `thebibliography'~ environment}}
+  \end{list}}
+
+
+
+\usepackage[activate=normal]{pdfcprot}
+
+
+\endinput
+
+% cant make all this work
+\DeclareUserEnvironment{XMLExample}[2]
+
+\ExampleType{xml}  
+  {}
+  {}
+  {} 
+  {}
+
+\DeclareUserEnvironment{XML}[1]
+
+\ImplementUserEnvironment{XML}[1]
+   {\XMLExample{xml}{#1}}
+   {\endXMLExample}
+
+
+\ImplementUserEnvironment{XMLExample}[2]
+  { \init@extension@code{#1}{#2}%
+   \BeginExample}
+  {\EndExample
+    \index@vals%
+    \fvset{commandchars=\\\{\},fontsize=\small,frame=single,xleftmargin=0pt}%
+    %    \bgroup\ttfamily\small\obeylines\obeyspaces
+    %    \egroup
+    \@@XMLDisplay{\VerbatimInput{\EX@dir\EX@prefix\theEX@ct.\EX@suffix}}%
+}
+\newcommand\@@XMLDisplay[1]{%
+\bgroup\def\baselinestretch{1}%
+\trivlist
+\leftskip-\@totalleftmargin  % don't move inside lists
+ \item[]%
+ \nointerlineskip
+ \leavevmode
+ \OddOrEvenPage
+    {\IdentifyOddExample
+    \typeout{Odd Wide Example <\theEX@ct, \theside@count>
+      <picture: \the\wd\@display>/\the\ExampleWidth}#1}{%
+   \typeout{Even Wide Example <\theEX@ct, \theside@count>
+      <picture: \the\wd\@display>/\the\ExampleWidth}#1\IdentifyEvenExample
+   }%
+\egroup
+}
+\endinput

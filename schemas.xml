@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<locatingRules
+    xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
+  <uri resource="teicomp.xml" uri="teicomp.rnc"/>
+  <uri pattern="*.xml" typeId="XML"/>
+  <typeId id="XML" uri="teicomp.rnc"/>
+</locatingRules>

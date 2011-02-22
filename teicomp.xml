@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<TEI      
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns="http://www.tei-c.org/ns/1.0"
+    rend="ttct">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The TEI Companion</title>
+        <author>Lou Burnard</author>
+        <author>Sebastian Rahtz</author>
+      </titleStmt>
+      <editionStmt>
+	<edition>
+	  <date>February 2009</date>
+	</edition>
+      </editionStmt>
+      <publicationStmt>
+        <p> </p>
+      </publicationStmt>
+      <sourceDesc>
+        <p></p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <list>
+        <item>
+  <date>$LastChangedDate$.</date>
+	</item>
+      </list>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+<group>
+<!--
+
+<text>
+
+<front>
+<divGen type="toc"/>
+<titlePart>Text Encoding</titlePart>
+</front>
+<body>
+<xi:include href="part1-intro.xml"/>    
+<xi:include href="part1-principles.xml"/> 
+</body>
+</text>
+
+<text>
+<front>
+<titlePart>The TEI By Example</titlePart>
+</front>
+<body>
+<xi:include href="part1-text.xml"/>                         
+<xi:include href="part1-letters.xml"/>                   
+<xi:include href="part1-proc.xml"/>                    
+<xi:include href="part1-office.xml"/>                   
+<xi:include href="part1-orinoco.xml"/>                        
+<xi:include href="part1-ms.xml"/>                            
+<xi:include href="part1-web.xml"/>                            
+<xi:include href="part1-metadata.xml"/>                         
+<xi:include href="part1-biblio.xml"/>                     
+<xi:include href="part1-tables.xml"/>                  
+</body>
+</text>
+-->
+<text>
+<front>
+<titlePart>The TEI Reference</titlePart>
+</front>
+<body>
+<xi:include href="part2-tei.xml"/>           
+<xi:include href="part2-extensions.xml"/>    
+<xi:include href="part2-xsl.xml"/>           
+<xi:include href="part2-teixsl.xml"/>        
+</body>
+<!--
+<back>
+<xi:include href="part2-urls.xml"/>          
+</back>
+-->
+</text>
+</group>
+  </text>
+</TEI>
+
+

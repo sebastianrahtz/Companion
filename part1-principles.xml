@@ -1,0 +1,32 @@
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="chap-principles">
+<head>General principles</head>
+
+  <div><head>Why markup? Why XML? Why the TEI?</head>
+<p>Markup makes explicit in a document its intended reading. XML
+provides a way of making that markup portable across computer
+environments, between applications, and across time. The TEI defines a
+conceptual framework within which the semantics of markup can be
+defined and shared.</p></div>
+
+<div><head>Authoring tools: a survey</head> <p>What are the chief
+characteristics of the various authoring tools available? By what
+criteria (feature list, cost, usability etc) can one evaluate them?
+Which tools will we discuss in this book? </p></div>
+
+  <div><head>Publishing tools: a survey</head><p>Ditto, but for
+publishing on paper, in digital form, on the web.</p></div>
+
+  <div><head>Manipulation tools</head><p>Ditto, but for transforming
+in and out of XML, interfacing XML documents with other digital
+resources (databases, programs, etc)</p></div>
+
+  <div><head>Storage and archiving</head> <p>Documents, XML Objects,
+Subdocuments, etc. How does one manage XML data. Data and
+documents. Version control. Longterm storage. Access issues: how to
+index and retrieve XML documents. Topic maps? </p></div>
+
+  <div><head>Metadata</head> <p>Self describing documents: the role of
+the TEI Header. Brief <!--hand-waving--> discussions of RDF, Dublin Core,
+etc? Interaction between metadata and long term
+preservation. </p></div>
+</div>

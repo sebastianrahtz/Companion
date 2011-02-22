@@ -1,0 +1,2317 @@
+<tei:div1 xmlns:tei="http://www.tei-c.org/ns/1.0">
+   <tei:head>Customization variables and templates</tei:head>
+   <div2 xmlns="http://www.tei-c.org/ns/1.0" xml:id="output">
+       <head>Output</head>
+      <p>You can set a name for the output file(s); if you ask for multiple
+output files, this name will be used to create unique filenames for
+each section. By default, results will go to wherever your XSLT
+processor normally writes (usually standard output).  If you opt to
+have files created, you can specify the name of the directory where
+the output is to be placed.</p>
+
+      <p>If you are making HTML, do you want a single output page, or a
+separate one for each section of the document?   You
+can decide to have a different splitting policy for front and
+back matter.  </p>
+
+      <div3>
+         <head>(common) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>REQUEST</ident>
+            </label>
+            <item> (string) 
+The complete URL when the document is being delivered from a web
+server (normally set by Apache or Cocoon)
+ <code rend="box"/>
+            </item>
+            <label>
+               <ident>STDOUT</ident>
+            </label>
+            <item> (boolean) 
+Write to standard output channel
+ <code rend="box">true</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(html) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>ID</ident>
+            </label>
+            <item> (string) 
+An ID passed to the stylesheet to indicate which section to display
+ <code rend="box"/>
+            </item>
+            <label>
+               <ident>URLPREFIX</ident>
+            </label>
+            <item> (string) 
+A path fragment to put before all internal URLs 
+ <code rend="box"/>
+            </item>
+            <label>
+               <ident>outputName</ident>
+            </label>
+            <item> (string) 
+The name of the input file
+ <code rend="box"/>
+            </item>
+            <label>
+               <ident>outputDir</ident>
+            </label>
+            <item> (string) 
+Directory in which to place generated files.
+ <code rend="box"/>
+            </item>
+            <label>
+               <ident>outputEncoding</ident>
+            </label>
+            <item> (string) 
+Encoding of output file(s).
+ <code rend="box">iso-8859-1</code>
+            </item>
+            <label>
+               <ident>outputMethod</ident>
+            </label>
+            <item> (string) 
+Output method for output file(s).
+ <code rend="box">html</code>
+            </item>
+            <label>
+               <ident>doctypePublic</ident>
+            </label>
+            <item> (string) 
+Public Doctype of output file(s).
+ <code rend="box">-//W3C//DTD HTML 4.0 Transitional//EN</code>
+            </item>
+            <label>
+               <ident>doctypeSystem</ident>
+            </label>
+            <item> (string) 
+System Doctype of output file(s).
+ <code rend="box">http://www.w3.org/TR/html4/loose.dtd</code>
+            </item>
+            <label>
+               <ident>pageLayout</ident>
+            </label>
+            <item> (string) The style of HTML (Simple, CSS or Table) which creates the layout for generated pages. <code rend="box">Simple</code>
+            </item>
+            <label>
+               <ident>rawXML</ident>
+            </label>
+            <item> (boolean) 
+Pass through input essentially unchanged
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>splitBackmatter</ident>
+            </label>
+            <item> (boolean) 
+Break back matter into separate HTML pages (if splitting enabled).
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>splitFrontmatter</ident>
+            </label>
+            <item> (boolean) 
+Break front matter into separate HTML pages (if splitting enabled).
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>splitLevel</ident>
+            </label>
+            <item> (integer) Level at which to split sections. <code rend="box">-1</code>
+            </item>
+            <label>
+               <ident>standardSuffix</ident>
+            </label>
+            <item> (string) 
+Suffix for generated output files.
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:choose xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+                           <xsl:when test="$rawXML='true'">.xml</xsl:when>
+                           <xsl:when test="tei:teiCorpus">.html</xsl:when>
+                           <xsl:when test="$STDOUT='true'"/>
+                           <xsl:otherwise>.html</xsl:otherwise>
+                      </xsl:choose>
+               </egXML>
+            </item>
+            <label>
+               <ident>topNavigationPanel</ident>
+            </label>
+            <item> (boolean) 
+Display navigation panel at top of pages.
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>urlChunkPrefix</ident>
+            </label>
+            <item> (string) 
+How to specify infra-document links. When a document is split,
+links need to be constructed between parts of the document. 
+The default is to use a query parameter on the URL.
+ <code rend="box">?ID=</code>
+            </item>
+            <label>
+               <ident>useIDs</ident>
+            </label>
+            <item> (boolean) Construct links using existing ID values. <code rend="box">true</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(fo) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>language</ident>
+            </label>
+            <item> (string) 
+Language (for hyphenation)
+ <code rend="box">en_US</code>
+            </item>
+            <label>
+               <ident>foEngine</ident>
+            </label>
+            <item> (string) Name of intended XSL FO engine <code rend="box"/>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(latex) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>baseURL</ident>
+            </label>
+            <item> (string) 
+URL root where referenced documents are located
+ <code rend="box">http://www.tei-c.org</code>
+            </item>
+            <label>
+               <ident>reencode</ident>
+            </label>
+            <item> (boolean) 
+Whether or not to load LaTeX packages which attempt to
+process the UTF-8 characters. Set to "false" if you are
+using XeTeX or similar.
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>realFigures</ident>
+            </label>
+            <item> (boolean) 
+Use real name of graphics files rather than pointers
+ <code rend="box">true</code>
+            </item>
+         </glossList>
+      </div3>
+   </div2>
+
+
+   <div2 xmlns="http://www.tei-c.org/ns/1.0" xml:id="layout">
+      <head>Layout</head>
+      <p>There are three ways to provide a constant navigation aid. You can
+either make the whole page into a table, where the first column has a table
+of contents, or you can make an HTML frameset, or you can just have 
+a table of links on the left or right</p>
+      <p>Hypertext links present special problems, as we have to choose
+whether they should start a new window, occupy all of the current
+window, or stay within the frame. These stylesheets implement the
+following rules:
+<list type="ordered">
+            <item>Any <gi>ref</gi> or <gi>ptr</gi> link stays within the frame</item>
+            <item>Any link containing <q>://</q> uses the whole browser window</item>
+            <item>Any link starting <q>.</q> uses the whole browser window</item>
+            <item>If the stylesheet sets no splitting of the document,
+any <gi>xref</gi> or <gi>xptr</gi> link  uses the whole browser
+window</item>
+            <item>If a <gi>xref</gi> or <gi>xptr</gi> link has a
+<ident>rend</ident> attribute value of <q>noframe</q>, the whole browser
+window is used</item>
+            <item>If a <gi>xref</gi> or <gi>xptr</gi> link has a
+<ident>rend</ident> attribute value of <q>new</q>, a new browser window
+is started</item>
+         </list>
+      </p>
+      <div3>
+         <head>(html) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>contentStructure</ident>
+            </label>
+            <item> (string) How to use the front/body/back matter in creating
+columns. <code rend="box">body</code>
+            </item>
+            <label>
+               <ident>divOffset</ident>
+            </label>
+            <item> (integer) The difference between TEI div levels and HTML.
+headings. <code rend="box">2</code>
+            </item>
+            <label>
+               <ident>footnoteFile</ident>
+            </label>
+            <item> (boolean) 
+Make a separate file for footnotes
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>linksWidth</ident>
+            </label>
+            <item> (string) 
+Width of left-hand column when $pageLayout is "Table"
+ <code rend="box">15%</code>
+            </item>
+            <label>
+               <ident>navbarFile</ident>
+            </label>
+            <item> (anyURI) XML resource defining a navigation bar. <code rend="box"/>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(fo) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>backMulticolumns</ident>
+            </label>
+            <item> (boolean) 
+Put back matter in multiple columns
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>bodyMarginBottom</ident>
+            </label>
+            <item> (string) 
+Margin at bottom of text body
+ <code rend="box">24pt</code>
+            </item>
+            <label>
+               <ident>bodyMarginTop</ident>
+            </label>
+            <item> (string) 
+Margin at top of text body
+ <code rend="box">24pt</code>
+            </item>
+            <label>
+               <ident>bodyMulticolumns</ident>
+            </label>
+            <item> (boolean) 
+Put body matter in multiple columns
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>bulletFour</ident>
+            </label>
+            <item> (string) 
+Symbol for 4th level itemized list
+ <code rend="box">+</code>
+            </item>
+            <label>
+               <ident>bulletOne</ident>
+            </label>
+            <item> (string) 
+Symbol for top-level itemized list
+ <code rend="box">•</code>
+            </item>
+            <label>
+               <ident>bulletThree</ident>
+            </label>
+            <item> (string) 
+Symbol for 3rd level itemized list
+ <code rend="box">*</code>
+            </item>
+            <label>
+               <ident>bulletTwo</ident>
+            </label>
+            <item> (string) 
+Symbol for 2nd level itemized list
+ <code rend="box">–</code>
+            </item>
+            <label>
+               <ident>columnCount</ident>
+            </label>
+            <item> (integer) 
+Number of columns, when multiple-column work is requested
+ <code rend="box">1</code>
+            </item>
+            <label>
+               <ident>distanceBetweenStarts</ident>
+            </label>
+            <item> (string) 
+XSL FO "provisional-distance-between starts"
+ <code rend="box">18pt</code>
+            </item>
+            <label>
+               <ident>distanceBetweenGlossStarts</ident>
+            </label>
+            <item> (string) 
+XSL FO "provisional-distance-between starts" for gloss lists
+ <code rend="box">42pt</code>
+            </item>
+            <label>
+               <ident>divRunningheads</ident>
+            </label>
+            <item> (boolean) 
+Display section headings in running heads
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>exampleAfter</ident>
+            </label>
+            <item> (string) 
+Space below examples
+ <code rend="box">4pt</code>
+            </item>
+            <label>
+               <ident>exampleBefore</ident>
+            </label>
+            <item> (string) 
+Space above examples
+ <code rend="box">4pt</code>
+            </item>
+            <label>
+               <ident>exampleMargin</ident>
+            </label>
+            <item> (string) 
+Left margin for examples
+ <code rend="box">12pt</code>
+            </item>
+            <label>
+               <ident>flowMarginLeft</ident>
+            </label>
+            <item> (string) 
+Left margin of flow
+ <code rend="box"/>
+            </item>
+            <label>
+               <ident>forcePageMaster</ident>
+            </label>
+            <item> (string) 
+Which named page master name to use
+ <code rend="box"/>
+            </item>
+            <label>
+               <ident>formatBackpage</ident>
+            </label>
+            <item> (string) 
+How to format page numbers in back matter (use XSLT number format)
+ <code rend="box">1</code>
+            </item>
+            <label>
+               <ident>formatBodypage</ident>
+            </label>
+            <item> (string) 
+How to format page numbers in main matter (use XSLT number format)
+ <code rend="box">1</code>
+            </item>
+            <label>
+               <ident>formatFrontpage</ident>
+            </label>
+            <item> (string) 
+How to format page numbers in front matter (use XSLT number format)
+ <code rend="box">i</code>
+            </item>
+            <label>
+               <ident>frontMulticolumns</ident>
+            </label>
+            <item> (boolean) 
+Put front matter in multiple columns
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>indentBibl</ident>
+            </label>
+            <item> (string) 
+Indentation for bibliography entries
+ <code rend="box">1em</code>
+            </item>
+            <label>
+               <ident>labelSeparation</ident>
+            </label>
+            <item> (string) 
+XSL FO "provisional-label-separation"
+ <code rend="box">6pt</code>
+            </item>
+            <label>
+               <ident>listAbove-1</ident>
+            </label>
+            <item> (string) 
+Space above lists at top level
+ <code rend="box">6pt</code>
+            </item>
+            <label>
+               <ident>listAbove-2</ident>
+            </label>
+            <item> (string) 
+Space above lists at 2nd level
+ <code rend="box">4pt</code>
+            </item>
+            <label>
+               <ident>listAbove-3</ident>
+            </label>
+            <item> (string) 
+Space above lists at 3rd level
+ <code rend="box">0pt</code>
+            </item>
+            <label>
+               <ident>listAbove-4</ident>
+            </label>
+            <item> (string) 
+Space above lists at 4th level
+ <code rend="box">0pt</code>
+            </item>
+            <label>
+               <ident>listBelow-1</ident>
+            </label>
+            <item> (string) 
+Space below lists at top level
+ <code rend="box">6pt</code>
+            </item>
+            <label>
+               <ident>listBelow-2</ident>
+            </label>
+            <item> (string) 
+Space below lists at 2nd level
+ <code rend="box">4pt</code>
+            </item>
+            <label>
+               <ident>listBelow-3</ident>
+            </label>
+            <item> (string) 
+Space below lists at 3rd level
+ <code rend="box">0pt</code>
+            </item>
+            <label>
+               <ident>listBelow-4</ident>
+            </label>
+            <item> (string) 
+Space below lists at 4th level
+ <code rend="box">0pt</code>
+            </item>
+            <label>
+               <ident>listItemsep</ident>
+            </label>
+            <item> (string) 
+Spacing between list items
+ <code rend="box">4pt</code>
+            </item>
+            <label>
+               <ident>listLeftGlossIndent</ident>
+            </label>
+            <item> (string) 
+Left margin for gloss lists
+ <code rend="box">0.5in</code>
+            </item>
+            <label>
+               <ident>listLeftGlossInnerIndent</ident>
+            </label>
+            <item> (string) 
+Left margin for nested gloss lists
+ <code rend="box">0.25in</code>
+            </item>
+            <label>
+               <ident>listLeftIndent</ident>
+            </label>
+            <item> (string) 
+Indentation for lists
+ <code rend="box">0pt</code>
+            </item>
+            <label>
+               <ident>listRightMargin</ident>
+            </label>
+            <item> (string) 
+Right margin for lists
+ <code rend="box">10pt</code>
+            </item>
+            <label>
+               <ident>pageHeight</ident>
+            </label>
+            <item> (string) 
+Paper height
+ <code rend="box">297mm</code>
+            </item>
+            <label>
+               <ident>pageMarginBottom</ident>
+            </label>
+            <item> (string) 
+Margin at bottom of text area
+ <code rend="box">100pt</code>
+            </item>
+            <label>
+               <ident>pageMarginLeft</ident>
+            </label>
+            <item> (string) 
+Left margin
+ <code rend="box">80pt</code>
+            </item>
+            <label>
+               <ident>pageMarginRight</ident>
+            </label>
+            <item> (string) 
+Right margin
+ <code rend="box">150pt</code>
+            </item>
+            <label>
+               <ident>pageMarginTop</ident>
+            </label>
+            <item> (string) 
+Margin at top of text area
+ <code rend="box">75pt</code>
+            </item>
+            <label>
+               <ident>pageWidth</ident>
+            </label>
+            <item> (string) 
+Paper width
+ <code rend="box">211mm</code>
+            </item>
+            <label>
+               <ident>parIndent</ident>
+            </label>
+            <item> (string) 
+Paragraph indentation
+ <code rend="box">1em</code>
+            </item>
+            <label>
+               <ident>parSkip</ident>
+            </label>
+            <item> (string) 
+Default spacing between paragraphs
+ <code rend="box">0pt</code>
+            </item>
+            <label>
+               <ident>parSkipmax</ident>
+            </label>
+            <item> (string) 
+Maximum space allowed between paragraphs
+ <code rend="box">12pt</code>
+            </item>
+            <label>
+               <ident>readColSpecFile</ident>
+            </label>
+            <item> (anyURI) 
+External XML file containing specifications for column sizes for
+tables in document
+ <code rend="box"/>
+            </item>
+            <label>
+               <ident>regionAfterExtent</ident>
+            </label>
+            <item> (string) 
+Region after
+ <code rend="box">14pt</code>
+            </item>
+            <label>
+               <ident>regionBeforeExtent</ident>
+            </label>
+            <item> (string) 
+Region before
+ <code rend="box">14pt</code>
+            </item>
+            <label>
+               <ident>sectionHeaders</ident>
+            </label>
+            <item> (boolean) 
+Construct running headers from page number and section headings
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>spaceAfterBibl</ident>
+            </label>
+            <item> (string) 
+Space after bibliography
+ <code rend="box">0pt</code>
+            </item>
+            <label>
+               <ident>spaceAroundTable</ident>
+            </label>
+            <item> (string) 
+Space above and below a table
+ <code rend="box">8pt</code>
+            </item>
+            <label>
+               <ident>spaceBeforeBibl</ident>
+            </label>
+            <item> (string) 
+Space above bibliography
+ <code rend="box">4pt</code>
+            </item>
+            <label>
+               <ident>spaceBelowCaption</ident>
+            </label>
+            <item> (string) 
+Space below caption of figure or table
+ <code rend="box">4pt</code>
+            </item>
+            <label>
+               <ident>titlePage</ident>
+            </label>
+            <item> (boolean) 
+Make title page
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>twoSided</ident>
+            </label>
+            <item> (boolean) 
+Make 2-page spreads
+ <code rend="box">true</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(latex) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>classParameters</ident>
+            </label>
+            <item> (string) 
+Optional parameters for documentclass
+ <code rend="box">11pt</code>
+            </item>
+            <label>
+               <ident>latexLogo</ident>
+            </label>
+            <item> (string) 
+Logo graphics file
+ <code rend="box"/>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(html) templates</head>
+         <glossList rend="small">
+            <label>
+               <ident>columnHeader</ident>
+            </label>
+            <item> Banner for top of column
+			 <code rend="box">
+               </code>
+            </item>
+            <label>
+               <ident>hdr</ident>
+            </label>
+            <item> Header section across top of page <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <xsl:call-template xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="pageHeader">
+                         <xsl:with-param name="mode"/>
+                    </xsl:call-template>
+               </egXML>
+            </item>
+            <label>
+               <ident>hdr2</ident>
+            </label>
+            <item> Navigation bar <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:call-template xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="navbar"/>
+                 </egXML>
+            </item>
+            <label>
+               <ident>hdr3</ident>
+            </label>
+            <item> Breadcrumb trail <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <a xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="" href="#rh-col" title="Go to main page content" class="skiplinks">Skip links</a>
+                      <a xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="" class="hide">|</a>
+                      <xsl:call-template xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="crumbPath"/>
+                      <a xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="" class="hide">|</a>
+                      <a xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="" class="bannerright" href="{$parentURL}" title="Go to home page">
+                           <xsl:value-of select="$parentWords"/>
+                           <xsl:text> home page</xsl:text>
+                      </a>
+                 </egXML>
+            </item>
+            <label>
+               <ident>lh-col-bottom</ident>
+            </label>
+            <item>Bottom of left-hand column<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <xsl:param xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="currentID"/>
+                    <xsl:call-template xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="leftHandFrame">
+                         <xsl:with-param name="currentID" select="$currentID"/>
+                      </xsl:call-template>
+                      <hr xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns=""/>
+               </egXML>
+            </item>
+            <label>
+               <ident>lh-col-top</ident>
+            </label>
+            <item>Top of left-hand column <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:call-template xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="searchbox"/>
+                      <xsl:call-template xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="printLink"/>
+                 </egXML>
+            </item>
+            <label>
+               <ident>logoPicture</ident>
+            </label>
+            <item> Logo<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <a xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="" class="framelogo" target="_top" href="http://www.tei-c.org/Stylesheets/teic/">
+                           <img src="http://www.tei-c.org/Stylesheets/teic/teixsl.png" vspace="5" width="124" height="161" border="0" alt="TEI XSL Stylesheets"/>
+                      </a>
+               </egXML>
+            </item>
+            <label>
+               <ident>metaHTML</ident>
+            </label>
+            <item> Making elements in HTML &lt;head&gt;<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <xsl:param xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="title"/>
+                      <meta xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="" name="author">
+                           <xsl:attribute name="content">
+	                        <xsl:call-template name="generateAuthor"/>
+                           </xsl:attribute>
+                      </meta>
+                      <meta xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="" name="generator" content="Text Encoding Initiative Consortium XSLT stylesheets"/>
+                      <meta xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="" name="DC.Title" content="{$title}"/>
+                      <meta xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="" name="DC.Type" content="Text"/>
+                      <meta xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="" name="DC.Format" content="text/html"/>
+               </egXML>
+            </item>
+            <label>
+               <ident>navbar</ident>
+            </label>
+            <item> Construction of navigation bar <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:if xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="not($navbarFile='')">
+                           <xsl:for-each select="document($navbarFile,document(''))">
+                                <xsl:for-each select="tei:list/tei:item">
+                                     <span xmlns="" class="navbar">
+                                          <a href="{$URLPREFIX}{tei:xref/@url}" class="navbar">
+                                               <xsl:apply-templates select="tei:xref/text()"/>
+                                          </a>
+                                     </span>
+                                     <xsl:if test="following-sibling::tei:item"> | </xsl:if>
+                                </xsl:for-each>
+                           </xsl:for-each>
+                      </xsl:if>
+                 </egXML>
+            </item>
+            <label>
+               <ident>pageHeader</ident>
+            </label>
+            <item> Banner for top of page<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <xsl:param xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="mode"/>
+                      <xsl:choose xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+                           <xsl:when test="$mode='table'">
+                                <table xmlns="" width="100%" border="0">
+                                     <tr>
+                                          <td height="98" class="bgimage" onClick="window.location='{$homeURL}'" cellpadding="0">
+                                               <h2 class="subtitle">
+                                                    <xsl:call-template name="generateSubTitle"/>
+                                               </h2>
+                                               <h1 class="maintitle">
+                                                    <xsl:call-template name="generateTitle"/>
+                                               </h1>
+                                          </td>
+                                          <td valign="top"/>
+                                     </tr>
+                                </table>
+                           </xsl:when>
+                           <xsl:otherwise>
+                                <h2 xmlns="" class="subtitle">
+                                     <xsl:call-template name="generateSubTitle"/>
+                                </h2>
+                                <h1 xmlns="" class="maintitle">
+                                     <xsl:call-template name="generateTitle"/>
+                                </h1>
+                           </xsl:otherwise>
+                      </xsl:choose>
+                 </egXML>
+            </item>
+            <label>
+               <ident>rh-col-bottom</ident>
+            </label>
+            <item> Bottom of right-hand column<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <xsl:param xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="currentID"/>
+                      <xsl:call-template xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="mainFrame">
+                           <xsl:with-param name="currentID" select="$currentID"/>
+                      </xsl:call-template>
+                 </egXML>
+            </item>
+            <label>
+               <ident>rh-col-top</ident>
+            </label>
+            <item> Top of right-hand column<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:call-template xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="columnHeader"/>
+                 </egXML>
+            </item>
+            <label>
+               <ident>searchbox</ident>
+            </label>
+            <item> Make a search box
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>singleFileLabel</ident>
+            </label>
+            <item> Construct a label for the link which makes a
+    printable version of the document.
+			 <code rend="box">For Printing</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(latex) templates</head>
+         <glossList rend="small">
+            <label>
+               <ident>latexPackages</ident>
+            </label>
+            <item>LaTeX package setup<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <xsl:text xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+\usepackage[twoside,a4paper,lmargin=1in,rmargin=1in,tmargin=1in,bmargin=1in]{geometry}
+\usepackage{longtable}
+\usepackage{colortbl}
+\usepackage{ulem}
+\usepackage{fancyvrb}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{endnotes}
+\def\Gin@extensions{.pdf,.png,.jpg,.mps,.tif}
+</xsl:text>
+                  <xsl:if xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="$reencode='true'">
+                     <xsl:text>
+\IfFileExists{tipa.sty}{\usepackage{tipa}}{}
+\usepackage{times}
+</xsl:text>
+                  </xsl:if>
+                  <xsl:if xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="not($userpackage='')">
+  \usepackage{<xsl:value-of select="$userpackage"/>}
+</xsl:if>
+                  <xsl:text xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  \pagestyle{fancy} 
+</xsl:text>
+               </egXML>
+            </item>
+            <label>
+               <ident>latexSetup</ident>
+            </label>
+            <item>LaTeX setup<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <xsl:if xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="$reencode='true'">
+\IfFileExists{utf8x.def}%
+ {\usepackage[utf8x]{inputenc}}%
+ {\usepackage[utf8]{inputenc}}
+\usepackage[T1]{fontenc}
+\usepackage[]{ucs}
+</xsl:if>
+\usepackage{relsize}
+\uc@dclc{8421}{default}{\textbackslash }
+\uc@dclc{10100}{default}{\{}
+\uc@dclc{10101}{default}{\}}
+\DeclareTextSymbol{\textpi}{OML}{25}
+\def\textquoted#1{`#1'}
+\def\textcal#1{\ensuremath{\mathcal{#1}}}
+\def\textsmall#1{{\small #1}}
+\def\textlarge#1{{\large #1}}
+\def\textoverbar#1{\ensuremath{\overline{#1}}}
+\def\textgothic#1{\ensuremath{\mathscr{#1}}}
+\RequirePackage{array}
+\gdef\arraybackslash{\let\\=\@arraycr}
+<xsl:text xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" disable-output-escaping="yes">
+\newcolumntype{L}[1]{&gt;{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{&gt;{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{&gt;{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{P}[1]{&gt;{\arraybackslash}p{#1}}
+\IfFileExists{xcolor.sty}%
+  {\RequirePackage{xcolor}}%
+  {\RequirePackage{color}}
+\definecolor{label}{gray}{0.75}
+</xsl:text>
+\DeclareRobustCommand*{\xref}{\hyper@normalise\xref@}
+\def\xref@#1#2{\hyper@linkurl{#2}{#1}}
+\def\Div[#1]#2{\section*{#2}}
+\catcode`\_=12\relax
+</egXML>
+            </item>
+            <label>
+               <ident>latexLayout</ident>
+            </label>
+            <item>LaTeX layout preamble<egXML xmlns="http://www.tei-c.org/ns/Examples">
+\paperwidth211mm
+\paperheight297mm
+\def\@pnumwidth{1.55em}
+\def\@tocrmarg {2.55em}
+\def\@dotsep{4.5}
+\setcounter{tocdepth}{3}
+\clubpenalty=8000
+\emergencystretch 3em
+\hbadness=4000
+\hyphenpenalty=400
+\pretolerance=750
+\tolerance=2000
+\vbadness=4000
+\widowpenalty=10000
+<xsl:if xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="not($docClass='letter')">
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+     {-1.75ex \@plus -0.5ex \@minus -.2ex}%
+     {0.5ex \@plus .2ex}%
+     {\reset@font\large\bfseries\sffamily}}
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+     {-1.75ex\@plus -0.5ex \@minus- .2ex}%
+     {0.5ex \@plus .2ex}%
+     {\reset@font\large\sffamily}}
+\renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
+     {-1.5ex\@plus -0.35ex \@minus -.2ex}%
+     {0.5ex \@plus .2ex}%
+     {\reset@font\normalsize\sffamily}}
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+     {1.5ex \@plus0.5ex \@minus.2ex}%
+     {-1em}%
+     {\reset@font\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
+     {1.5ex \@plus1ex \@minus .2ex}%
+     {-1em}%
+     {\reset@font\normalsize\bfseries}}
+
+</xsl:if>
+\def\l@section#1#2{\addpenalty{\@secpenalty} \addvspace{1.0em plus 1pt}
+ \@tempdima 1.5em \begingroup
+ \parindent \z@ \rightskip \@pnumwidth 
+ \parfillskip -\@pnumwidth 
+ \bfseries \leavevmode #1\hfil \hbox to\@pnumwidth{\hss #2}\par
+ \endgroup}
+\def\l@subsection{\@dottedtocline{2}{1.5em}{2.3em}}
+\def\l@subsubsection{\@dottedtocline{3}{3.8em}{3.2em}}
+\def\l@paragraph{\@dottedtocline{4}{7.0em}{4.1em}}
+\def\l@subparagraph{\@dottedtocline{5}{10em}{5em}}
+\@ifundefined{c@section}{\newcounter{section}}{}
+\newif\if@mainmatter 
+\@mainmattertrue
+\def\frontmatter{%
+  \setcounter{secnumdepth}{-1}
+  \@mainmatterfalse
+  \pagenumbering{roman}}
+\def\mainmatter{%
+  \setcounter{section}{0}
+  \setcounter{secnumdepth}{4}
+  \@mainmattertrue
+  \pagenumbering{arabic}}
+\def\backmatter{%
+  \clearpage
+  \appendix
+  \@mainmatterfalse}
+\newenvironment{bibitemlist}[1]{%
+   \list{\@biblabel{\@arabic\c@enumiv}}%
+       {\settowidth\labelwidth{\@biblabel{#1}}%
+        \leftmargin\labelwidth
+        \advance\leftmargin\labelsep
+        \@openbib@code
+        \usecounter{enumiv}%
+        \let\p@enumiv\@empty
+        \renewcommand\theenumiv{\@arabic\c@enumiv}%
+	}%
+  \sloppy
+  \clubpenalty4000
+  \@clubpenalty \clubpenalty
+  \widowpenalty4000%
+  \sfcode`\.\@m}%
+  {\def\@noitemerr
+    {\@latex@warning{Empty `bibitemlist' environment}}%
+    \endlist}
+
+\def\tableofcontents{\section*{\contentsname}\@starttoc{toc}}
+\usepackage[pdftitle={<xsl:call-template xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="generateSimpleTitle"/>},
+ pdfauthor={<xsl:call-template xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="generateAuthor"/>}]{hyperref}
+\hyperbaseurl{<xsl:value-of xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="$baseURL"/>}
+<xsl:call-template xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="latexPreambleHook"/>
+               </egXML>
+            </item>
+            <label>
+               <ident>latexBegin</ident>
+            </label>
+            <item>LaTeX setup at start of document<egXML xmlns="http://www.tei-c.org/ns/Examples">
+\makeatletter
+\thispagestyle{plain}
+<xsl:if xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="not(tei:text/tei:front/tei:titlePage)">
+                       <xsl:call-template name="printTitleAndLogo"/>
+                  </xsl:if>
+\markright{\@title}%
+\markboth{\@title}{\@author}%
+\makeatother
+<xsl:if xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="not($docClass='letter')">
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+</xsl:if>
+\fvset{frame=single,numberblanklines=false,xleftmargin=5mm,xrightmargin=5mm}
+\fancyhf{} 
+\fancyhead[LE]{\bfseries\leftmark} 
+\fancyhead[RO]{\bfseries\rightmark} 
+\fancyfoot[RO]{\TheFullDate}
+\fancyfoot[CO]{\thepage}
+\fancyfoot[LO]{<xsl:value-of xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="$REQUEST"/>}
+\fancyfoot[LE]{\TheFullDate}
+\fancyfoot[CE]{\thepage}
+\fancyfoot[RE]{<xsl:value-of xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="$REQUEST"/>}
+\fancypagestyle{plain}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+<xsl:call-template xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:edate="http://exslt.org/dates-and-times" xmlns:estr="http://exslt.org/strings" xmlns:exsl="http://exslt.org/common" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="beginDocumentHook"/>
+               </egXML>
+            </item>
+            <label>
+               <ident>latexEnd</ident>
+            </label>
+            <item>LaTeX setup at end of document
+			 <code rend="box">
+               </code>
+            </item>
+         </glossList>
+      </div3>
+   </div2>
+
+   <div2 xmlns="http://www.tei-c.org/ns/1.0" xml:id="links">
+      <head>Standard page features</head>
+      <p>The default behaviour of the system is to construct each HTML page
+with per-page navigation bars top and bottom, and a standard set of
+navigation links underneath. </p>
+      <div3>
+         <head>(common) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>department</ident>
+            </label>
+            <item> (string) 
+Name of department within institution
+ <code rend="box"/>
+            </item>
+            <label>
+               <ident>homeLabel</ident>
+            </label>
+            <item> (string) 
+Name of link to home page of application
+ <code rend="box">Home</code>
+            </item>
+            <label>
+               <ident>homeURL</ident>
+            </label>
+            <item> (anyURI) 
+Home URL of project
+ <code rend="box">http://www.tei-c.org/</code>
+            </item>
+            <label>
+               <ident>homeWords</ident>
+            </label>
+            <item> (string) 
+Label for link to project
+ <code rend="box">TEI</code>
+            </item>
+            <label>
+               <ident>institution</ident>
+            </label>
+            <item> (string) 
+Name of institution
+ <code rend="box">TEI XSL Stylesheets</code>
+            </item>
+            <label>
+               <ident>parentURL</ident>
+            </label>
+            <item> (anyURI) 
+Link to overall institution
+ <code rend="box">http://www.tei-c.org/</code>
+            </item>
+            <label>
+               <ident>parentWords</ident>
+            </label>
+            <item> (string) 
+Name of overall institution
+ <code rend="box">My Parent Institution</code>
+            </item>
+            <label>
+               <ident>searchURL</ident>
+            </label>
+            <item> (anyURI) 
+Link to search application
+ <code rend="box">http://www.google.com</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(html) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>alignNavigationPanel</ident>
+            </label>
+            <item> (string) 
+How to align the navigation panel at the bottom of the page
+ <code rend="box">right</code>
+            </item>
+            <label>
+               <ident>bottomNavigationPanel</ident>
+            </label>
+            <item> (boolean) 
+Display navigation panel at bottom of pages
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>feedbackURL</ident>
+            </label>
+            <item> (anyURI) 
+Link for feedback
+ <code rend="box">mailto:feedback</code>
+            </item>
+            <label>
+               <ident>htmlTitlePrefix</ident>
+            </label>
+            <item> (string) 
+Fixed string to insert before normal page title in HTML meta
+&lt;title&gt; element
+ <code rend="box"/>
+            </item>
+            <label>
+               <ident>linkPanel</ident>
+            </label>
+            <item> (boolean) 
+Make a panel with next page/previous page links.
+ <code rend="box">true</code>
+            </item>
+         </glossList>
+      </div3>
+   </div2>
+
+
+   <div2 xmlns="http://www.tei-c.org/ns/1.0" xml:id="headings">
+       <head>Headings</head>
+      <p>Headings for sections can be customized in various ways.</p>
+      <div3>
+         <head>(common) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>autoHead</ident>
+            </label>
+            <item> (boolean) 
+Construct a heading (eg "Heading") for &lt;div&gt; elements with no  &lt;head&gt;
+ <code rend="box"/>
+            </item>
+            <label>
+               <ident>headingNumberSuffix</ident>
+            </label>
+            <item> (string) 
+Punctuation to insert after a section number
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                    <xsl:text xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:edate="http://exslt.org/dates-and-times" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">.</xsl:text>
+                    <xsl:value-of xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:edate="http://exslt.org/dates-and-times" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="$numberSpacer"/>
+               </egXML>
+            </item>
+            <label>
+               <ident>numberSpacer</ident>
+            </label>
+            <item> (string) 
+Character to put after number of section header
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:text xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:edate="http://exslt.org/dates-and-times" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> </xsl:text>
+               </egXML>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(common) templates</head>
+         <glossList rend="small">
+            <label>
+               <ident>autoMakeHead</ident>
+            </label>
+            <item> How to make a heading for section if there is
+    no &lt;head&gt;<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <xsl:choose xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:edate="http://exslt.org/dates-and-times" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+                       <xsl:when test="@type">
+                        <xsl:value-of select="@type"/>
+                     </xsl:when>
+                       <xsl:otherwise>Heading</xsl:otherwise>
+                  </xsl:choose>
+               </egXML>
+            </item>
+         </glossList>
+      </div3>
+   </div2>
+
+   <div2 xmlns="http://www.tei-c.org/ns/1.0" xml:id="numbering">
+      <head>Numbering</head>
+      <p>Section headings, figures, tables and notes can be numbered
+automatically.  We can set the numbering of front matter and back
+matter separately. If you prefer to supply your own numbering, using
+the <code>n</code> attribute, you can choose this over automatic
+numbering.</p>
+
+      <p>Normally, heading numbers are followed by <q>. </q>, but you can vary
+this. This would let you use eg fixed spaces.</p>
+      <div3>
+         <head>(common) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>numberBackFigures</ident>
+            </label>
+            <item> (boolean) 
+Automatically number figures in back matter
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>numberBackHeadings</ident>
+            </label>
+            <item> (string) 
+How to construct heading numbering in back matter
+ <code rend="box">A.1</code>
+            </item>
+            <label>
+               <ident>numberBackTables</ident>
+            </label>
+            <item> (boolean) 
+Automatically number tables in back matter
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>numberBodyHeadings</ident>
+            </label>
+            <item> (string) 
+How to construct heading numbering in main matter
+ <code rend="box">1.1.1.1</code>
+            </item>
+            <label>
+               <ident>numberFigures</ident>
+            </label>
+            <item> (boolean) 
+Automatically number figures
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>numberFrontFigures</ident>
+            </label>
+            <item> (boolean) 
+Automatically number figures in front matter
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>numberFrontHeadings</ident>
+            </label>
+            <item> (string) 
+How to construct heading numbering in front matter
+ <code rend="box"/>
+            </item>
+            <label>
+               <ident>numberFrontTables</ident>
+            </label>
+            <item> (boolean) 
+Automatically number tables in front matter
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>numberHeadings</ident>
+            </label>
+            <item> (boolean) 
+Automatically number sections
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>numberHeadingsDepth</ident>
+            </label>
+            <item> (integer) 
+Depth to which sections should be numbered
+ <code rend="box">9</code>
+            </item>
+            <label>
+               <ident>numberTables</ident>
+            </label>
+            <item> (boolean) 
+Automatically number tables
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>prenumberedHeadings</ident>
+            </label>
+            <item> (boolean) 
+Use value of "n" attribute to number sections
+ <code rend="box">false</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(html) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>numberParagraphs</ident>
+            </label>
+            <item> (boolean) 
+Automatically number paragraphs.
+ <code rend="box">false</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(common) templates</head>
+         <glossList rend="small">
+            <label>
+               <ident>numberBackDiv</ident>
+            </label>
+            <item> How to number sections in back matter<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                   <xsl:if xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:edate="http://exslt.org/dates-and-times" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="not($numberBackHeadings='')">
+                        <xsl:number format="A.1.1.1.1.1" level="multiple" count="tei:div|tei:div0|tei:div1|tei:div2|tei:div3|tei:div4|tei:div5|tei:div6"/>
+                  </xsl:if>
+               </egXML>
+            </item>
+            <label>
+               <ident>numberBodyDiv</ident>
+            </label>
+            <item> How to number sections in main matter<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                   <xsl:if xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:edate="http://exslt.org/dates-and-times" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="$numberHeadings='true'">
+                        <xsl:number level="multiple" count="tei:div|tei:div0|tei:div1|tei:div2|tei:div3|tei:div4|tei:div5|tei:div6"/>
+                  </xsl:if>
+               </egXML>
+            </item>
+            <label>
+               <ident>numberFrontDiv</ident>
+            </label>
+            <item> How to number sections in front matter<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                   <xsl:if xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:edate="http://exslt.org/dates-and-times" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" test="not($numberFrontHeadings='')">
+                        <xsl:number level="multiple" count="tei:div|tei:div0|tei:div1|tei:div2|tei:div3|tei:div4|tei:div5|tei:div6"/>
+                   </xsl:if>
+               </egXML>
+            </item>
+         </glossList>
+      </div3>
+   </div2>
+
+
+   <div2 xmlns="http://www.tei-c.org/ns/1.0" xml:id="toc">
+      <head>Table of contents generation</head>
+      <p>You probably want tables of contents built for your document, using
+the <gi>div</gi> structure. However, if you have used a <gi>divGen
+type="toc"</gi> explicitly, that will also create a table of contents,
+so you can suppress the automatic one.  When a table of contents is
+created, you choose how many levels of headings it will show.
+You can choose whether or not the front and backmatter appear
+in the table of contents.</p>
+      <div3>
+         <head>(html) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>autoToc</ident>
+            </label>
+            <item> (boolean) 
+Make an automatic table of contents
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>class_subtoc</ident>
+            </label>
+            <item> (string) 
+CSS class for second-level TOC entries
+ <code rend="box">subtoc</code>
+            </item>
+            <label>
+               <ident>subTocDepth</ident>
+            </label>
+            <item> (integer) Depth at which to stop doing a recursive table of
+contents. <code rend="box">-1</code>
+            </item>
+            <label>
+               <ident>tocBack</ident>
+            </label>
+            <item> (boolean) 
+Include the back matter in the table of contents.
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>tocDepth</ident>
+            </label>
+            <item> (string) 
+Depth to which table of contents is constructed.
+ <code rend="box">5</code>
+            </item>
+            <label>
+               <ident>tocFront</ident>
+            </label>
+            <item> (boolean) 
+Include the front matter in the table of contents.
+ <code rend="box">true</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(fo) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>div0Tocindent</ident>
+            </label>
+            <item> (string) 
+Indentation for level 0 TOC entries
+ <code rend="box">0in</code>
+            </item>
+            <label>
+               <ident>div1Tocindent</ident>
+            </label>
+            <item> (string) 
+Indentation for level 1 TOC entries
+ <code rend="box">0.25in</code>
+            </item>
+            <label>
+               <ident>div2Tocindent</ident>
+            </label>
+            <item> (string) 
+Indentation for level 2 TOC entries
+ <code rend="box">0.5in</code>
+            </item>
+            <label>
+               <ident>div3Tocindent</ident>
+            </label>
+            <item> (string) 
+Indentation for level 3 TOC entries
+ <code rend="box">0.75in</code>
+            </item>
+            <label>
+               <ident>div4Tocindent</ident>
+            </label>
+            <item> (string) 
+Indentation for level 4 TOC entries
+ <code rend="box">1in</code>
+            </item>
+            <label>
+               <ident>tocBack</ident>
+            </label>
+            <item> (boolean) 
+Make TOC for sections in &lt;back&gt;
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>tocFront</ident>
+            </label>
+            <item> (boolean) 
+Make TOC for sections in &lt;front&gt;
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>tocNumberSuffix</ident>
+            </label>
+            <item> (string) 
+Punctuation to insert after a section number in a TOC
+ <code rend="box">. </code>
+            </item>
+            <label>
+               <ident>tocStartPage</ident>
+            </label>
+            <item> (integer) 
+Page number on which TOC should start
+ <code rend="box">1</code>
+            </item>
+         </glossList>
+      </div3>
+   </div2>
+
+
+
+   <div2 xmlns="http://www.tei-c.org/ns/1.0" xml:id="i18n">
+      <head>Internationalization</head>
+      <p>At various places, the system has to create text. You can choose
+the words it uses (eg translate them to another language).</p>
+      <div3>
+         <head>(html) templates</head>
+         <glossList rend="small">
+            <label>
+               <ident>copyrightStatement</ident>
+            </label>
+            <item> Make a copyright claim
+			 <code rend="box">This page is copyrighted</code>
+            </item>
+         </glossList>
+      </div3>
+   </div2>
+
+
+   <div2 xmlns="http://www.tei-c.org/ns/1.0" xml:id="CSS">
+       <head>CSS</head>
+      <p>Setting up material for the CSS file to accompany HTML output.</p>
+      <div3>
+         <head>(common) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>class_toc</ident>
+            </label>
+            <item> (string) 
+CSS class for TOC entries
+ <code rend="box">toc</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(html) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>class_ptr</ident>
+            </label>
+            <item> (string) 
+CSS class for links derived from &lt;ptr&gt;
+ <code rend="box">ptr</code>
+            </item>
+            <label>
+               <ident>class_ref</ident>
+            </label>
+            <item> (string) 
+CSS class for links derived from &lt;ref&gt;
+ <code rend="box">ref</code>
+            </item>
+            <label>
+               <ident>class_xptr</ident>
+            </label>
+            <item> (string) 
+CSS class for links derived from &lt;xptr&gt;
+ <code rend="box">xptr</code>
+            </item>
+            <label>
+               <ident>class_xref</ident>
+            </label>
+            <item> (string) 
+CSS class for links derived from &lt;xref&gt;
+ <code rend="box">xref</code>
+            </item>
+            <label>
+               <ident>cssFile</ident>
+            </label>
+            <item> (anyURI) 
+CSS style file to be associated with output file(s)
+ <code rend="box">http://www.tei-c.org/stylesheet/tei.css</code>
+            </item>
+            <label>
+               <ident>cssSecondaryFile</ident>
+            </label>
+            <item> (anyURI) 
+Secondary CSS style file to be associated with output file(s)
+ <code rend="box"/>
+            </item>
+         </glossList>
+      </div3>
+   </div2>
+
+   <div2 xmlns="http://www.tei-c.org/ns/1.0" xml:id="tables">
+       <head>Tables</head>
+      <p>Default behaviour of table elements.</p>
+      <div3>
+         <head>(common) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>cellAlign</ident>
+            </label>
+            <item> (string) 
+Default alignment of table cells
+ <code rend="box">left</code>
+            </item>
+            <label>
+               <ident>tableAlign</ident>
+            </label>
+            <item> (string) 
+Default alignment of tables
+ <code rend="box">left</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(fo) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>defaultCellLabelBackground</ident>
+            </label>
+            <item> (string) 
+Default colour for background of table cells which are labelling rows
+or columns <code rend="box">silver</code>
+            </item>
+            <label>
+               <ident>inlineTables</ident>
+            </label>
+            <item> (boolean) 
+Force tables to appear inline
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>makeTableCaption</ident>
+            </label>
+            <item> (boolean) 
+Put a caption on tables  
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>tableCaptionAlign</ident>
+            </label>
+            <item> (string) 
+Alignment of table captions
+ <code rend="box">center</code>
+            </item>
+            <label>
+               <ident>tableCellPadding</ident>
+            </label>
+            <item> (string) 
+Default padding on table cells
+ <code rend="box">2pt</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(fo) templates</head>
+         <glossList rend="small">
+            <label>
+               <ident>tableCaptionstyle</ident>
+            </label>
+            <item> Set attributes for display of table <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="text-align">center</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="font-style">italic</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="end-indent">
+                           <xsl:value-of select="$exampleMargin"/>
+                      </xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="start-indent">
+                           <xsl:value-of select="$exampleMargin"/>
+                      </xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="space-before">
+                           <xsl:value-of select="$spaceAroundTable"/>
+                      </xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="space-after">
+                           <xsl:value-of select="$spaceBelowCaption"/>
+                      </xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="keep-with-next">always</xsl:attribute>
+               </egXML>
+            </item>
+         </glossList>
+      </div3>
+   </div2>
+
+   <div2 xmlns="http://www.tei-c.org/ns/1.0" xml:id="figures">
+       <head>Figures and graphics</head>
+      <p>Sometimes you need to prefix the names of all graphics files with 
+a directory name or a URL, or provide a default suffix.
+You can also tell <gi>figure</gi> elements whether or not to
+produce anything.</p>
+
+      <div3>
+         <head>(common) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>graphicsPrefix</ident>
+            </label>
+            <item> (string) Directory specification to put before names of graphics files, unless
+they start with "./" <code rend="box"/>
+            </item>
+            <label>
+               <ident>graphicsSuffix</ident>
+            </label>
+            <item> (string) 
+Default file suffix for graphics files, if not directly specified
+ <code rend="box">.png</code>
+            </item>
+            <label>
+               <ident>standardScale</ident>
+            </label>
+            <item> (decimal) 
+Scaling of imported graphics
+ <code rend="box">1</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(html) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>dpi</ident>
+            </label>
+            <item> (integer) 
+Resolution of images. This is needed to calculate
+HTML width and height (in pixels) from supplied dimensions.
+ <code rend="box">96</code>
+            </item>
+            <label>
+               <ident>showFigures</ident>
+            </label>
+            <item> (boolean) 
+Display figures.
+ <code rend="box">true</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(fo) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>autoScaleFigures</ident>
+            </label>
+            <item> (string) 
+How to scale figures if no width and height specified (pass to XSL FO content-width)
+ <code rend="box"/>
+            </item>
+            <label>
+               <ident>captionInlineFigures</ident>
+            </label>
+            <item> (boolean) 
+Put captions on inline figures
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>showFloatHead</ident>
+            </label>
+            <item> (boolean) 
+Show the contents of &lt;head&gt; in a cross-reference to table or figure
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>showFloatLabel</ident>
+            </label>
+            <item> (boolean) 
+Show a title for figures or tables (eg Table or Figure) in a cross-reference
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>xrefShowPage</ident>
+            </label>
+            <item> (boolean) 
+Show the page number in a cross-reference to table or figure
+ <code rend="box">false</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(fo) templates</head>
+         <glossList rend="small">
+            <label>
+               <ident>figureCaptionstyle</ident>
+            </label>
+            <item> Set attributes for display of figures<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="text-align">center</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="font-style">italic</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="end-indent">
+                           <xsl:value-of select="$exampleMargin"/>
+                      </xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="start-indent">
+                           <xsl:value-of select="$exampleMargin"/>
+                      </xsl:attribute>
+               </egXML>
+            </item>
+         </glossList>
+      </div3>
+   </div2>
+   <div2 xmlns="http://www.tei-c.org/ns/1.0" xml:id="style">
+      <head>Style</head>
+      <p>You can choose lots of features which affect the font, size, etc
+<list>
+            <item>What font to use for URLs.</item>
+            <item>Whether titles, dates and authors are shown.</item>
+            <item>Whether headings of objects are included in cross-references.</item>
+         </list>
+      </p>
+      <div3>
+         <head>(common) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>pagebreakStyle</ident>
+            </label>
+            <item> (boolean) 
+Display of &lt;pb&gt; element. Choices are "visible", "active" and "none".
+ <code rend="box">none</code>
+            </item>
+            <label>
+               <ident>displayMode</ident>
+            </label>
+            <item> (string) 
+How to display Relax NG schema fragments (rnc or rng)
+ <code rend="box">rnc</code>
+            </item>
+            <label>
+               <ident>minimalCrossRef</ident>
+            </label>
+            <item> (boolean) 
+Provide minimal context for a link
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>postQuote</ident>
+            </label>
+            <item> (string) 
+Character to insert at end of quote.
+ <code rend="box">’</code>
+            </item>
+            <label>
+               <ident>preQuote</ident>
+            </label>
+            <item> (string) 
+Character to insert at start of quote
+ <code rend="box">‘</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(html) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>urlMarkup</ident>
+            </label>
+            <item> (string) 
+HTML element to put around visible text of display URLs
+ <code rend="box">span</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(fo) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>activeLinebreaks</ident>
+            </label>
+            <item> (boolean) 
+Make &lt;lb&gt; active (ie cause a line break)
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>alignment</ident>
+            </label>
+            <item> (string) 
+Alignment of text (ie justified or ragged)
+ <code rend="box">justify</code>
+            </item>
+            <label>
+               <ident>authorSize</ident>
+            </label>
+            <item> (string) 
+Font size for display of author name 
+ <code rend="box">14pt</code>
+            </item>
+            <label>
+               <ident>biblSize</ident>
+            </label>
+            <item> (string) 
+Font size for bibliography
+ <code rend="box">16pt</code>
+            </item>
+            <label>
+               <ident>bodyFont</ident>
+            </label>
+            <item> (string) 
+Default font for body
+ <code rend="box">Times</code>
+            </item>
+            <label>
+               <ident>bodyMaster</ident>
+            </label>
+            <item> (string) 
+Default font size for body (without dimension)
+ <code rend="box">10</code>
+            </item>
+            <label>
+               <ident>bodySize</ident>
+            </label>
+            <item> (string) 
+Calculation of normal body font size (add dimension)
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:value-of xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="$bodyMaster"/>
+                      <xsl:text xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">pt</xsl:text>
+               </egXML>
+            </item>
+            <label>
+               <ident>dateSize</ident>
+            </label>
+            <item> (string) 
+Font size for display of date
+ <code rend="box">14pt</code>
+            </item>
+            <label>
+               <ident>divFont</ident>
+            </label>
+            <item> (string) 
+Font for section headings
+ <code rend="box">Times</code>
+            </item>
+            <label>
+               <ident>exampleSize</ident>
+            </label>
+            <item> (string) 
+Calculation of font size for examples (add dimension)
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:value-of xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="$bodyMaster * 0.8"/>
+                      <xsl:text xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">pt</xsl:text>
+               </egXML>
+            </item>
+            <label>
+               <ident>footnoteSize</ident>
+            </label>
+            <item> (string) 
+Font size for footnotes
+ <code rend="box">8pt</code>
+            </item>
+            <label>
+               <ident>footnotenumSize</ident>
+            </label>
+            <item> (string) 
+Font size for footnote numbers
+ <code rend="box">7pt</code>
+            </item>
+            <label>
+               <ident>giColor</ident>
+            </label>
+            <item> (string) 
+Colour for display of element names
+ <code rend="box">black</code>
+            </item>
+            <label>
+               <ident>headingOutdent</ident>
+            </label>
+            <item> (string) 
+Indentation of headings
+ <code rend="box">-3em</code>
+            </item>
+            <label>
+               <ident>hyphenate</ident>
+            </label>
+            <item> (boolean) 
+Hyphenate text
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>identColor</ident>
+            </label>
+            <item> (string) 
+Colour for display of &lt;ident&gt; values
+    Customization parameter.
+ <code rend="box">black</code>
+            </item>
+            <label>
+               <ident>runFont</ident>
+            </label>
+            <item> (string) 
+Font family for running header and footer
+ <code rend="box">sans-serif</code>
+            </item>
+            <label>
+               <ident>runSize</ident>
+            </label>
+            <item> (string) 
+Font size for running header and footer
+ <code rend="box">9pt</code>
+            </item>
+            <label>
+               <ident>sansFont</ident>
+            </label>
+            <item> (string) 
+Sans-serif font
+ <code rend="box">Helvetica</code>
+            </item>
+            <label>
+               <ident>smallSize</ident>
+            </label>
+            <item> (string) 
+Calculation of small font size (add dimension)
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:value-of xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="$bodyMaster * 0.9"/>
+                      <xsl:text xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">pt</xsl:text>
+               </egXML>
+            </item>
+            <label>
+               <ident>tableSize</ident>
+            </label>
+            <item> (string) 
+Create font size for tables, by reference to $bodyMaster
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:value-of xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="$bodyMaster * 0.9"/>
+                      <xsl:text xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">pt</xsl:text>
+               </egXML>
+            </item>
+            <label>
+               <ident>titleSize</ident>
+            </label>
+            <item> (string) 
+Font size for display of title
+ <code rend="box">16pt</code>
+            </item>
+            <label>
+               <ident>tocSize</ident>
+            </label>
+            <item> (string) 
+Font size for TOC heading
+ <code rend="box">16pt</code>
+            </item>
+            <label>
+               <ident>typewriterFont</ident>
+            </label>
+            <item> (string) 
+Font for literal code
+ <code rend="box">Courier</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(fo) templates</head>
+         <glossList rend="small">
+            <label>
+               <ident>divXRefHeading</ident>
+            </label>
+            <item> How to display section headings in a cross-reference <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <xsl:param xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="head">
+                           <xsl:apply-templates mode="section" select="tei:head"/>
+                      </xsl:param>
+                      <xsl:text xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> (</xsl:text>
+                      <xsl:value-of xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="normalize-space($head)"/>
+                      <xsl:text xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">)</xsl:text>
+               </egXML>
+            </item>
+            <label>
+               <ident>linkStyle</ident>
+            </label>
+            <item> Set attributes for display of links<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="text-decoration">underline</xsl:attribute>
+               </egXML>
+            </item>
+            <label>
+               <ident>setupDiv0</ident>
+            </label>
+            <item> Set attributes for display of heading for chapters (level 0)<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="font-size">18pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="text-align">left</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="font-weight">bold</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="space-after">6pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="space-before.optimum">12pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="text-indent">
+                           <xsl:value-of select="$headingOutdent"/>
+                      </xsl:attribute>
+               </egXML>
+            </item>
+            <label>
+               <ident>setupDiv1</ident>
+            </label>
+            <item> Set attributes for display of heading for 1st level sections<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="font-size">14pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="text-align">left</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="font-weight">bold</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="space-after">3pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="space-before.optimum">9pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="text-indent">
+                           <xsl:value-of select="$headingOutdent"/>
+                      </xsl:attribute>
+               </egXML>
+            </item>
+            <label>
+               <ident>setupDiv2</ident>
+            </label>
+            <item> Set attributes for display of heading for 2nd level sections <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="font-size">12pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="text-align">left</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="font-weight">bold</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="font-style">italic</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="space-after">2pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="space-before.optimum">4pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="text-indent">
+                           <xsl:value-of select="$headingOutdent"/>
+                      </xsl:attribute>
+               </egXML>
+            </item>
+            <label>
+               <ident>setupDiv3</ident>
+            </label>
+            <item>Set attributes for display of heading for 3rd level sections <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="font-size">10pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="text-align">left</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="font-style">italic</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="space-after">0pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="space-before.optimum">4pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="text-indent">
+                           <xsl:value-of select="$headingOutdent"/>
+                      </xsl:attribute>
+               </egXML>
+            </item>
+            <label>
+               <ident>setupDiv4</ident>
+            </label>
+            <item> Set attributes for display of heading for 4th level sections <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="font-size">10pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="space-before.optimum">4pt</xsl:attribute>
+                      <xsl:attribute xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="text-indent">
+                           <xsl:value-of select="$headingOutdent"/>
+                      </xsl:attribute>
+               </egXML>
+            </item>
+            <label>
+               <ident>showXrefURL</ident>
+            </label>
+            <item> How to display the link text of a &lt;ptr&gt;<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <xsl:param xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" name="dest"/>
+                      <xsl:value-of xmlns:xd="http://www.pnp-software.com/XSLTdoc" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" select="$dest"/>
+               </egXML>
+            </item>
+         </glossList>
+      </div3>
+   </div2>
+
+   <div2 xmlns="http://www.tei-c.org/ns/1.0" xml:id="hook">
+      <head>Hooks</head>
+      <p>A set of templates which are empty by default; they can be used
+to add code at strategic points. The content must be valid XSLT.</p>
+      <div3>
+         <head>(html) templates</head>
+         <glossList rend="small">
+            <label>
+               <ident>bodyHook</ident>
+            </label>
+            <item> Hook where HTML can be inserted just after &lt;body&gt;
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>bodyJavaScriptHook</ident>
+            </label>
+            <item> Hook where Javascript calls can be inserted  just after &lt;body&gt;
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>cssHook</ident>
+            </label>
+            <item> Hook where extra CSS can be inserted
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>headHook</ident>
+            </label>
+            <item> Hook where code can be added to the HTML &lt;head&gt;.
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>imgHook</ident>
+            </label>
+            <item> Hook where HTML can be inserted when creating an &lt;img&gt;
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>javaScriptHook</ident>
+            </label>
+            <item> Hook where extra Javascript functions can be defined
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>preAddressHook</ident>
+            </label>
+            <item> Hook where HTML can be inserted just before the &lt;address&gt;
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>startDivHook</ident>
+            </label>
+            <item> Hook where HTML can be inserted at the start of
+    processing each section
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>startHook</ident>
+            </label>
+            <item> Hook where HTML can be inserted at the beginning
+    of the main text, after the header
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>teiEndHook</ident>
+            </label>
+            <item> Hook where HTML can be inserted after processing &lt;TEI&gt;
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>teiStartHook</ident>
+            </label>
+            <item> Hook where HTML can be inserted before processing &lt;TEI&gt;
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>xrefHook</ident>
+            </label>
+            <item> Hook where HTML can be inserted when creating an
+    &lt;a&gt; element
+			 <code rend="box"/>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(fo) templates</head>
+         <glossList rend="small">
+            <label>
+               <ident>afterBodyHook</ident>
+            </label>
+            <item> Hook where extra material can be inserted after the
+    &lt;body&gt; has been processed
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>blockStartHook</ident>
+            </label>
+            <item> Hook where work can be done at the start of each block
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>pageMasterHook</ident>
+            </label>
+            <item> Hook where extra page masters can be defined
+			 <code rend="box"/>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(latex) templates</head>
+         <glossList rend="small">
+            <label>
+               <ident>beginDocumentHook</ident>
+            </label>
+            <item> Hook where LaTeX commands can be inserted after \begin{document}
+			 <code rend="box"/>
+            </item>
+            <label>
+               <ident>latexPreambleHook</ident>
+            </label>
+            <item> Hook where LaTeX commands can be inserted in the
+    preamble before \begin{document}
+			 <code rend="box"/>
+            </item>
+         </glossList>
+      </div3>
+   </div2>
+
+
+   <div2 xmlns="http://www.tei-c.org/ns/1.0" xml:id="misc">
+      <head>Miscellaneous and advanced</head>
+      <p>Finally, some miscellaneous or advanced features which you probably won't
+use much.</p>
+      <div3>
+         <head>(common) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>teixslHome</ident>
+            </label>
+            <item> (anyURI) 
+The home page for these stylesheets
+ <code rend="box">http://www.tei-c.org/Stylesheets/teic/</code>
+            </item>
+            <label>
+               <ident>teiP4Compat</ident>
+            </label>
+            <item> (boolean) 
+Process elements according to assumptions of TEI P4
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>useHeaderFrontMatter</ident>
+            </label>
+            <item> (boolean) 
+Title, author and date is taken from the &lt;teiHeader&gt;
+     rather than looked for in the front matter
+ <code rend="box">false</code>
+            </item>
+         </glossList>
+      </div3>
+      <div3>
+         <head>(html) parameters</head>
+         <glossList rend="small">
+            <label>
+               <ident>generateParagraphIDs</ident>
+            </label>
+            <item> (boolean) 
+Generate a unique ID for all paragraphs
+ <code rend="box">true</code>
+            </item>
+            <label>
+               <ident>rendSeparator</ident>
+            </label>
+            <item> (string) Character separating values in a rend attribute. <code rend="box">;</code>
+            </item>
+            <label>
+               <ident>showTitleAuthor</ident>
+            </label>
+            <item> (boolean) 
+Show a title and author at start of document
+ <code rend="box">false</code>
+            </item>
+            <label>
+               <ident>verbose</ident>
+            </label>
+            <item> (boolean) 
+Be talkative while working.
+ <code rend="box">false</code>
+            </item>
+         </glossList>
+      </div3>
+   </div2>
+
+</tei:div1>

@@ -1,0 +1,604 @@
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="chap-text"><!-- revised $Date$ -->
+<head>Encoding a literary text</head>
+
+<opener>
+<!-- what this chapter is about -->
+</opener>
+
+<div><head>Introduction</head>
+
+<p>Many early readers of the TEI Guidelines, noticing the decidedly
+   literary character of many of the examples quoted, and the range of
+   facilities provided for markup of distinctly literary aspects, have
+   assumed that encoding and display of the great and not-so-great
+   written texts of the past was their primary purpose. In other parts
+   of this book we try to demonstrate that this assumption is a little
+   inaccurate: although the encoding of old plays, poetry, and drama
+   is one of the things that the TEI scheme does best, it is by no
+   means the only one. </p>
+
+  <p>In this chapter however, we explore some of the ways in which you
+  can use the TEI scheme to encode complex literary texts. We begin by
+   deciding which features of a text should be encoded to support the
+   most likely kinds of processing such texts will undergo. We then
+   consider ways of processing literary texts, specifically how to
+   produce a variety of readable versions — on the web, on
+   paper, and on your Palm Pilot. We also discuss how to produce
+   variant editions of the same text, and consider briefly some kinds
+   of analytic tools we might use with them.
+  </p>
+
+  <p>The text we will mark up in this exercise is a printed edition
+  of one of Gilbert and Sullivan's less well-known comic operas:
+  <title>Utopia Ltd.</title> We chose this text partly because it combines a number of
+  different types of textual feature (prose, verse, and song), but
+  also because it's fairly accessible to the modern reader (assuming he
+  or she has or can acquire the peculiarly English sense of humour
+  which characterizes it). But of course the same
+  principles will apply to marking up any comparable text in any
+  language or from any period.
+  </p>
+
+<!-- discussioon of dtd choice / tagsets needed should go here? -->
+ </div>
+
+<div xml:id="text-struct"><head>Organization of the text and its chief features</head>
+
+<p>We begin by deciding on the copy-text we will use in preparing our
+    digital edition. At the time of writing, we found two different
+    HTML versions; the text is also, of course, included in the
+    Chadwyck-Healey English Drama Database. We will go back to a more
+    authentic version than any of these: the first printed edition.
+<!-- what if we dont have a copy text?-->
+    </p> 
+
+<p>This <!-- insert note on printing from final curtain -->
+    edition consists of xxx printed pages, including a titlepage and
+    some advertisements. We could choose to regard the pages
+    as the basic organizing principle for our digital edition. In each
+    copy-text, pages are collected togther to constitute
+    gatherings, and each of them contains a number of typographic
+    lines.  But we also
+    note that the text (as distinct from any particular instance of
+    the text) is not really made up of pages. It is made up of
+    components such as the following:
+   <list type="unordered">
+     <item>Prefatory matter (title page, cast list, etc.)</item>
+     <item>Two acts, each made up of</item>
+     <item>Scenes, which consist of 
+     <list type="unordered">
+       <item>stage directions</item>
+       <item>speeches</item>
+       <item>musical numbers</item>
+     </list>
+     </item>
+   </list>
+</p>
+
+<p>Speeches and musical numbers can also be subdivided, of course, as
+    we shall show below. </p>
+
+<p>Why do we choose to mark up this kind of structure, rather than the
+physical organization of the printed text? In some cases, of course,
+it might be useful to do precisely the opposite -- if, for example, we
+were dealing with a rare manuscript, or if we were dealing with an
+esoteric text in a language or script we hardly understand; in such
+cases the layout and organization of the text as a physical object, as
+a book rather than as a text, might well be a serious object of
+study. But this is not such a case. Would we feel that anything of
+major importance to our understanding of this text had been lost if it
+were presented with different page breaks, or lines of different
+length? With the exception of the verse material (in which the line
+breaks clearly have a more than purely typographic significance, which
+we do not wish to lose) it seems to us that there is no particular
+significance in the physical organization of this book, and we do not
+therefore propose to represent it particularly well in our
+encoding. </p>
+
+<p>This may seem a trivial decision, but it is symptomatic of many
+such that we will encounter repeatedly in designing our
+encodings. Each choice we make effectively privileges some kinds of
+analysis or reading at the expense of others. The decision we have
+just taken will make it hard or impossible for the user of our text to
+investigate some aspects of nineteenth century typographic practice;
+at the same time, it will make it far easier for him or her to compare
+dramatic aspects of the play across different versions of it. This is
+because (for example) the second paragraph of the third speech of King
+Paramount will always be readily identified in our encoding, no matter
+what line of which page it happens to begin on in a given edition. We
+are more likely to reference a part of the play in terms of the act,
+scene, or speech concerned, than in terms of the page or line number
+of this particular printed version of it. Page and line references
+can, of course, be included (we could use the <gi>pb</gi> and
+<gi>lb</gi> elements for the purpose) in our encoding, but they don't
+form the basis of its organization.</p>
+
+<p>As elsewhere in the TEI scheme, we now have to make a decision as
+to whether we want to use numbered or un-numbered <gi>div</gi>
+elements to mark the acts and schenes. There is little to add to the
+discussion in the TEI Guidelines on this point (<ref
+target="DR.html#DRBOD">TEI P4, section 10.2</ref>); the difference
+really is a matter of taste. Our taste inclining us to simplicity, we
+will use the unnumbered <gi>div</gi> option.  Beginning at the
+outside, therefore, we plan to organize the whole play as follows:
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<text xml:id="GS12_a" lang="ENG">
+<front xml:id="GS12-Fa">
+<!-- prefatory material here -->
+</front>
+<body>
+<div xml:id="GS12-1a">
+<!-- act one here -->
+</div>
+<div xml:id="GS12-2a">
+<!-- act two here -->
+</div>
+</body>
+</text></egXML></p>
+
+<p>As the example shows, we have also chosen to supply values for the
+   TEI global <ident>id</ident> attribute on these key structural
+   elements. The code used is arbitrary (GS for Gilbert and Sullivan,
+   12 because this is the twelfth work of that celebrated collaboration),
+   The purpose of this attribute is partly just to label individual
+   parts of the text. It will also simplify the business of providing
+   access to these structural components at a later stage, on the
+   assumption that at some point we are likely include this text in
+   some larger anthology of dramatic material.</p> 
+
+<p>For completeness, we use the TEI global <ident>lang</ident> attribute
+   at the highest appropriate level, in order to record that the play
+   is all in English.  </p>
+
+<p>We have no difficulty determining where the <gi>div</gi>
+   elements constituting acts of the play begin and end, since the
+   printed text makes this explicit with a heading. The beginnings and
+   ends of scenes in this text are not, however explicitly signalled
+   or numbered in the printed text. Hierarchically contained within
+   the act, theatrical convention distinguishes at least the following
+   larger components: 
+   <list type="unordered">
+     <item>action taking place in a single
+     location (<soCalled>scene</soCalled> in the normal sense)</item>
+     <item>musical numbers</item> 
+     <item>passages delimited by a complete
+     change of persons on stage (<soCalled>french
+     scene</soCalled>)</item>
+   </list>
+  </p>
+
+<p>In most dramatic works of the period, particularly those (like this
+  one) printed for use in rehearsal, the stage directions and
+  associated headings can also suggest whether or not a new section of
+  an act has begun. In this case, it seems clear that the major
+  organizing principle lies in the distinction between musical numbers
+  and stretches of dialogue: each new musical number is clearly
+  labelled with a heading such as <q>Duet</q>, <q>Solo</q> together
+  with the name of the performers. Moreover, it is customary to assign
+  each distinct musical item a number (hence the term <soCalled>musical
+  number</soCalled>!). These numbers do not appear in our printed libretto, but
+  can be found in the orchestral and vocal scores printed shortly
+  afterwards. </p>
+
+<p>If, however, we decide to mark each <soCalled>number</soCalled>
+  (musical sequence) as, say, a <gi>div type="number"</gi>, we will
+  also have to mark up each intervening stretch of dialogue as, say, a
+  <gi>div type="dialogue"</gi>, since we cannot mix <gi>div</gi>
+  elements and their contents at the same level. Using the published
+  numbers for the sung parts and some other numbering system for the
+  non-sung parts would also be feasible, if a little strange. The
+  advantage of this approach is that we can readily synchronize parts
+  of our text with the score, and we also make explicit the existence
+  of the musical <soCalled>number</soCalled> as an object in the
+  play. The disadvantage is that we are also required to mark up as
+  distinct structural objects stretches of the play which are defined
+  purely negatively -- they don't feature in the score. </p>
+
+<p>Let us explore this problem by looking a little more closely at the
+   start of the first Act of <title>Utopia Limited</title>. We will
+   first attempt to list the distinct <soCalled>number</soCalled>s
+   into which we might subdivide it, using as our guide the published
+   score.
+
+<list type="gloss">
+<!-- <labelHead>Number</labelHead><itemHead>Description</itemHead> -->
+<label>1</label><item>Chorus <q>In lazy languor
+      motionless</q>  and Song <q>The song of birds in ivied towers</q> by Phylla; </item>
+<label>none</label><item>a passage of dialogue between Calynx, Tarara, and others</item>
+<label>2</label><item>Chorus: <q>O make way for the wisemen</q></item>
+<label>2a</label><item>Duet <q>In every mental lore</q>by Scaphio and Phantis; </item>
+<label>none</label><item>a dialogue between Scaphio and Phantis; </item>
+<label>3</label><item>Duet <q>Let
+    all your doubts take wing</q> by Scaphio and Phantis, which includes a dance;</item>
+<label>4</label><item>Chorus <q>Quaff the nectar</q></item>
+<label>4a</label><item>Song <q>A King of autocratic power we</q> and
+      recitative by King Paramount and Chorus, followed by a Chorus <q>How fair! how modest! how discreet!</q></item>
+<label>4b</label><item>Duet <q>Although of native maids the cream</q> by Nekya and Kalyba</item>
+<label>4c</label><item>Solo <q>Bold-faced ranger</q> and recitative  by Lady Sophy and chorus</item>
+<label>none</label><item>Dialogue between King, Scaphio, and
+       Phantis</item>
+</list>
+  </p>
+
+<p>Reviewing this list suggests that using the musical
+   <soCalled>numbers</soCalled> to structure the text may not be so
+   simple as at first glance it appeared.  As we've already suggested,
+   the dialogue sequences are un-numbered; moreover a single number
+   can contain several different items, apparently at random. Numbers
+   2 and 4 above each contains a single chorus; number 4a however
+   combines a chorus with a song -- and that chorus is in fact an
+   introduction to Number 4b, rather than a conclusion of 4a. The
+   numbering suggests that 4a, 4b and 4c should in some sense be
+   regarded as making up a single unit, with internal
+   substructure. This is, of course, because the numbers are
+   <emph>musical</emph> units: a new number begins when the orchestra
+   has to start a significantly different piece of music. As such, we
+   should not expect them necessarily to map easily or directly to the dramatic
+   structure of the libretto. </p>
+
+<p>We conclude that although they are interesting, we will not treat the
+   musical numbers as divisions of our text. Instead, we will mark the
+   points at which new musical numbers <emph>begin</emph> using the
+   <gi>mileStone</gi> element:
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<div xml:id="GS12-1b">
+<milestone unit="numberStart" value="1"/>
+<!-- Chorus "In lazy languor motionless"  
+     and Song "The song of birds in ivied towers" by Phylla;
+     passage of dialogue between Calynx, Tarara, and others  -->
+<milestone unit="numberStart" value="2"/>
+<!-- Chorus: "O make way for the wisemen"-->
+<milestone unit="2a"/>
+<!-- Duet "In every mental lore" by Scaphio and Phantis; 
+     dialogue between Scaphio and Phantis; -->
+<milestone unit="numberStart" value="3"/>
+<!-- Duet "Let all your doubts take wing" by Scaphio and Phantis -->
+</div>
+    </egXML>
+Since we are marking only the starts of numbers, a naive
+   interpretation of the above might suggest the dialogue passages are
+   part of the musical numbers. We could guard against that  by
+   adding a further set of <gi>milestone unit="numberEnd"</gi> tags,
+   which seems a little unnecessary.</p>
+ </div>
+
+<div xml:id="text-comp">
+<head><soCalled>Components</soCalled> of the text</head>
+
+<p>The TEI Guidelines uses the word <term>component</term> for the
+   textual objects which make up the divisions of a text. The
+   prototypical component is a paragraph, but the TEI Guidelines allow
+   for other kinds of component, for example the entries which make up
+   a dictionary, the utterances or turns which make up a spoken text,
+   or the speeches and songs which make up a dramatic text. In some
+   cases, using a different component requires use of a different TEI
+   base tagset; if we were encoding a dictionary, we would have no
+   choice but to use the TEI dictionary tagset. In our case, we could
+   use any of the TEI prose, verse, or drama tagsets, since all of
+   these support basic encoding of speeches and verse. For the sake of
+   completeness, however, we will use the Drama base, since this
+   provides specialist tags for  such components as cast lists (see
+   further <ptr target="#text-front"/>. A quick look at our text
+   reveals the following components in the body of the text:
+<list type="unordered">
+<item>headings</item>
+<item>speeches, which may be in prose or verse</item>
+<item>stage-directions</item>
+</list>
+  </p>
+<p>Speeches are generally headed by one or more speaker prefixes and
+   may contain mixtures of prose and verse. Interestingly, verse is
+   always sung, and when prose is sung (i.e. passages of recitative)
+   it is represented as if it were verse.   Stage directions can
+   appear within or between speeches.
+  </p>
+<p>The TEI proposes the tag <gi>sp</gi> ("speech") for any kind of
+   conventionally transcribed representation of speech, including for
+   example oral testimony as well as drama. This contains  an optional
+   <gi>speaker</gi> element to indicate the speaker/s, and is followed
+   by one or more <gi>p</gi> (paragraph) elements for prose, one or more
+   <gi>lg</gi> (line-group) or <gi>l</gi> (verse line) elements for verse, or a combination. 
+So we may represent the start of Act 1 as follows:
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<div xml:id="GS12-1c"><pb n="1"/>
+<head>ACT I.</head>
+<milestone unit="numberStart" value="1"/>
+<sp>
+<speaker>OPENING CHORUS.</speaker>
+<l>In lazy languor — motionless,</l>
+<l>We lie and dream of nothingness;</l>
+<l>For visions come</l>
+<l>From Poppydom</l>
+<l>Direct at our command:</l>
+<l>Or, delicate alternative,</l>
+<l>In open idleness we live,</l>
+<l>With lyre and lute</l>
+<l>And silver flute,</l>
+<l>The life of Lazyland.</l>
+</sp>
+<milestone unit="numberStart" value="2"/>
+<sp>
+<speaker>SOLO - Phylla.</speaker>
+<l>The song of birds</l>
+<l>In ivied towers;</l>
+<l>The rippling play</l>
+<l>Of waterway;</l>
+<l>The lowing herds;</l>
+<l>The breath of flowers;</l>
+<l>The languid loves</l>
+<l>Of turtle doves--</l>
+<l>These simple joys are all at hand</l>
+<l>Upon thy shores, O Lazyland!</l>
+</sp>
+<stage>Enter Calynx</stage>
+<sp>
+<speaker>Calynx:</speaker>
+<p>Good news!  Great news!  His Majesty's eldest daughter,
+Princess Zara, who left our shores five years since to go to
+England--the greatest, the most powerful, the wisest country
+in the world--has taken a high degree at Girton, and is on
+her way home again, having achieved a complete mastery over
+all the elements that have tended to raise that glorious
+country to her present pre-eminent position among civilized
+nations!
+</p>
+</sp>
+<sp><speaker>Salata</speaker>
+<p>Then in a few months Utopia may hope to be completely 
+Anglicized?</p></sp>
+</div>
+<figure xml:id="text-fig1"/>
+</egXML>
+</p>
+
+<p>Comparing this first encoding with the original printed text
+   reproduced opposite it in <ptr target="#text-fig1"/> it's clear that
+   we have had to make some possibly debatable assumptions and
+   encoding decisions. The headings "Opening Chorus" and "Solo Phylla"
+   and the heading "Calynx" look quite different on the page, but we
+   have encoded them all as <gi>speaker</gi> elements. Nothing in our
+   encoding represents the pattern of indentation used in the printing
+   of the verse. Neither have we tried to preserve the lineation of
+   the prose text or end-of-line hyphenation of the original. Nor
+   indeed have we attempted to capture the different sizes or styles
+   of typography used.
+  </p>
+
+<p>Most of these choices reflect the importance we attach to such
+ information. We do not, for example, consider that the typography or
+ lineation of prose has any particular significance in this text;
+ perhaps more debatably, we also consider the indentation of the verse
+ lines to be of secondary importance. In other cases, the choices are
+ a consequence of our reading of the text's organization: if (for
+ example) we had decided to encode the muscal numbers as structural
+ elements, then we would have been able to use the <gi>head</gi>
+ element to represent the fact that some of the speaker labellings are
+ presented as section headings rather than simple speaker prefixes:
+
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<div xml:id="GS12-1d"><pb n="1"/>
+<head>ACT I.</head>
+<div type="number" n="1">
+<head>OPENING CHORUS.</head>
+<sp>
+<l>In lazy languor — motionless,</l>
+<l>We lie and dream of nothingness;</l>
+<!-- ... -->
+<l>The life of Lazyland.</l>
+</sp>
+</div>
+<div type="number" n="2"/>
+<head>SOLO - Phylla.</head>
+<sp>
+<l>The song of birds</l>
+<l>In ivied towers;</l>
+<!-- ... -->
+<l>These simple joys are all at hand</l>
+<l>Upon thy shores, O Lazyland!</l>
+</sp>
+</div>
+<div type="dialogue">
+<stage>Enter Calynx</stage>
+<sp>
+<speaker>Calynx:</speaker>
+<p>Good news!  Great news!  His Majesty's eldest daughter,
+Princess Zara, who left our shores five years since to go to
+<!-- ... -->
+</p>
+</sp>
+</div>
+</egXML>
+</p>
+<p>Suppose, however, that we do want to record the indentation or
+other typographic features of the text. All that the unmodified TEI
+offers us is the global <ident>rend</ident> attribute. The possible
+values for this attribute are not defined formally in the current
+version of the Guidelines, though several TEI adopters have proposed
+ways of standardizing it (e.g. most notably Syd Bauman's
+<emph>Rendition Ladders</emph>). Using this scheme we might show the
+indentation of each of the verse lines as follows:
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<l>In lazy languor — motionless,</l>
+<l>We lie and dream of nothingness;</l>
+<l rend="indent:1">For visions come</l>
+<l rend="indent:1">From Poppydom</l>
+<l rend="indent:2">Direct at our command:</l>
+<l>Or, delicate alternative,</l>
+<l>In open idleness we live,</l>
+<l  rend="indent:1">With lyre and lute</l>
+<l  rend="indent:1">And silver flute,</l>
+<l  rend="indent:2">The life of Lazyland.</l>
+</egXML>
+</p>
+<p>The advantage of such an encoding is of course that a formatting
+   engine, or stylesheet, can use it and thus more simply produce a formatted
+   version which is closer to the original than might otherwise be the
+   case. Without this explicit encoding, a formatter might find it
+   difficult to work out when and by how much to indent the
+   lines. </p>
+
+<p>On the other hand, since the indentation is actually quite
+   automatically determined by the rhyme scheme, and since an encoding
+   of the rhyme scheme might be useful for other purposes too, we
+   might instead prefer to encode that. The TEI Guidelines propose one
+   simple way of recording the rhyme scheme of regular (stanzaic)
+   verse: to use it, we must tag individual stanzas as well as verse
+   lines, for which the <gi>lg</gi> (line group) element is provided,
+   as in the following example:
+
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<lg met="AABBC">
+<l>In lazy languor — motionless,</l>
+<l>We lie and dream of nothingness;</l>
+<l>For visions come</l>
+<l>From Poppydom</l>
+<l>Direct at our command:</l>
+</lg>
+<lg met="AABBC">
+<l>Or, delicate alternative,</l>
+<l>In open idleness we live,</l>
+<l>With lyre and lute</l>
+<l>And silver flute,</l>
+<l>The life of Lazyland.</l>
+</lg>
+</egXML>
+We could now instruct our formatter to ensure that each stanza begins
+  with an indentation of zero, that each pair of rhyming lines should
+  have the same amount of indentation, and that indentation is
+  increased by 1 for each new rhyme found in a stanza. This would
+  have the same effect (in this case at least) as the previous
+  explicit encoding, but would obviously be preferable in terms of
+  economy of expression and generality of application, if not perhaps
+  in simplicity of programming. 
+</p>
+</div>
+
+<div xml:id="text-front"><head>Special tags for front matter</head>
+<p>So far we have  discussed only the body of the play, the part which
+   happens after the curtain goes up. But in a printed playtext there is
+    usually a small but significant amount of other material which it
+    is often desirable to include in an encoding of it: title pages,
+    dedications, prefaces etc. occur in performance texts in just the
+    same way as other texts, but there more specialized
+    features such as descriptions of the setting or lists of persons
+    appearing (<soCalled>dramatis personæ</soCalled>) are also
+    frequently found.  Including encoded versions of such parts of a dramatic
+    text adds authenticity and completeness, but it also has some
+    interesting technical consequences, as we shall see below.
+   </p>
+<p>In our text, we note that there is a title page, and also a
+   dramatis persona, represented in <ptr target="#fig2"/>. Together
+   these constitute the front matter of the text, which has an
+overall   structure like the following:
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<text xml:id="GS12e" lang="ENG">
+<front xml:id="GS12-Fe">
+<titlePage>
+  <!-- title page information here -->
+</titlePage>
+<div type="castlist">
+<head>Dramatis Personæ</head>
+<castList>
+  <!-- dramatis personae here -->
+</castList>
+</div>
+</front>
+<body>
+<!-- body of text here -->
+</body>
+</text>
+</egXML></p>
+
+<p>The title page presents no particular problems: it is essentially
+    similar to many other texts. We use a <gi>docTitle</gi> element
+    for the title, and  
+
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            UTOPIA LIMITED
+
+                                  OR
+
+                        THE FLOWERS OF PROGRESS
+
+                     Music by Sir Arthur Sullivan
+                    Libretto by William S. Gilbert
+
+</egXML></p>
+
+<p>A <term>cast list</term> as defined by the TEI is a special form of
+list, in which each item represents the combination of a role
+     in the performance, identified by name or description or both,
+    possibly together with the name of the actor who took the role in
+    some performance.  Such items can be grouped together. 
+
+                        
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+
+<castList>
+<head>DRAMATIS PERSONAE</head>
+<castItem>
+<role>King Paramount, the First</role> 
+<roleDesc>(King of Utopia)</roleDesc>
+</castItem>
+<castItem><role>Scaphio</role>
+and <role>Phantis</role> 
+<roleDesc>(Judges of the Utopian Supreme Court)</roleDesc></castItem>
+<castItem><role>Tarara</role><roleDesc> (The Public Exploder)</roleDesc></castItem>
+<castItem><role>Calynx</role><roleDesc>(The Utopian Vice-Chamberlain)</roleDesc></castItem>
+<castGroup>
+<head>Imported Flowers of Progress:</head>
+<castItem>
+<role>Lord Dramaleigh</role><roleDesc>(a British Lord Chamberlain)</roleDesc>
+</castItem>
+<castItem>
+<role>Captain Fitzbattleaxe</role><roleDesc>  (First Life Guards)</roleDesc>
+</castItem>
+<castItem>
+<role>Captain Sir Edward Corcoran, K.C.B.</role><roleDesc>  (of the Royal Navy)</roleDesc>
+</castItem>
+<castItem>
+<role>Mr. Goldbury</role><roleDesc>  (a company promoter; afterwards Comptroller of the Utopian
+     Household)</roleDesc>
+</castItem>
+<castItem><role>Sir Bailey Barre, Q.C., M.P.</role></castItem>
+<castItem><role>Mr. Blushington </role><roleDesc> (of the County Council)</roleDesc>
+</castItem>
+  </castGroup>
+<castItem>
+<role>The Princess Zara</role><roleDesc> (eldest daughter of King Paramount)</roleDesc></castItem>
+<castItem>The Princesses <role>Nekaya</role> and <role>Kalyba</role>
+<roleDesc> (her Younger Sisters)</roleDesc></castItem>
+<castItem><role>The Lady Sophy</role><roleDesc> (their English Gouvernante)</roleDesc></castItem>
+<castGroup>
+<head>Utopian Maidens:</head>
+<castItem><role> Salata</role></castItem>
+<castItem><role>Melene</role></castItem>
+<castItem><role>Phylla</role></castItem>
+</castGroup>
+</castList>
+</egXML>
+</p>
+ </div>
+
+<div>
+<p>Structural complications: shared verse; simultaneous speech</p>
+ 
+</div>
+
+
+<div><head>Generating HTML, PDF, and eBook versions</head>
+<p>line numbers</p>
+</div>
+
+<div><head>Enriching the edition</head>
+<p>Editorial interventions, critical apparatus, explanatory notes</p>
+<p>Supporting materials, illustrations, performance details</p>
+</div>
+
+
+<closer>
+<!-- what we learnt in this chapter-->
+</closer>
+
+
+</div>

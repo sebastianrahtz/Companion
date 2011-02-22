@@ -1,0 +1,61 @@
+Guidelines for TEI Companion
+----------------------------
+Last changed: $Date$
+
+* the book is a single text, each chapter is a <div>
+* each chapter must have a <opener> at the start and
+  a  <closer> at the end. these will produce unnumbered sections, and
+  should say what we are about to learn and what we just did learn
+* use <div>s not div1, div2 etc
+* make IDs for divs using a "type-name" notation, eg chap-orinoco and
+  section-photos??
+* need a new element for name of a tei tagset?
+* type/rend attributes:
+
+   <list>    type   ordered, unordered, gloss
+   <list>    rend   fancy
+   <ptr>     rend   citenoun, citeyear, cite
+   <gi>      rend   major
+   <eg>      rend   small, numbered
+
+* to drag in the definitive DTD definition of an element from the main
+  TEI guidelines, we do <xptr id="foo" doc="P3" to="id(foo)"/> and
+  <eg copyOf="foo"/>. similarly for any small example files
+
+* Use the royal "we", rather than "you" or the 3rd person. eg "we make
+  a <table>", rather than "you make a <table>" or "A <table> is made"
+
+* Do NOT prefix section or chapter cross-refs with a word. So 
+ if in doubt "See  <ptr target="chap-orinoco"/>" rather than "See
+ chapter <ptr target="chap-orinoco"/>". This can be overridden with
+ <ref> if necessary, which never generates any markup.
+
+* utility programs:
+   listids.xsl: list of IDs and references to them
+
+* for bibliographical references, preferred solutions:
+
+     input                                  result
+
+   <bibptr target="#rahtz87"/>                  Rahtz (1987)
+   <bibptr target="#rahtz87" rend="year"/>  1987
+   <bibptr target="#rahtz87" rend="noun"/>  Rahtz
+   <bibptr target="#rahtz87" rend="paren"/>  (Rahtz, 1987)
+   <bibptr target="#rahtz87 #rahtz88"/>          Rahtz (1987, 1988)
+   <bibptr target="#rahtz87 #rahtz88"            1987, 1988
+        rend="year"/>
+   <bibptr target="#rahtz87 #rahtz88"            ERRROR!
+        rend="noun"/>
+   <bibptr target="#rahtz87 #rahtz88"            (Rahtz, 1987, 1988)
+        rend="paren"/>
+   <bibptr target="#rahtz87a #rahtz88b"/>        Rahtz (1987a,b)
+
+   if necessary:
+    As my colleague said in his <ref target="#rahtz87">magisterial tome
+    of the 1980s</ref>
+
+* how to mention a bit of software?? <name type="sw">tidy</name>
+ 
+
+
+

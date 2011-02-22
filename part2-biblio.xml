@@ -1,0 +1,41 @@
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="back-biblio"><!-- revised $Date$ -->
+<head>Bibliography</head>
+<listBibl>
+
+<bibl xml:id="latex">
+ <author><persName><forename>Leslie</forename><surname>Lamport</surname>
+    </persName>
+</author>
+   <title>The <entity name="LaTeX"/> Book</title>
+   <publisher>Addison Wesley</publisher>
+   <pubPlace></pubPlace>
+   <dateStruct>June <year>1990</year></dateStruct>
+</bibl>
+
+<bibl xml:id="TEIGuide">
+<title>TEI Guidelines</title>, TEI Consortium 2002
+</bibl>
+
+<bibl>Neil Bradley, 
+<title>The XML Companion</title>, Prentice Hall, 1998</bibl> 
+
+<bibl>Robert Ducharme, 
+<title>XML: The Annotated Specifications</title>, Kluwer, 1998</bibl> 
+<bibl>Elliotte Rusty Harold, 
+<title>The XML Bible</title>, Wrox Press, 1999</bibl> 
+
+<bibl xml:id="kay">
+ <author><persName><forename>Michael</forename><surname>Kay</surname>
+    </persName></author>
+<title>XSLT Programmers' Reference</title>
+<publisher>Wrox Press</publisher>
+<dateStruct><year>2000</year></dateStruct>
+</bibl> 
+
+<bibl>Rick Jelliffe, 
+<title>The XML and SGML Cookbook</title>, Prentice Hall, 1998</bibl> 
+<bibl>David Megginson, 
+<title>Structuring XML Documents</title>, SAMS, 1999</bibl> 
+</listBibl>
+</div>
+

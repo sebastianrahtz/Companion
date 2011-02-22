@@ -1,0 +1,11 @@
+<schemaSpec ident="teilite" start="TEI">
+  <specGrpRef target="#LITEADD"/>
+  <specGrpRef target="#LITEDEL"/>
+  <moduleRef key="tei"/>
+  <moduleRef key="core"/>
+  <moduleRef key="header"/>
+  <moduleRef key="textstructure"/>
+  <moduleRef key="figures"/>
+  <moduleRef key="linking"/>
+  <moduleRef key="analysis"/>
+</schemaSpec>

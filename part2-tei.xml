@@ -1,0 +1,50 @@
+<div 
+     xmlns:xi="http://www.w3.org/2001/XInclude"
+     xmlns="http://www.tei-c.org/ns/1.0" 
+     xml:id="back-tei">
+<head>TEI Basics</head>
+
+<div xml:id="modulecat">
+<head>TEI  modules</head>
+<xi:include href="examples/ref/modules.xml"/>
+</div>
+
+<div xml:id="elementcat">
+<head>TEI elements</head>
+<xi:include href="examples/ref/elements.xml"/>
+</div>
+
+<div xml:id="classcat">
+<head>TEI classes</head>
+<p>The TEI system currently defines 488 elements; to make this more
+manageable, they are grouped into 22 modules, but also into 83
+classes. These classes perform two jobs:
+<list type="ordered">
+<item>The <term>model classes</term> provide a way of grouping syntactically or semantically
+similar elements together (for example, all elements which occur at the
+top of sections; or all elements which are to do with describing times
+and dates). These groups can then appear in the content models of
+other elements; this in turn makes the maintenance of those content
+models easier, as they are freed from worrying about, for example, new
+elements which describe times and dates, or deleted elements.</item>
+<item>The <term>attributes classes</term> provide a way of allowing
+the same attributes  on syntactically or semantically
+similar elements. For examples, all elements which are like divisions
+have a <ident>type</ident> attribute.</item>
+</list>
+<xi:include href="examples/ref/classes.xml"/>
+</p>
+</div>
+
+<div xml:id="macrocat">
+<head>TEI macros</head>
+<p>Macros (also called <soCalled>patterns</soCalled> in RelaxNG), are 
+convenient shorthands for complex content models used in element definitions.
+There are 62 of them in the TEI, of which the important ones are
+listed below.
+
+<xi:include href="examples/ref/macros.xml"/>
+</p>
+</div>
+
+</div>

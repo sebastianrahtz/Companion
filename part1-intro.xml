@@ -1,0 +1,381 @@
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="chap-intro"><!-- revised $Date$ -->
+<head>Introduction to text markup</head>
+
+<opener>
+<!-- what this chapter is about -->
+
+</opener>
+<p></p>
+<div>
+<head>Introduction</head>
+<p>This book shows you how to combine two powerful technologies
+   — TEI and XML — wide variety of everyday writing,
+   publishing, and research tasks. 
+   It gives detailed guidance in the use of XML to solve
+   real world problems, using as its basis the
+   <title>Recommendations</title> of the Text Encoding Initiative. It
+   also discusses and exemplifies freely-available tools you can use to
+   produce TEI texts and publish them on the web and in
+   print.
+   
+ </p>
+ 
+ <p>
+   The Text Encoding Initiative (TEI) is a major scholarly project which
+   has published definitive markup guidelines for text material across a
+   very broad range of materials. Its recommendations have been taken up
+   by academic researchers, digital libraries and language engineering
+   projects across the world. This book makes the
+   <title>Guidelines</title> accessible and usable for the individual
+   author and academic by providing authoritative coverage and practical
+   explication for key parts of the published Recommendations.
+   
+ </p>
+ 
+ 
+ <p>XML is the technology underlying the latest developments on the
+   World Wide Web and the information revolution. Understanding how to
+   use XML is essential to the information professional, as is keeping up
+   with the rapid proliferation of specialist application languages built
+   upon it. This books helps a non-specialist user community share in
+   that revolution by describing how the facilities of XML can
+   best be exploited for specific purposes.
+   
+ </p>
+ 
+ 
+ <p>The book has three parts:
+   
+   <list type="ordered">
+  
+  <item>An introductory section, containing short overview chapters,
+    each of which gives a brief summary of key issues and general principles
+    
+  </item>
+  
+  <item>A suite of detailed use cases, each of which presents the reader
+    with a specific application scenario, and shows how to address it
+    using TEI and XML. Each case may be studied in isolation but they are
+    of increasing technical sophistication and complexity. Together they
+    provide reasonably complete coverage of the key parts of TEI and the
+    full range of XML facilities.
+    
+  </item>
+  
+  <item>A reference section, containing more detailed technical
+    information about the systems described in the book.
+  </item>
+  
+   </list>
+   
+ </p>
+ 
+ <p>It may be helpful to point out what the book does <emph>not</emph> aim to
+   do:
+   
+   <list type="unordered">
+  
+  <item>It does not teach XML syntax, how to write XML DTDs or
+  schemas  </item>
+  
+  <item>It does not provide detailed reference material about the XML family of standards
+  </item>
+  
+  <item>It does not discuss schemas other than those of the TEI.  </item>
+  
+   </list>
+   
+ </p>
+</div>
+
+<div>
+<head>The intended audience</head> 
+
+<p>The book is intended for people
+who have learnt something about XML and are
+considering using it for their work, but are not sure how to apply it,
+in particular which tag set to use. A typical reader will probably
+have produced an HTML web page or written an article using LaTeX, and
+will have some degree of technical experience beyond simply using a
+word-processor. The book does not assume any knowledge of computer
+programming, but readers who are unfamiliar with scripting languages
+may find some of it technical.
+</p>
+
+<p>The general principles we discuss are widely applicable, as are the
+techniques we propose. However, both the specific scenarios discussed
+and the working environment we assume mean that the book is likely to
+be of most use in academic or similar environments. The material is not
+intended to appeal to e.g. technical authors in the aerospace
+industry, or those using XML for healthcare records.
+</p>
+</div>
+
+<div> 
+<head>Basic principles of this book</head>
+<p>This book tells you how to make electronic texts and do useful
+things with them. It is intended to be entirely practical, and is
+arranged as a series of realistic scenarios.
+We make a few fundamental assumptions about all the projects we describe:
+<list type="unordered">
+ <item>We use XML for <emph>all</emph> aspects
+ of the work. That is not to say that software such as a database may
+ not sometimes be the best way to collect and store some of the information, but
+ we always describe an XML-only solution. This ensures that
+ material can always be interchanged and stored in a simple
+ format.</item>
+<item>We describe software which conforms to the principles of the
+ Open Source movement and the Free Software Foundation. All the
+ techniques in this book can be implemented without using proprietary
+ closed software systems.
+</item>
+<item>We implement all our solutions using the principles of the
+Text Encoding Initiative. That is not to say that every XML element
+we describe is listed in the TEI DTD; we use the TEI
+DTD where it is appropriate, but extend the TEI (using the principles
+described in the TEI Guidelines<ptr rend="citeparen" 
+target="TEIGuide"/>) where we need to.</item>
+</list></p>
+</div>
+
+<div><head>What is XML?</head>
+
+<p>A section of this length is not the place from which to learn the
+details of XML and its TEI implementation<note place
+="foot">Fortunately there is no shortage of introductory material on
+such topics on the Web: the TEI's own <soCalled>Gentle
+Guide</soCalled> is at <ptr
+target="http://www.tei-c.org/P4X/SG.html"/></note>. However, it may be
+helpful for the complete novice to mention some of the salient
+features of this way of thinking about what a document is.</p>
+<p>In an XML document, information is represented by means of
+identifiable objects, called elements. The document itself is such an
+object, and it contains within it nested occurrences of other objects
+of the same or other types. Objects of any type may also bear
+descriptive named attributes. A very simple document
+might consist of a <gi>text</gi> element, containing a number of <gi>div</gi>
+elements. Each <gi>division</gi> element might begin with an optional
+<gi>head</gi>, and then contain a number of <gi>p</gi> elements. Each
+<gi>p</gi> might contain just plain text, and might have an attribute
+<ident>lastChange</ident> specifying the time and date it was last changed.</p>
+
+<p>An important characteristic of an XML document is that its structure can be
+described by means of a textual grammar (technically known as a
+schema). A schema specifies both what elements exist, and how they can
+meaningfully be combined (for example, that a <gi>div</gi> element may
+contain a <gi>head</gi> only if it precedes a <gi>p</gi>). Depending on
+the specific schema language employed, rules may also be specified
+which constrain the legal values for attributes, for example to
+specify exactly the format for representing dates and times. </p>
+
+<p>Every XML document is modelled as a single hierarchy of elements,
+which means that it can easily be represented as a linearised sequence
+with labelled brackets. So, for example, by marking the start and end
+of  texts, divisions, headings, and paragraphs, the nested structure
+in  figure 2
+ below can be represented by the linear sequence given in
+figure 3  without loss of information.</p>
+<!--
+<figure><graphic url="boxes.png" width="3in"/></figure>
+-->
+<egXML xmlns="http://www.tei-c.org/ns/Examples"><text><div>
+<head>Heading</head>
+<p>Para 1</p>
+<p>Para 2</p>
+</div></text></egXML>
+
+
+<p>This tree-based model of textual structure has many advantages from
+both conceptual and processing points of view. However, it is
+important to note that one can often define more than one hierarchic
+structure within a text and moreover that the components of such
+structures rarely map tidily onto one another. A codex may be seen as a
+hierarchic structure of gatherings containing leaves, each comprising a
+recto page and a verso page. A page may contain many paragraphs, but
+a single paragraph may start on one page and finish on the next. We
+cannot therefore easily nest a paragraph hierarchy within a page
+hierarchy. Similarly, in a verse drama, because we can expect to find
+verse lines which are divided between speakers, we cannot easily
+combine speaker and metrical structures. A number of techniques have
+been proposed for the representation of such structures in XML, but
+of which the majority depend on the language's ability to represent
+links between one point of a structure and another, thus making it
+possible to define one or more independent hierarchies while at the
+same time representing their points of alignment, both with each other
+and with a single segmentation of the text being annotated.</p>
+<p>XML markup thus provides a unified way of representing individual
+tokens in a text, the structural units in which they occur, arbitrary
+regions of text, and links, correspondences, or alignment amongst
+these elements. These features of a text can also be formally verified
+against a textual grammar. XML markup can be verified in such a way as
+to ensure that it reflects the meaning of your data, not its
+appearance</p>
+
+</div>
+<div><head>What is the TEI?</head>
+
+<p>In November 1987, representatives from about forty  academic
+institutions and projects converged on Vassar College, Poughkeepsie in upstate New
+York. They shared a common vision: the transformation of substantial
+amounts of the world's literature into computer-readable form; but
+what had brought them together was the lack of agreed international
+standards in the production of what was at that time called
+<soCalled>machine-readable text</soCalled>. Over two wintry days, they
+considered the cacophony of different practices emerging in the
+service of that common vision at institutions already existing across
+the US, across Europe, and in Japan, but scattered and fragmented in
+those pre-World Wide Web days. The Internet as a social phenomenon was
+approaching adolescence: it had not yet established itself outside the
+world of academic research, and the technical standards needed to move
+it forward were still only dimly perceived. </p>
+
+<p>Following that conference<note place="foot">For a report on the
+outcomes of the Poughkeepsie Conference, see <title level="a">Report
+of Workshop on Text Encoding Guidelines</title> in <title
+level="s">Literary &amp; Linguistic Computing</title>, 3
+(1988)</note>, the Text Encoding Initiative (TEI) was formed as an
+international research project, with funding from the US National
+Endowment for the Humanities, the European Union, the Canadian Social
+Science Research Council, and the Andrew W Mellon Foundation. The TEI
+was jointly sponsored by three established international professional
+associations, which established a small management committee, and
+appointed two <soCalled>editors</soCalled> to co-ordinate the
+enthusiastic participation of more than a hundred scholars
+worldwide. Its remit was to attempt a complete definition of current
+practice and to produce recommendations or Guidelines for the creation
+and usage of electronic texts in key linguistic and literary
+disciplines. The first research phases of the TEI came to an end in
+1994 with the publication of TEI P3, the <soCalled>big green
+books</soCalled> which over the next few years were to become the
+reference standard for the building of the digital library<note
+place="foot">For history and background on the TEI, see the website at
+<ptr target="http://www.tei-c.org"/></note>.</p>
+
+<p>At the start of the current century, the TEI re-established itself
+as a membership consortium, jointly hosted by two US and two European
+Universities, and sponsored a first major revision of the TEI
+<title>Guidelines</title>. This edition, known as TEI P4, was a
+<soCalled>maintenance release</soCalled>, bringing the Guidelines up
+to date with changes in the technical infrastructure — most notably
+in the use of the W3C's Extensible Markup Language (XML) as its means
+of expression<note place="foot">This was particularly appropriate in
+that one of the editors of the XML standard, Michael Sperberg-McQueen,
+had also served as editor of the original TEI Guidelines.</note>
+rather than the ISO standard SGML. TEI P4 was published in 2002, under
+the imprint of the University of Virginia Press, and forms the current
+reference standard.</p>
+
+<p>However, nothing written in digital form is ever really
+finished. Since 2002, work has been proceeding on the next major
+revision of the TEI Guidelines, to be known as TEI P5, which will
+include far more substantive changes than were needed for P4<note place="foot">A
+preliminary release of TEI P5 appeared in January 2005: see <ptr
+target="http://www.tei-c.org/P5"/> for its current status</note>. </p>
+
+
+<p>The goals of the TEI were to facilitate better interchange and
+integration of scholarly textual data, in all languages, and from all
+periods. As such the TEI had two inherently contradictory objectives:
+on the one hand, to deliver <soCalled>guidance for the
+perplexed</soCalled> by suggesting <emph>what</emph> textual features
+should be encoded in a document; on the other, to provide assistance for
+the specialist by suggesting <emph>how</emph> any particular set of
+textual phenomena might be encoded. Its aim was thus to be both a
+user-driven codification of existing best practice, and also a loose
+framework into which unpredictable extensions might be fitted. Its
+recommendations thus cover both generic text structures and some
+highly specific areas based on (but not limited by) existing
+practice.</p>
+
+<p>The original scope of the TEI was encyclopaedic, embracing not just
+the basic structural and functional components of running text but
+also diplomatic transcription of non-digital textual (and aural)
+sources, images, and annotation thereof; links, correspondence, and
+alignment of encoded objects; data-like objects such as dates, times,
+places, persons, events (what is now termed <soCalled>named entity
+recognition</soCalled>); meta-textual annotations (correction,
+deletion, etc); linguistic analysis of all kinds and at all levels;
+contextual metadata of all kind. No-one requires all of this, yet all
+of it is required by someone.  Considerable effort and ingenuity was
+therefore invested in ways of making it possible to derive multiple
+views (DTDs or schemas) from the enormous set of textual categories or
+distinctions identified by the Guidelines, which (as of TEI P4)
+documented 362 distinct XML elements, 95 attributes, and 88 classes,
+grouped into 24 distinct modules of various kinds.  To
+demonstrate that this polymorphic architecture actually worked, the
+TEI editors used it to produce TEI Lite, one specific customization
+which turned out to have a life of its own. </p>
+
+<p>TEI Lite was intended to meet three goals. The first was to provide
+a subset of the TEI Recommendations which would be adequate to the
+needs of most likely users of the whole of the TEI most of the
+time. The second goal was to provide a subset of elements rich enough
+to support an authoring environment for the production of online
+documentation such as the Guidelines themselves. And, as already
+mentioned, TEI Lite was conceived of as a practical demonstration of
+the customization facilities of the TEI scheme — and therefore had to
+provide some features which were <emph>not</emph> otherwise included
+in it.</p>
+ 
+<p>Despite the protestations of the TEI editors and others, however,
+TEI Lite was occasionally perceived as being <emph>the</emph>
+recommended introduction to the TEI scheme for all purposes. Widely
+translated, its manual came to form the basis of many introductory
+tutorials and workshops<note place="foot">See <ptr
+target="http://www.tei-c.org/Lite/"/></note>, as well as to define the
+practice of many major encoding projects, particularly in the digital
+library community. This was a mixed blessing: TEI Lite is (inevitably)
+lacking in elements some projects will consider essential, and (even
+more inevitably) over-supplied with elements other projects will never
+wish to use. Because the customization methods by which TEI Lite was
+constructed remain somewhat arcane to the non-SGML specialist, there
+was a tendency for projects to edit TEI Lite itself in nonstandard and
+unpredictable ways to produce <soCalled>TEI Lite like</soCalled>
+schemas, thus seriously compromising the interchangeability of their
+resources. More worryingly, it came to be perceived in some quarters
+as the TEI's final word on what <soCalled>text</soCalled>
+<emph>really</emph> is: though any careful reading of the TEI
+Guidelines proper would show the extent to which the TEI tries to
+problematize this notion, by emphasizing the relativity of the shared
+assumptions and priorities about the digital agenda which underly its
+suggestions. Those priorities, specifically the focus on content and
+function (rather than presentation), and the identification of generic
+solutions (rather than application-specific ones) have stood the test
+of time. But they are not necessarily universal.</p>
+
+<p>All texts are alike, in some sense; yet every text is
+different. Because it needed to be able to cope with the full variety
+of texts and textual readings, and the whole range of scholarly
+endeavours, the TEI system was designed in a modular way. Rather than
+define a single monolithic schema, the TEI defines a number of schema
+modules which can be combined in a controlled manner. Each module
+contains definitions for a set of elements and attributes, each of
+which is also a member of one or more classes. Elements may refer to
+each other indirectly by means of their class membership. This allows
+the system designer to modify particular components of a module, or to
+add new components to it, without disturbing the rest of the
+structure. The technical details of the mechanisms used to implement
+this architecture are described elsewhere<note place="foot">For TEI
+P4, see for example <title level="a">Rolling your own with the
+TEI</title> in <title level="s">Information Services and Use</title>
+vol 13 no 2 (Amsterdam, IOS Press, 1993); for P5, see Sebastian Rahtz,
+<title level="a">Converting to schema: the TEI and RelaxNG</title>.
+Available from <ptr
+target="http://www.idealliance.org/papers/dx_xmle02/papers/03-03-08/03-03-08.html"/>.
+Paper presented at XML Europe 2002, Barcelona, May 2002; see also
+Burnard and Rahtz, <title level="a">RelaxNG with Son of ODD</title>,
+Available from <ptr
+target="http://www.mulberrytech.com/Extreme/Proceedings/html/2004/Burnard01/EML2004Burnard01-toc.html"/>.
+Paper presented at Extreme Markup Languages, Montréal, August
+2004</note>; the key point is that the system can be used to develop a
+schema which contains all and only the elements and attributes needed
+to support the specific needs of a given text-creation project without
+overly compromising the interchangeability of the project's
+deliverables.</p>
+</div>
+
+<closer>
+<!-- what we learnt in this chapter-->
+</closer>
+</div>
+

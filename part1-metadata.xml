@@ -1,0 +1,25 @@
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="chap-metadata">
+<head>Never mind the content, feel the metadata...</head>
+<p>Sometimes we find ourselves spending more time talking
+	    <emph>about</emph> a document than actually preparing its
+	    content. XML allows us to use the same formalism for representing
+the content of a document and a description of that content; TEI proposes a
+detailed and extensible way of collecting metadata together in one place (the TEI Header)
+and associating it with a document, a group of documents, or document components.
+<!-- Using the example of a manuscript letter in a
+	    library archive, this is the place to really understand
+	    the complexities of the TEI Header, the place where
+	    metadata is stored.--> </p>
+
+<p>We discuss the headers which could, should, or might, be needed for
+each of the case studies discussed so far.</p>
+<list type="gloss">
+<label>TEI coverage</label>
+<item>teiHeader, teiCorpus, decls</item>
+<label>XML coverage</label>
+<item>database interfaces; search facilities</item>
+<label>Discussion topics</label>
+<item>how much or how little goes in the header? how do you combine multiple headers
+</item>
+</list>
+  </div>

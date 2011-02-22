@@ -1,0 +1,128 @@
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="chap-proc"><!-- revised $Date$ -->
+<head>A multi-author book</head>
+
+<div type="opener"><!-- what this chapter is about -->
+<p>In this chapter we look for the first time at 
+writing <emph>new</emph> material in TEI, rather than encoding
+existing material. Our example will be the production of a
+conference proceedings, where each chapter has its own title, author
+and bibliography. We consider some of the technical issues relating
+to figures, tables, formulae and indices, and describe some production
+issues. One of our aims is to be able to describe a level
+of markup equivalent to the popular <entity name="LaTeX"/> 
+typesetting system<ptr target="#latex"/>.
+Our main aim here is to teach the
+TEI high-level structural tags, talk about conversion from
+different formats, and how to link together related files.
+<list type="gloss">
+<label>TEI coverage</label>
+<item>front, body, back, div, head, list, p, label, item, table, figure, hi, q, mentioned, foreign, term, index, bibl, ptr, ref</item>
+<label>XML coverage</label>
+<item>up-conversion, validation, editing, managing multiple documents</item>
+<label>Discussion topics</label>
+<item>tag what it means, not what it looks like, as a means of enforcing consistency; specific cases: treatment of italics and quotes; funny characters.
+</item>
+</list>
+</p>
+</div>
+
+<div><head>Assembling the material</head>
+<p>We have been asked to produce a book from a set of papers
+given at a conference about markup. There are 26 papers, authored by
+43 different people, almost none of them using XML or the TEI DTD; most of
+them are using a proprietary word-processor with largely
+presentational effects. Our first
+task, therefore, is to convert all the text to XML, and make sure it
+conforms to the TEI DTD. There are four strategies we could adopt:
+<list type="ordered">
+<item>Retype the papers in XML, ignoring any electronic versions. This
+can ensure consistent markup, will avoid any complex checking of
+conversion, and will likely be at a fixed cost. However, if the
+material is at all complex, it will probably be necessary for the
+author to review the result.</item>
+<item>Remove all markup or styling from the electronic version of the
+papers, and add markup to the plain text. Again, markup will be
+consistent, but there will be much less need for the author to check
+the actual words. However, layout-intensive elements like tables or
+formulae are likely to need a lot of careful work.</item>
+<item>Convert word-processor files into XML directly, attempting to 
+interpret presentation or structural markup as we proceed. This may
+work well, but there are two difficulties. Firstly, if our authors use
+different word-processors, we have to find or develop more than one
+converter; and secondly, most word-processors allow both structural
+and presentation markup. We can ameliorate the first difficulty by 
+converting all the files to a single format (probably Microsoft Word,
+or its export format, RTF (Rich Text Format), but even that can result
+in loss or corruption of information (structures like tables may well
+not survive a conversion 100% intact). The second problem is even
+harder to solve, because some authors may use <emph>only</emph>
+structural styles (i.e., they mark all headings as headings, lists as
+lists, and so on), others may pick and mix (i.e., mark headings as
+headings, but format lists `by hand'), while others may use low-level
+features like fonts and white-space for all their formatting.</item>
+<item>Convert all files to the <emph>lingua franca</emph> of HTML
+(a feature present in almost any word-processor), and
+attempt to convert that to our target DTD. This can work well, because
+it can have the effect of preserving structural information (headings,
+tables, lists) and putting everything into a form which can be
+manipulated by standard XML tools. The <name type="sw">tidy</name>
+program (<ptr target="#TIDY"/>) is a useful resource in this context,
+cleaning and checking HTML.
+</item>
+</list>
+The last two solutions produce material which is
+similar to that from authors who <emph>do</emph> use XML; that is to say, it
+is in a regular form, but its mapping to the TEI schema is not clear. 
+For instance, we may encounter
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<p align="center">Preface</p>
+</egXML>
+which we need to interpret as 
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<div type="Preface">
+  <head>Preface</head>
+  <p>...</p>
+</div>
+</egXML>
+or
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<opener>...</opener>
+</egXML>
+We are also likely to meet markup like
+<code><![CDATA[<font face="Arial">]]></code>
+transferred from HTML, which could mean almost anything.
+
+</p>
+</div>
+
+<div><head>Deciding on the basic structure</head>
+<p></p>
+</div>
+
+<div><head>Bibliographic references</head>
+<p></p>
+</div>
+
+<div><head>Tables</head>
+<p></p>
+</div>
+
+<div><head>Figures</head>
+<p></p>
+</div>
+
+<div><head>The index</head>
+<p></p>
+</div>
+
+<div><head>Production typesetting</head>
+<p></p>
+</div>
+
+<closer>
+<!-- what we learnt in this chapter-->
+We have looked at the some of the problems that arise in authoring
+a simple multi-author book using the TEI.
+</closer>
+</div>
+

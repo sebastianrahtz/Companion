@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tei:glossList xmlns:tei="http://www.tei-c.org/ns/1.0">
+  <tei:label>datatype.Certainty</tei:label>
+  <tei:item>A degree of certainty<tei:output>
+datatype.Certainty = text</tei:output></tei:item>
+  <tei:label>datatype.Choice</tei:label>
+  <tei:item>A choice from a closed list<tei:output>
+datatype.Choice = text</tei:output></tei:item>
+  <tei:label>datatype.Code</tei:label>
+  <tei:item>A value from a set of possible codes<tei:output>
+datatype.Code = text</tei:output></tei:item>
+  <tei:label>datatype.Formula</tei:label>
+  <tei:item>The content of a mathematical formula<tei:output>
+datatype.Formula = text</tei:output></tei:item>
+  <tei:label>datatype.Key</tei:label>
+  <tei:item>A value from a set of possible keys<tei:output>
+datatype.Key = text</tei:output></tei:item>
+  <tei:label>datatype.Language</tei:label>
+  <tei:item>A language code<tei:output>
+datatype.Language = xsd:language</tei:output></tei:item>
+  <tei:label>datatype.Regexp</tei:label>
+  <tei:item>Used as the declared value of an attribute, indicates that all
+values of that attribute must be valid regular expressions with
+respect to the definition found in the World Wide Consortium's
+XML Schema Part 2: Datatypes Second Edition, Appendix
+F.<tei:output>
+datatype.Regexp = text</tei:output></tei:item>
+  <tei:label>datatype.Sex</tei:label>
+  <tei:item>A notation for sex, which allows for
+ unknown and mixed. This could be replaced by the numeric codes and extended
+categories allowed for in ISO 5218:1977.<tei:output>
+datatype.Sex = "m" | "f" | "u" | "x"</tei:output></tei:item>
+  <tei:label>datatype.Token</tei:label>
+  <tei:item>Text which can be represented using the subset of 
+ Unicode permitted in XML attributes
+by means of XML markup. <tei:output>
+datatype.Token = text</tei:output></tei:item>
+  <tei:label>datatype.UBoolean</tei:label>
+  <tei:item>An extended boolean, which also allows for unknown
+and unspecified<tei:output>
+datatype.UBoolean = xsd:boolean | "unknown" | "unspecified"</tei:output></tei:item>
+  <tei:label>datatype.ucs</tei:label>
+  <tei:item>Any legal Unicode codepoint, expressed using the Unicode
+    notational convention of U+ followed by four to six
+    hexadecimal digits, using the digits 0-9 and A-F (for 10 through
+    15, respectively). Use sufficient leading zeros to ensure there
+    are at least four hexadecimal digits, but no more.<tei:output>
+datatype.ucs = token { pattern = "U\+([1-9A-F][0-9A-F]?)?[0-9A-F]{4}" }</tei:output></tei:item>
+  <tei:label>datatype.uri</tei:label>
+  <tei:item>Any syntactically valid Uniform Resource Identifier (URI) Reference.<tei:output>
+datatype.uri = xsd:anyURI</tei:output></tei:item>
+  <tei:label>datatype.uriList</tei:label>
+  <tei:item>A series of one or more syntactically valid Uniform Resource
+  Identifier (URI) References, separated by whitespace. If a
+  whitespace character is needed inside the URI Reference it must be
+  escaped using the standard mechanism, e.g.
+  TEI%20Consortium.<tei:output>
+datatype.uriList = list { xsd:anyURI+ }</tei:output></tei:item>
+  <tei:label>formulaNotations</tei:label>
+  <tei:item>specifies the set of notations which may be used for the
+formula element.<tei:output>
+formulaNotations = text</tei:output></tei:item>
+  <tei:label>gen.dictionaries</tei:label>
+  <tei:item>contains a string used in constructing the definition of
+component sequence used in the general base tag set.<tei:output>
+gen.dictionaries =
+   tei.comp.dictionaries, ( tei.common | tei.comp.dictionaries )*</tei:output></tei:item>
+  <tei:label>gen.dictionaries</tei:label>
+  <tei:item>contains a string used in constructing the definition of
+component sequence used in the general base tag set.<tei:output>
+gen.dictionaries = </tei:output></tei:item>
+  <tei:label>gen.drama</tei:label>
+  <tei:item>contains a string used in constructing the definition of
+component sequence used in the general base tag set.<tei:output>
+gen.drama = tei.comp.drama, ( tei.common | tei.comp.drama )*</tei:output></tei:item>
+  <tei:label>gen.drama</tei:label>
+  <tei:item>contains a string used in constructing the definition of
+component sequence used in the general base tag set.<tei:output>
+gen.drama = </tei:output></tei:item>
+  <tei:label>gen.spoken</tei:label>
+  <tei:item>contains a string used in constructing the definition of
+component sequence used in the general base tag set.<tei:output>
+gen.spoken = tei.comp.spoken, ( tei.common | tei.comp.spoken )*</tei:output></tei:item>
+  <tei:label>gen.spoken</tei:label>
+  <tei:item>contains a string used in constructing the definition of
+component sequence used in the general base tag set.<tei:output>
+gen.spoken = </tei:output></tei:item>
+  <tei:label>gen.verse</tei:label>
+  <tei:item>contains a string used in constructing the definition of
+component sequence used in the general base tag set.<tei:output>
+gen.verse = tei.comp.verse, ( tei.common | tei.comp.verse )*</tei:output></tei:item>
+  <tei:label>gen.verse</tei:label>
+  <tei:item>contains a string used in constructing the definition of
+component sequence used in the general base tag set.<tei:output>
+gen.verse = </tei:output></tei:item>
+  <tei:label>macro.component</tei:label>
+  <tei:item>defines the set of component-level elements for use with the mixed
+or general base; these are elements which can appear directly within
+text bodies or text divisions.
+ <tei:output>
+macro.component =
+   tei.common,
+   mix.verse,
+   mix.drama,
+   mix.spoken,
+   mix.dictionaries</tei:output></tei:item>
+  <tei:label>macro.componentSeq</tei:label>
+  <tei:item>defines a sequence of component-level elements (such as paragraphs
+or lists) which can occur directly within text divisions and in similar
+positions.<tei:output>
+macro.componentSeq = ( ( macro.component ) | ( tei.Incl ) )*</tei:output></tei:item>
+  <tei:label>macro.glossSeq</tei:label>
+  <tei:item>defines a sequence of descriptive or identifying elements
+which characterize and object.<tei:output>
+macro.glossSeq = altIdent?, equiv*, gloss?, desc?</tei:output></tei:item>
+  <tei:label>macro.paraContent</tei:label>
+  <tei:item>defines the legal version for paragraphs and similar elements.<tei:output>
+macro.paraContent = ( text | tei.phrase | tei.inter | tei.Incl )*</tei:output></tei:item>
+  <tei:label>macro.phraseSeq</tei:label>
+  <tei:item>defines a sequence of character data and phrase-level elements.<tei:output>
+macro.phraseSeq = macro.phrasegroup*</tei:output></tei:item>
+  <tei:label>macro.phrasegroup</tei:label>
+  <tei:item>defines a phrase as character data or any phrase-level element.<tei:output>
+macro.phrasegroup = text, tei.phrase, tei.Incl</tei:output></tei:item>
+  <tei:label>macro.specialPara</tei:label>
+  <tei:item>defines the content model of elements such as notes or list items,
+which either contain a series of component-level elements or else have
+the same structure as a paragraph, containing a series of phrase-level
+and inter-level elements.<tei:output>
+macro.specialPara = ( text | tei.phrase | tei.inter | tei.chunk | tei.Incl )*</tei:output></tei:item>
+  <tei:label>schemapattern</tei:label>
+  <tei:item>A patterm to match elements from the chosen schema language<tei:output>
+schemapattern =
+   element * { ( attribute * - inh:xml:id { text } | text | schemapattern )* }</tei:output></tei:item>
+  <tei:label>version</tei:label>
+  <tei:item>defines the name to be used for the root element of a concurrent
+markup stream for marking pages and lines of some reference edition.<tei:output>
+version = ref</tei:output></tei:item>
+</tei:glossList>

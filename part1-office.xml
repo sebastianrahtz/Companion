@@ -1,0 +1,17 @@
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:id="chap-office"><head>The TEI in the office</head>
+    <p>Our administration has said that minutes and letters are to be
+	    archived in XML. Can the TEI help us? We will consider how
+	  to build very specialized customizations of the TEI,
+	    and customize editing tools for easy authoring. We will
+	    also look at what markup to put in office documents so
+	    that they can be indexed in useful ways.</p>
+<list type="gloss">
+<label>TEI coverage</label>
+<item>customization; p, div, list, head, name</item>
+<label>XML coverage</label>
+<item>very basic</item>
+<label>Discussion topics</label>
+<item>editing tools; what to tag and what not to tag.
+</item>
+</list>
+  </div>
